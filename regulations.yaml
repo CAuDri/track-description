@@ -1,16 +1,19 @@
 # CAuDri Track Regulations Profile
+#
+# This is a machine-readable version of the CAuDri-Challenge regulations. 
+# It contains limits and constraints for the track layout and simulation. 
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: regulations.yaml
 
 title: CAuDri Regulations / 2026-05-06
 x-caudri:
-  version: 1.0.0-draft.2
-  release_uri: 
+  version: "1.0"
+  release_uri: # TODO before release
   ruleset: '2026-05-06'
-  # Appendix A: +/-5% for figure-only dimensions and angles, already included in the bounds below.
-  # Explicit ranges and text dimensions are unchanged; never apply this tolerance twice.
-  figure_dimension_tolerance: 0.05
+
+  # # 5% default tolerance for all dimensions
+  # dimension_tolerance: 0.05 # TODO: actually necessary to be specified?
 
 $defs:
   global:
@@ -19,6 +22,8 @@ $defs:
         properties:
           root_anchor_port: {const: exit}     # To be able to place a start box
           connected_network: {const: true}    # Road must be closed for the competition
+
+          # TODO: why define here and not obstacle local?
           obstacle_width: {minimum: 0.1, maximum: 0.4}
           obstacle_height: {minimum: 0.1, maximum: 0.24}
           obstacle_length: {minimum: 0.1}
@@ -36,6 +41,7 @@ $defs:
       rendering:
         properties:
           marking_color: {const: '#FFFFFF'}
+          # TODO: What exactly are the wide markings?
           wide_marking_width: {minimum: 0.036, maximum: 0.04}
           centerline_dashed_stroke_length: {const: 0.2}
           centerline_dashed_gap_length: {const: 0.2}
@@ -63,19 +69,21 @@ $defs:
 
       intersection:
         $defs:
-          # Uncontrolled ports use priority signs by default
           parameters:
             properties:
               layout: {enum: [stop, give_way, priority_to_right]}
-              ports: {minItems: 2, maxItems: 3}
+              ports: {minItems: 2, maxItems: 3} # Number of exit ports
               angle: {minimum: 70, maximum: 110}
+              priority_sign_distance: {minimum: 0.3, maximum: 0.5}
+              mandatory_sign_distance: {minimum: 0.15, maximum: 0.25}
+              mandatory_marking_distance: {minimum: 0.05, maximum: 0.25}
 
           validation:
             properties:
-              arm_count: {minimum: 3, maximum: 4}
+              arm_count: {minimum: 3, maximum: 4} # Sum of all ports # TODO: also use "ports" instead of "arms"?
               dynamic_obstacle_count: {maximum: 1}
             $defs:
-              # A single stop line can be present, 2 at most
+              # Controlled ports are those with a stop or give-way line where the vehicle must yield
               stop:
                 properties:
                   controlled_port_count: {minimum: 1, maximum: 2}
@@ -85,22 +93,28 @@ $defs:
 
           simulation:
             properties:
+            # TODO: what exactly are those values?
               priority_obstacle_distance_before_stop_line: {minimum: 0.2375, maximum: 0.2625}
               priority_obstacle_distance_after_stop_line: {minimum: 0.19, maximum: 0.21}
 
-  # Road elements — start area, lines, crosswalks, junctions and parking.
+  # Road elements: start area, lines, crosswalks, junctions and parking.
   road_elements:
     $defs:
       start_box:
         $defs:
+          parameters:
+            properties:
+              # Gap between QR-code and stop sign
+              horizontal_gap: {minimum: 0.05}
+              # Height of the lower edge of the stop sign above the road surface
+              lower_edge_height: {minimum: 0.1, maximum: 0.2}
+
           rendering:
             properties:
               stop_panel_width: {minimum: 0.1425, maximum: 0.1575}
               stop_panel_height: {minimum: 0.1425, maximum: 0.1575}
               stop_qr_width: {minimum: 0.1425, maximum: 0.1575}
               stop_qr_height: {minimum: 0.1425, maximum: 0.1575}
-              horizontal_gap: {minimum: 0.05}
-              lower_edge_height: {minimum: 0.1, maximum: 0.2}
               qr_payload: {const: STOP}
               qr_version: {const: 1}
               qr_error_correction: {const: H}
@@ -109,7 +123,7 @@ $defs:
 
           validation:
             properties:
-              # A start box can only really be placed at the exit port of a left arc section, so we will validate that
+              # A start box can only really be placed at the exit port of a left arc section, so we will validate that.
               root_section_type: {const: arc}
               root_section_direction: {const: left}
 
@@ -125,40 +139,47 @@ $defs:
 
           rendering:
             $defs:
-              solid: # TODO: Why the nested $defs? Why only solid and no checkered? 
+              solid: # TODO: Why the nested $defs? Why only solid and no checkered?
                 properties:
                   width: {minimum: 0.018, maximum: 0.02}
 
           validation:
             properties:
+              # Only tracks with a single starting line are valid competition tracks.
               maximum_count: {const: 1}
               root_only: {const: true}
               trailing_edge_at_root_exit: {const: true}
 
       crosswalk:
         $defs:
+          parameters:
+            properties:
+              sign_distance: {minimum: 0.3, maximum: 0.5}
+              # Waiting areas for pedestrians are always placed on both sides of the crosswalk, this can be overridden.
+              waiting_area_sides: {const: [left, right]}
+              waiting_area_lateral_extent: {minimum: 0.19, maximum: 0.21}
+              waiting_area_longitudinal_extent: {minimum: 0.4275, maximum: 0.4725}
+
           rendering:
             properties:
               stripe_width: {minimum: 0.036, maximum: 0.04}
               stripe_length: {const: 0.4}
               stripe_gap: {const: 0.04}
-              sign_distance: {minimum: 0.3, maximum: 0.5}
-              # Waiting areas for pedestrians are always placed on both sides of the crosswalk, this can be overridden
-              waiting_area_count: {const: 2}
-              waiting_area_sides: {const: [left, right]}
-              waiting_area_lateral_extent: {minimum: 0.19, maximum: 0.21}
-              waiting_area_longitudinal_extent: {minimum: 0.4275, maximum: 0.4725}
 
       barred_area:
         $defs:
-          rendering:
+          parameters:
             properties:
               outline_side_angle: {minimum: 57.0, maximum: 63.0}
+              priority_sign_distance: {minimum: 0.3, maximum: 0.5}
+
+          rendering:
+            properties:
               outline_width: {minimum: 0.018, maximum: 0.02}
               hatch_angle: {minimum: 25.65, maximum: 28.35}
               hatch_width: {minimum: 0.036, maximum: 0.04}
+              # Measured on the outside track boundary along the direction of travel
               hatch_longitudinal_gap: {const: 0.15}
-              priority_sign_distance: {minimum: 0.3, maximum: 0.5}
 
           validation:
             properties:
@@ -179,18 +200,21 @@ $defs:
 
       parking_area:
         $defs:
-          # Parking areas are straight and planar with a dashed centerline. Missing
-          # markings and static obstacles in their driving lanes are invalid. Parallel
-          # spot lengths increase in approach order; gaps below 0.40 m are not spots.
-          rendering:
+          # Parking areas are straight and planar with a dashed centerline.
+          # Missing markings and static obstacles in their driving lanes are invalid.
+          # Parallel spot lengths increase in approach order. Gaps below 0.40 m are not considered valid spots.
+          parameters:
             properties:
               announcement_sign_distance: {minimum: 0.3, maximum: 0.5}
-              parallel_outer_marking_width: {minimum: 0.018, maximum: 0.02}
-              perpendicular_separator_width: {minimum: 0.018, maximum: 0.02}
               perpendicular_spot_extent_along_road: {minimum: 0.3325, maximum: 0.3675}
               perpendicular_spot_extent_lateral: {minimum: 0.475, maximum: 0.525}
               parallel_lateral_depth: {minimum: 0.285, maximum: 0.315}
-              boundary_side_angle_to_road_outer_line: {minimum: 45, maximum: 60}
+              boundary_side_angle: {minimum: 45, maximum: 60}
+
+          rendering:
+            properties:
+              parallel_outer_marking_width: {minimum: 0.018, maximum: 0.02}
+              perpendicular_separator_width: {minimum: 0.018, maximum: 0.02}
               boundary_outline_width: {minimum: 0.018, maximum: 0.02}
 
           validation:
@@ -254,14 +278,14 @@ $defs:
                   - guide_right
                   - guide_left_multiple
                   - guide_right_multiple
+              lateral_offset: {minimum: 0.075, maximum: 0.125}
+              lower_edge_height: {minimum: 0.1425, maximum: 0.1575}
 
           rendering:
             properties:
-              lateral_offset: {minimum: 0.075, maximum: 0.125}
               standard_width: {minimum: 0.1425, maximum: 0.1575}
               standard_height: {minimum: 0.1425, maximum: 0.1575}
               round_diameter: {minimum: 0.095, maximum: 0.105}
-              lower_edge_height: {minimum: 0.1425, maximum: 0.1575}
               # A.2: axis-aligned bounding sizes, including the diamond's diagonal.
               priority_width: {minimum: 0.095, maximum: 0.105}
               priority_height: {minimum: 0.095, maximum: 0.105}
@@ -269,9 +293,6 @@ $defs:
               guide_height: {minimum: 0.095, maximum: 0.105}
               guide_multiple_width: {minimum: 0.285, maximum: 0.315}
               guide_multiple_height: {minimum: 0.095, maximum: 0.105}
-              intersection_priority_distance: {minimum: 0.3, maximum: 0.5}
-              mandatory_direction_sign_distance: {minimum: 0.15, maximum: 0.25}
-              mandatory_surface_marking_distance: {minimum: 0.05, maximum: 0.25}
 
           validation:
             properties:
@@ -281,17 +302,15 @@ $defs:
 
       surface_marking:
         $defs:
-          # Mandatory-direction markings include internal turn lines that may not be
-          # omitted.
           parameters:
-            allOf:
-              - if:
-                  required: [marking]
-                  properties:
-                    marking: {enum: [speed_limit_begin, speed_limit_end]}
-                then:
-                  properties:
-                    displayed_value: {$ref: '#/$defs/zones/$defs/speed_limit/$defs/parameters/properties/value_kmh'}
+            if:
+              required: [marking]
+              properties:
+                marking:
+                  enum: [speed_limit_begin, speed_limit_end]
+            then:
+              properties:
+                displayed_value: {$ref: '#/$defs/zones/$defs/speed_limit/$defs/parameters/properties/value_kmh'}
             properties:
               marking:
                 enum:
@@ -300,7 +319,7 @@ $defs:
                   - speed_limit_begin
                   - speed_limit_end
                   - mandatory_direction
-                  - intersection_turn_lines
+                  - intersection_turn_lines # TODO: Intersection turn lines should not be an additional surface marking but be implicitly rendered as part of the intersection lane markings when a mandatory turning direction is given and don't need to be specified in the track description!
 
           rendering:
             $defs:
@@ -334,13 +353,13 @@ $defs:
         $defs:
           parameters:
             properties:
+              # TODO: Maybe allow additional payloads for debug purposes?
               identifier: {minimum: 0, maximum: 9}
+              sign_sides: {const: [left, right]}
+              sign_orientation: {const: face_adjacent_lane}
 
           rendering:
             properties:
-              sign_count: {const: 2}
-              sign_sides: {const: [left, right]}
-              sign_orientation: {const: face_adjacent_lane}
               sign_shape: {const: square}
               sign_width: {minimum: 0.1425, maximum: 0.1575}
               sign_height: {minimum: 0.1425, maximum: 0.1575}
@@ -348,19 +367,21 @@ $defs:
               qr_error_correction: {const: H}
               qr_payloads: {const: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']}
               qr_profiles:
-                const:
-                  '0': {mode: numeric, mask_pattern: 3}
-                  '1': {mode: byte, mask_pattern: 4}
-                  '2': {mode: byte, mask_pattern: 4}
-                  '3': {mode: byte, mask_pattern: 3}
-                  '4': {mode: byte, mask_pattern: 3}
-                  '5': {mode: byte, mask_pattern: 4}
-                  '6': {mode: byte, mask_pattern: 4}
-                  '7': {mode: byte, mask_pattern: 0}
-                  '8': {mode: byte, mask_pattern: 7}
-                  '9': {mode: byte, mask_pattern: 5}
+                # Constrain supplied leaves so a track can override one subfield.
+                # Unspecified profiles/members inherit their catalog/rule values.
+                properties:
+                  '0': {properties: {mode: {const: numeric}, mask_pattern: {const: 3}}}
+                  '1': {properties: {mode: {const: byte}, mask_pattern: {const: 4}}}
+                  '2': {properties: {mode: {const: byte}, mask_pattern: {const: 4}}}
+                  '3': {properties: {mode: {const: byte}, mask_pattern: {const: 3}}}
+                  '4': {properties: {mode: {const: byte}, mask_pattern: {const: 3}}}
+                  '5': {properties: {mode: {const: byte}, mask_pattern: {const: 4}}}
+                  '6': {properties: {mode: {const: byte}, mask_pattern: {const: 4}}}
+                  '7': {properties: {mode: {const: byte}, mask_pattern: {const: 0}}}
+                  '8': {properties: {mode: {const: byte}, mask_pattern: {const: 7}}}
+                  '9': {properties: {mode: {const: byte}, mask_pattern: {const: 5}}}
+                additionalProperties: false
 
-  # Zones — limits on their parameters and derived geometry.
   zones:
     $defs:
       centerline:
@@ -373,7 +394,7 @@ $defs:
         $defs:
           validation:
             properties:
-              length: {maximum: 1}
+              length: {maximum: 1} # TODO: Markings can not be missing for more than 1 meter??
               simultaneous_count_outside_intersections: {maximum: 2}
 
       speed_limit:
@@ -382,14 +403,14 @@ $defs:
             properties:
               value_kmh: {type: integer, exclusiveMinimum: 0, multipleOf: 10}
 
-          rendering:
+          simulation:
             properties:
               displayed_to_vehicle_speed_scale: {const: 0.1}
 
       no_passing:
         $defs:
-          # Static obstacles are invalid in this Zone. The effective centerline is
-          # solid on the protected driving side; a passing maneuver started before the Zone may finish.
+          # Static obstacles may not be present in the no passing zone. The effective centerline is
+          # solid on the protected driving side, a passing maneuver started before the zone may finish.
           parameters:
             properties:
               centerline: {enum: [double_solid, mixed]}
@@ -405,7 +426,6 @@ $defs:
           validation:
             properties:
               length: {minimum: 5}
-              lane_count_per_direction: {const: 1}
 
       grade:
         $defs:
@@ -418,14 +438,13 @@ $defs:
             properties:
               warning_sign_advance: {minimum: 1.0}
 
-  # Actors — motion settings, behavior restrictions and rendered footprints.
   actors:
     $defs:
       dynamic_obstacle:
         $defs:
-          # A dynamic obstacle may stop temporarily. At Intersections it approaches
+          # A dynamic obstacle may stop temporarily. At intersections it approaches
           # from another direction and follows the applicable right-of-way rules.
-          parameters:
+          simulation:
             properties:
               speed: {maximum: 0.6}
 
@@ -445,7 +464,6 @@ $defs:
             $defs:
               crosswalk_traverse:
                 $defs:
-                  # Pedestrians remain distinguishable to vehicles approaching the Crosswalk.
                   parameters:
                     properties:
                       trigger: {const: after_vehicle_stops}
@@ -454,7 +472,7 @@ $defs:
             properties:
               box_width: {minimum: 0.095, maximum: 0.105}
               box_height: {minimum: 0.1425, maximum: 0.1575}
-              pictogram_width: {minimum: 0.07125, maximum: 0.07875}
+              pictogram_width: {minimum: 0.07125, maximum: 0.07875}   # TODO: Those values seem to be a bit off? Are they calculated?
               pictogram_height: {minimum: 0.114, maximum: 0.126}
               pictogram_stroke_width: {minimum: 0.01425, maximum: 0.01575}
 
@@ -462,20 +480,22 @@ $defs:
             properties:
               count_per_crosswalk: {maximum: 1}
 
-  # Disciplines — allowed types, simulator settings and counts of derived objects.
+  # Disciplines: allowed types, simulator settings and counts of derived objects.
   discipline: {type: string, enum: [freedrive_course, obstacle_evasion_course, navigation_course]}
 
   disciplines:
     $defs:
-      # The vehicle takes the straight exit at Intersections and may ignore traffic
+      # The vehicle takes the straight exit at intersections and may ignore traffic
       # priority, stop, give-way, and mandatory-direction instructions. No parking
-      # maneuver is required and no dynamic obstacle is generated.
+      # maneuver is required and no dynamic obstacle is present.
       freedrive_course:
         x-caudri:
           course:
             closure: required
             designated_route:
               requirement: required
+
+              # TODO: If it is implicit why add explicit definition? I think we can remove the next 4 fields and only declare the requirement for the designated route.
               implicit: true
               starts_at: starting_line
               follows_mandatory_directions: true
