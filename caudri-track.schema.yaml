@@ -1,0 +1,107 @@
+# CAuDri Track Description Schema
+#
+# This schema defines the general structure of a CAuDri track description file.
+# It follows JSON Schema Draft 2020-12 and is designed to be fully YAML-compatible.
+# 
+# It is intended to be used in conjunction with a regulations profile and a catalog of (possible) track elements.
+# 
+# This is the main schema file to be included in a track description. 
+
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: caudri-track.schema.yaml
+
+title: CAuDri Track Description Schema v1.0
+
+# CAuDri-specific metadata and conventions. This section is not validated by JSON Schema, but can be used for validation and tooling.
+x-caudri:
+  version: 1.0 
+  
+  catalog: catalog.yaml
+  regulations: regulations.yaml
+  
+  units:
+    length: m
+    time: s
+    speed: m/s
+    angle: deg
+    curvature: 1/m
+    grade: percent
+  coordinates:
+    axes: {x: map_x, y: map_y, z: upward}
+    origin: root_anchor
+    positive_yaw: ccw
+
+type: object # TODO: required definition?
+
+# Each track description must reference the schema, a catalog and a regulations profile.
+# At least one road section must be defined as the root anchor of the track.
+required: [$schema, id, root, road_sections]
+properties:
+  $schema:
+    description: (Immutable) URL of caudri-track.schema.yaml or local file path.
+    type: string
+    format: uri-reference
+  id: {$ref: catalog.yaml#/$defs/identifier}
+  # Catalog and regulations files are referenced by this schema, but can be overridden by the track description
+  catalog:
+    description: (Immutable) URL of the catalog.yaml or local file path.
+    type: string
+    format: uri-reference
+  regulations:
+    description: (Immutable) URL of the regulations.yaml or local file path.
+    type: string
+    format: uri-reference
+  discipline: {$ref: catalog.yaml#/$defs/discipline}
+  metadata: {$ref: catalog.yaml#/$defs/metadata}
+
+  # Track-wide overrides of road properties.
+  # TODO: (author): Change to "road", "defaults" or "road.defalts" to match the Catalog?
+  road_defaults: {$ref: catalog.yaml#/$defs/road_properties}
+
+  # A single section needs to be defined as the root (starting point) of the track.
+  # It will implicitly define the map frame and origin of the track coordinate system.
+  # TODO: (author): Change to "root_section"?
+  root: {$ref: catalog.yaml#/$defs/root_placement}
+
+  # The track is described as a directed graph of road sections (ie. straight sections, curves or intersections).
+  # Sections are connected by "ports" with each type of section having at least one entry and one or more exit ports.
+  # TODO: (author): Change to "sections" to match semantics?
+  road_sections:
+    type: object
+    additionalProperties: {$ref: catalog.yaml#/$defs/road_sections}
+    propertyNames: {$ref: catalog.yaml#/$defs/identifier}
+    minProperties: 1
+
+  # Connections between sections need to be defined explicitly using port references.
+  # Each connection is described as a pair of port references, the first being the source port and the second the target port.
+  # Example: "section1" -> "section2" is represented as ["section1.exit", "section2.entry"].
+  # Ports can only be referenced once, two entry ports cannot be connected together.
+  # This allows for an arbitrary track topology, including loops and branches, with an implicit direction of travel.
+  connections:
+    type: array
+    items: {$ref: catalog.yaml#/$defs/connection}
+    default: []
+
+  # Zones can span multiple sections and ca be defined with section-local start and end points.
+  # Examples are speed-limit zones or missing lane markings. Zones can overlap.
+  # The path between start and end points follows the directed section graph using the main/mandatory exit direction at intersections.
+  # A valid path is not guaranteed to exist. A zone can also be nested in a section using "range", a root zone uses "span".
+  zones: {$ref: catalog.yaml#/$defs/root_zones}
+
+  # Features such as traffic signs, obstacles, etc. can be defined section- or element-local, or as a root feature with a global scope.
+  features:
+    type: object
+    additionalProperties: {$ref: catalog.yaml#/$defs/root_feature}
+    propertyNames: {$ref: catalog.yaml#/$defs/identifier}
+    default: {}
+
+  # Moving objects with an explicit start and end position. (WIP)
+  actors:
+    type: object
+    additionalProperties: {$ref: catalog.yaml#/$defs/actors}
+    propertyNames: {$ref: catalog.yaml#/$defs/identifier}
+    default: {}
+
+allOf: # TODO: What is this needed for? Move or remove?
+  - {$ref: catalog.yaml#/$defs/disciplines}
+additionalProperties: false

@@ -1,0 +1,595 @@
+# CAuDri Track Regulations Profile
+
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: regulations.yaml
+
+title: CAuDri Regulations / 2026-05-06
+x-caudri:
+  version: 1.0.0-draft.2
+  release_uri: 
+  ruleset: '2026-05-06'
+  # Appendix A: +/-5% for figure-only dimensions and angles, already included in the bounds below.
+  # Explicit ranges and text dimensions are unchanged; never apply this tolerance twice.
+  figure_dimension_tolerance: 0.05
+
+$defs:
+  global:
+    $defs:
+      validation:
+        properties:
+          root_anchor_port: {const: exit}     # To be able to place a start box
+          connected_network: {const: true}    # Road must be closed for the competition
+          obstacle_width: {minimum: 0.1, maximum: 0.4}
+          obstacle_height: {minimum: 0.1, maximum: 0.24}
+          obstacle_length: {minimum: 0.1}
+
+  road:
+    $defs:
+      parameters:
+        properties:
+          lane_width: {minimum: 0.35, maximum: 0.45}
+          marking_width: {minimum: 0.018, maximum: 0.02}
+          centerline: {enum: [dashed, double_solid, mixed]}
+          left_boundary: {const: solid}
+          right_boundary: {const: solid}
+
+      rendering:
+        properties:
+          marking_color: {const: '#FFFFFF'}
+          wide_marking_width: {minimum: 0.036, maximum: 0.04}
+          centerline_dashed_stroke_length: {const: 0.2}
+          centerline_dashed_gap_length: {const: 0.2}
+          centerline_double_total_width: {minimum: 0.056, maximum: 0.06}
+
+      validation:
+        properties:
+          lane_count: {const: 2}
+          lanes_per_direction: {const: 1}
+          road_element_spacing: {minimum: 1.0}
+          neighboring_road_spacing: {minimum: 0.05}
+          artifact_marking_spacing: {minimum: 0.1}
+          obstacle_spacing: {minimum: 1.0}
+          marking_type_minimum_length: {minimum: 1.0}
+
+  road_sections:
+    $defs:
+      arc:
+        $defs:
+          validation:
+            properties:
+              # The regulations only specify a minimum inner radius for curved sections
+              # Other specified radii will normally be measured from the reference (center) line
+              inner_radius: {minimum: 1.0}
+
+      intersection:
+        $defs:
+          # Uncontrolled ports use priority signs by default
+          parameters:
+            properties:
+              layout: {enum: [stop, give_way, priority_to_right]}
+              ports: {minItems: 2, maxItems: 3}
+              angle: {minimum: 70, maximum: 110}
+
+          validation:
+            properties:
+              arm_count: {minimum: 3, maximum: 4}
+              dynamic_obstacle_count: {maximum: 1}
+            $defs:
+              # A single stop line can be present, 2 at most
+              stop:
+                properties:
+                  controlled_port_count: {minimum: 1, maximum: 2}
+              give_way:
+                properties:
+                  controlled_port_count: {minimum: 1, maximum: 2}
+
+          simulation:
+            properties:
+              priority_obstacle_distance_before_stop_line: {minimum: 0.2375, maximum: 0.2625}
+              priority_obstacle_distance_after_stop_line: {minimum: 0.19, maximum: 0.21}
+
+  # Road elements — start area, lines, crosswalks, junctions and parking.
+  road_elements:
+    $defs:
+      start_box:
+        $defs:
+          rendering:
+            properties:
+              stop_panel_width: {minimum: 0.1425, maximum: 0.1575}
+              stop_panel_height: {minimum: 0.1425, maximum: 0.1575}
+              stop_qr_width: {minimum: 0.1425, maximum: 0.1575}
+              stop_qr_height: {minimum: 0.1425, maximum: 0.1575}
+              horizontal_gap: {minimum: 0.05}
+              lower_edge_height: {minimum: 0.1, maximum: 0.2}
+              qr_payload: {const: STOP}
+              qr_version: {const: 1}
+              qr_error_correction: {const: H}
+              qr_mode: {const: alphanumeric}
+              qr_mask_pattern: {const: 5}
+
+          validation:
+            properties:
+              # A start box can only really be placed at the exit port of a left arc section, so we will validate that
+              root_section_type: {const: arc}
+              root_section_direction: {const: left}
+
+          simulation:
+            properties:
+              gate_open_duration: {const: 30}
+
+      starting_line:
+        $defs:
+          parameters:
+            properties:
+              pattern: {enum: [checkered, solid]}
+
+          rendering:
+            $defs:
+              solid: # TODO: Why the nested $defs? Why only solid and no checkered? 
+                properties:
+                  width: {minimum: 0.018, maximum: 0.02}
+
+          validation:
+            properties:
+              maximum_count: {const: 1}
+              root_only: {const: true}
+              trailing_edge_at_root_exit: {const: true}
+
+      crosswalk:
+        $defs:
+          rendering:
+            properties:
+              stripe_width: {minimum: 0.036, maximum: 0.04}
+              stripe_length: {const: 0.4}
+              stripe_gap: {const: 0.04}
+              sign_distance: {minimum: 0.3, maximum: 0.5}
+              # Waiting areas for pedestrians are always placed on both sides of the crosswalk, this can be overridden
+              waiting_area_count: {const: 2}
+              waiting_area_sides: {const: [left, right]}
+              waiting_area_lateral_extent: {minimum: 0.19, maximum: 0.21}
+              waiting_area_longitudinal_extent: {minimum: 0.4275, maximum: 0.4725}
+
+      barred_area:
+        $defs:
+          rendering:
+            properties:
+              outline_side_angle: {minimum: 57.0, maximum: 63.0}
+              outline_width: {minimum: 0.018, maximum: 0.02}
+              hatch_angle: {minimum: 25.65, maximum: 28.35}
+              hatch_width: {minimum: 0.036, maximum: 0.04}
+              hatch_longitudinal_gap: {const: 0.15}
+              priority_sign_distance: {minimum: 0.3, maximum: 0.5}
+
+          validation:
+            properties:
+              length: {maximum: 2}
+              blocked_lane_count: {const: 1}
+              dynamic_obstacle_count: {maximum: 1}
+
+      side_road_junction:
+        $defs:
+          rendering:
+            properties:
+              stroke_length: {const: 0.1}
+              gap_length: {const: 0.05}
+
+          validation:
+            properties:
+              length: {maximum: 0.96}
+
+      parking_area:
+        $defs:
+          # Parking areas are straight and planar with a dashed centerline. Missing
+          # markings and static obstacles in their driving lanes are invalid. Parallel
+          # spot lengths increase in approach order; gaps below 0.40 m are not spots.
+          rendering:
+            properties:
+              announcement_sign_distance: {minimum: 0.3, maximum: 0.5}
+              parallel_outer_marking_width: {minimum: 0.018, maximum: 0.02}
+              perpendicular_separator_width: {minimum: 0.018, maximum: 0.02}
+              perpendicular_spot_extent_along_road: {minimum: 0.3325, maximum: 0.3675}
+              perpendicular_spot_extent_lateral: {minimum: 0.475, maximum: 0.525}
+              parallel_lateral_depth: {minimum: 0.285, maximum: 0.315}
+              boundary_side_angle_to_road_outer_line: {minimum: 45, maximum: 60}
+              boundary_outline_width: {minimum: 0.018, maximum: 0.02}
+
+          validation:
+            properties:
+              parallel_spot_count: {minimum: 1}
+              parallel_final_spot_length: {minimum: 0.7}
+              parallel_obstacle_lateral_gap: {minimum: 0.02, maximum: 0.2}
+              parallel_invalid_gap_below: {const: 0.4}
+              parallel_side: {const: right}
+              perpendicular_spot_count: {minimum: 1}
+              perpendicular_obstacle_lateral_gap: {minimum: 0.02, maximum: 0.1}
+              perpendicular_side: {const: left}
+              centerline: {const: dashed}
+
+  # Features — supported signs, marking variants and landmarks.
+  features:
+    $defs:
+      traffic_sign:
+        $defs:
+          parameters:
+            allOf:
+              - if:
+                  required: [sign]
+                  properties:
+                    sign: {enum: [speed_limit_begin, speed_limit_end]}
+                then:
+                  # For speed limit signs, the displayed value can be defined as a parameter (in steps of 10 km/h)
+                  properties:
+                    displayed_value: {$ref: '#/$defs/zones/$defs/speed_limit/$defs/parameters/properties/value_kmh'}
+              - if:
+                  required: [sign]
+                  properties:
+                    sign: {enum: [uphill_grade, downhill_grade]}
+                then:
+                  # Same thing for grade signs in 1% steps, the sign itself indicates the direction of the grade (uphill or downhill)
+                  properties:
+                    displayed_value:
+                      $ref: '#/$defs/zones/$defs/grade/$defs/parameters/properties/grade_percent'
+                      minimum: 0
+            # Other signs don't require any additional parameters
+            properties:
+              sign:
+                enum:
+                  - stop
+                  - give_way
+                  - priority_road
+                  - mandatory_left
+                  - mandatory_right
+                  - crosswalk
+                  - parking_zone
+                  - oncoming_traffic_priority
+                  - speed_limit_begin
+                  - speed_limit_end
+                  - no_passing_begin
+                  - no_passing_end
+                  - expressway_begin
+                  - expressway_end
+                  - uphill_grade
+                  - downhill_grade
+                  - guide_left
+                  - guide_right
+                  - guide_left_multiple
+                  - guide_right_multiple
+
+          rendering:
+            properties:
+              lateral_offset: {minimum: 0.075, maximum: 0.125}
+              standard_width: {minimum: 0.1425, maximum: 0.1575}
+              standard_height: {minimum: 0.1425, maximum: 0.1575}
+              round_diameter: {minimum: 0.095, maximum: 0.105}
+              lower_edge_height: {minimum: 0.1425, maximum: 0.1575}
+              # A.2: axis-aligned bounding sizes, including the diamond's diagonal.
+              priority_width: {minimum: 0.095, maximum: 0.105}
+              priority_height: {minimum: 0.095, maximum: 0.105}
+              guide_width: {minimum: 0.095, maximum: 0.105}
+              guide_height: {minimum: 0.095, maximum: 0.105}
+              guide_multiple_width: {minimum: 0.285, maximum: 0.315}
+              guide_multiple_height: {minimum: 0.095, maximum: 0.105}
+              intersection_priority_distance: {minimum: 0.3, maximum: 0.5}
+              mandatory_direction_sign_distance: {minimum: 0.15, maximum: 0.25}
+              mandatory_surface_marking_distance: {minimum: 0.05, maximum: 0.25}
+
+          validation:
+            properties:
+              guide_curve_inner_radius: {exclusiveMaximum: 1.2}
+              guide_preceding_straight_length: {minimum: 3.0}
+              speed_limit_separated_sign_spacing: {minimum: 0.5}
+
+      surface_marking:
+        $defs:
+          # Mandatory-direction markings include internal turn lines that may not be
+          # omitted.
+          parameters:
+            allOf:
+              - if:
+                  required: [marking]
+                  properties:
+                    marking: {enum: [speed_limit_begin, speed_limit_end]}
+                then:
+                  properties:
+                    displayed_value: {$ref: '#/$defs/zones/$defs/speed_limit/$defs/parameters/properties/value_kmh'}
+            properties:
+              marking:
+                enum:
+                  - stop_line
+                  - give_way_line
+                  - speed_limit_begin
+                  - speed_limit_end
+                  - mandatory_direction
+                  - intersection_turn_lines
+
+          rendering:
+            $defs:
+              stop_line:
+                properties:
+                  width: {minimum: 0.036, maximum: 0.04}
+
+              give_way_line:
+                properties:
+                  stroke_length: {const: 0.08}
+                  gap_length: {const: 0.06}
+                  width: {minimum: 0.036, maximum: 0.04}
+
+              speed_limit_begin:
+                properties:
+                  digit_width: {minimum: 0.057, maximum: 0.063}
+                  digit_height: {minimum: 0.38, maximum: 0.42}
+                  total_width: {minimum: 0.1425, maximum: 0.1575}
+
+              speed_limit_end:
+                properties:
+                  total_width: {minimum: 0.19, maximum: 0.21}
+                  total_height: {minimum: 0.475, maximum: 0.525}
+
+              mandatory_direction:
+                properties:
+                  width: {minimum: 0.0665, maximum: 0.0735}
+                  length: {minimum: 0.475, maximum: 0.525}
+
+      landmark:
+        $defs:
+          parameters:
+            properties:
+              identifier: {minimum: 0, maximum: 9}
+
+          rendering:
+            properties:
+              sign_count: {const: 2}
+              sign_sides: {const: [left, right]}
+              sign_orientation: {const: face_adjacent_lane}
+              sign_shape: {const: square}
+              sign_width: {minimum: 0.1425, maximum: 0.1575}
+              sign_height: {minimum: 0.1425, maximum: 0.1575}
+              qr_version: {const: 1}
+              qr_error_correction: {const: H}
+              qr_payloads: {const: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']}
+              qr_profiles:
+                const:
+                  '0': {mode: numeric, mask_pattern: 3}
+                  '1': {mode: byte, mask_pattern: 4}
+                  '2': {mode: byte, mask_pattern: 4}
+                  '3': {mode: byte, mask_pattern: 3}
+                  '4': {mode: byte, mask_pattern: 3}
+                  '5': {mode: byte, mask_pattern: 4}
+                  '6': {mode: byte, mask_pattern: 4}
+                  '7': {mode: byte, mask_pattern: 0}
+                  '8': {mode: byte, mask_pattern: 7}
+                  '9': {mode: byte, mask_pattern: 5}
+
+  # Zones — limits on their parameters and derived geometry.
+  zones:
+    $defs:
+      centerline:
+        $defs:
+          parameters:
+            properties:
+              style: {enum: [dashed, double_solid, mixed]}
+
+      missing_marking:
+        $defs:
+          validation:
+            properties:
+              length: {maximum: 1}
+              simultaneous_count_outside_intersections: {maximum: 2}
+
+      speed_limit:
+        $defs:
+          parameters:
+            properties:
+              value_kmh: {type: integer, exclusiveMinimum: 0, multipleOf: 10}
+
+          rendering:
+            properties:
+              displayed_to_vehicle_speed_scale: {const: 0.1}
+
+      no_passing:
+        $defs:
+          # Static obstacles are invalid in this Zone. The effective centerline is
+          # solid on the protected driving side; a passing maneuver started before the Zone may finish.
+          parameters:
+            properties:
+              centerline: {enum: [double_solid, mixed]}
+
+          validation:
+            properties:
+              dynamic_obstacle_count: {maximum: 1}
+              post_zone_element_clearance: {minimum: 2}
+
+      expressway:
+        $defs:
+          # Expressway Zones have right of way and contain no obstacles or stop lines.
+          validation:
+            properties:
+              length: {minimum: 5}
+              lane_count_per_direction: {const: 1}
+
+      grade:
+        $defs:
+          # Road Elements are invalid on grades.
+          parameters:
+            properties:
+              grade_percent: {minimum: -10, maximum: 10}
+
+          validation:
+            properties:
+              warning_sign_advance: {minimum: 1.0}
+
+  # Actors — motion settings, behavior restrictions and rendered footprints.
+  actors:
+    $defs:
+      dynamic_obstacle:
+        $defs:
+          # A dynamic obstacle may stop temporarily. At Intersections it approaches
+          # from another direction and follows the applicable right-of-way rules.
+          parameters:
+            properties:
+              speed: {maximum: 0.6}
+
+          behaviors:
+            $defs:
+              follow_route:
+                $defs:
+                  parameters:
+                    properties:
+                      lane: {const: right}
+                      lane_changes: {const: false}
+                      passing: {const: false}
+
+      pedestrian:
+        $defs:
+          behaviors:
+            $defs:
+              crosswalk_traverse:
+                $defs:
+                  # Pedestrians remain distinguishable to vehicles approaching the Crosswalk.
+                  parameters:
+                    properties:
+                      trigger: {const: after_vehicle_stops}
+
+          rendering:
+            properties:
+              box_width: {minimum: 0.095, maximum: 0.105}
+              box_height: {minimum: 0.1425, maximum: 0.1575}
+              pictogram_width: {minimum: 0.07125, maximum: 0.07875}
+              pictogram_height: {minimum: 0.114, maximum: 0.126}
+              pictogram_stroke_width: {minimum: 0.01425, maximum: 0.01575}
+
+          validation:
+            properties:
+              count_per_crosswalk: {maximum: 1}
+
+  # Disciplines — allowed types, simulator settings and counts of derived objects.
+  discipline: {type: string, enum: [freedrive_course, obstacle_evasion_course, navigation_course]}
+
+  disciplines:
+    $defs:
+      # The vehicle takes the straight exit at Intersections and may ignore traffic
+      # priority, stop, give-way, and mandatory-direction instructions. No parking
+      # maneuver is required and no dynamic obstacle is generated.
+      freedrive_course:
+        x-caudri:
+          course:
+            closure: required
+            designated_route:
+              requirement: required
+              implicit: true
+              starts_at: starting_line
+              follows_mandatory_directions: true
+              returns_to: starting_line
+
+        $defs:
+          allow:
+            properties:
+              road_sections: {enum: [straight, arc, clothoid, intersection]}
+              road_elements: {enum: [start_box, starting_line, side_road_junction, parking_area]}
+              features: {enum: [traffic_sign, surface_marking, artifact]}
+              zones: {enum: [centerline, missing_marking, no_passing, expressway, speed_limit, grade]}
+              actors: false
+
+          allow_variants:
+            properties:
+              road_sections.intersection: {enum: [stop, give_way, priority_to_right]}
+
+          simulation:
+            type: object
+            properties:
+              duration: {const: 120}
+            additionalProperties: false
+
+          counts:
+            type: object
+            properties: {}
+            additionalProperties: false
+
+      # Traffic signs and mandatory directions apply. The vehicle stops for at
+      # least 3 s at stop lines and 1 s at give-way lines, no farther than 0.15 m
+      # before the line. Passing is invalid at Intersections, No-passing Zones,
+      # Barred Areas, and Crosswalks.
+      obstacle_evasion_course:
+        x-caudri:
+          course:
+            closure: required
+            designated_route:
+              requirement: required
+              implicit: true
+              starts_at: starting_line
+              follows_mandatory_directions: true
+              returns_to: starting_line
+
+        $defs:
+          allow:
+            properties:
+              road_sections: {enum: [straight, arc, clothoid, intersection]}
+              road_elements: {enum: [start_box, starting_line, crosswalk, barred_area, side_road_junction, parking_area]}
+              features: {enum: [traffic_sign, surface_marking, static_obstacle, artifact]}
+              zones: {enum: [centerline, missing_marking, no_passing, expressway, speed_limit, grade]}
+              actors: {enum: [dynamic_obstacle, pedestrian]}
+
+          allow_variants:
+            properties:
+              road_sections.intersection: {enum: [stop, give_way, priority_to_right]}
+
+          simulation:
+            type: object
+            properties:
+              duration: {const: 300}
+              laps: {const: 3}
+              parking_attempts_per_lap: {maximum: 1}
+              obstacle_return_to_right_lane_distance: {maximum: 2.0}
+              stop_line_duration: {minimum: 3.0}
+              give_way_line_duration: {minimum: 1.0}
+              controlled_line_stop_distance: {maximum: 0.15}
+              no_passing_dynamic_obstacle_distance: {minimum: 0.3}
+              barred_area_return_to_right_lane_distance: {maximum: 2.0}
+              barred_area_oncoming_obstacle_distance: {minimum: 0.5}
+              crosswalk_stop_duration: {minimum: 3.0}
+              crosswalk_stop_distance: {maximum: 0.15}
+            additionalProperties: false
+
+          counts:
+            type: object
+            properties:
+              features.static_obstacle: {minimum: 1}
+              actors.dynamic_obstacle: {minimum: 1}
+            additionalProperties: false
+
+      # The layout is not announced before the event. Landmarks are visited in
+      # ascending identifier order and may be passed in either direction. Regular
+      # traffic signs and mandatory directions may be ignored; layout and Landmark
+      # placement remain unchanged between navigation phases. The physical road
+      # network remains closed; only the designated route is optional.
+      navigation_course:
+        x-caudri:
+          course:
+            closure: required
+            designated_route: {requirement: optional}
+
+        $defs:
+          allow:
+            properties:
+              road_sections: {enum: [straight, arc, clothoid, intersection]}
+              road_elements: {enum: [start_box, starting_line, crosswalk, barred_area, side_road_junction, parking_area]}
+              features: {enum: [traffic_sign, surface_marking, landmark, artifact]}
+              zones: {enum: [centerline, missing_marking, no_passing, expressway, speed_limit, grade]}
+              actors: false
+
+          allow_variants:
+            properties:
+              road_sections.intersection: {enum: [stop, give_way, priority_to_right]}
+
+          simulation:
+            type: object
+            properties:
+              mapping_duration: {const: 180}
+              navigation_duration: {const: 180}
+            additionalProperties: false
+
+          counts:
+            type: object
+            properties:
+              features.landmark: {minimum: 1, maximum: 10}
+            additionalProperties: false
