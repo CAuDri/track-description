@@ -85,7 +85,7 @@ properties:
     propertyNames: {$ref: catalog.yaml#/$defs/identifier}
     default: {}
 
-  # Moving objects with an explicit start and end position. (WIP)
+  # Moving objects with an initial spawn and type-specific behavior. (WIP)
   actors:
     type: object
     additionalProperties: {$ref: catalog.yaml#/$defs/actors}

@@ -100,7 +100,7 @@ $defs:
               priority_obstacle_distance_after_stop_line: {const: 0.2}
 
   # Road elements: start area, lines, crosswalks, junctions and parking.
-  road_elements: # TODO: Rename to "elements" for consistency?
+  elements:
     $defs:
       start_box:
         $defs:
@@ -202,9 +202,6 @@ $defs:
           parameters:
             properties:
               announcement_sign_distance: {minimum: 0.3, maximum: 0.5}
-              perpendicular_spot_extent_along_road: {const: 0.35}
-              perpendicular_spot_extent_lateral: {const: 0.5}
-              parallel_lateral_depth: {const: 0.3}
               boundary_side_angle: {minimum: 45, maximum: 60}
 
           rendering:
@@ -224,6 +221,15 @@ $defs:
               perpendicular_obstacle_lateral_gap: {minimum: 0.02, maximum: 0.1}
               perpendicular_side: {const: left}
               centerline: {const: dashed}
+
+          parallel_spot:
+            properties:
+              extent_lateral: {const: 0.3}
+
+          perpendicular_spot:
+            properties:
+              extent_along_road: {const: 0.35}
+              extent_lateral: {const: 0.5}
 
   # Features — supported signs, marking variants and landmarks.
   features:
@@ -350,7 +356,10 @@ $defs:
             properties:
               identifier: {minimum: 0, maximum: 9}
               sign_sides: {const: [left, right]}
-              sign_orientation: {const: face_adjacent_lane}
+              faces:
+                properties:
+                  left: {const: backward}
+                  right: {const: forward}
 
           rendering:
             properties:
@@ -440,9 +449,6 @@ $defs:
           parameters:
             properties:
               grade_percent: {minimum: -10, maximum: 10}
-
-          validation:
-            properties:
               warning_sign_advance: {minimum: 1.0}
 
   actors:
@@ -507,7 +513,7 @@ $defs:
           allow:
             properties:
               sections: {enum: [straight, arc, clothoid, intersection]}
-              road_elements: {enum: [start_box, starting_line, side_road_junction, parking_area]}
+              elements: {enum: [start_box, starting_line, side_road_junction, parking_area]}
               features: {enum: [traffic_sign, surface_marking, artifact]}
               zones: {enum: [centerline, missing_marking, no_passing, expressway, speed_limit, grade]}
               actors: false
@@ -541,7 +547,7 @@ $defs:
           allow:
             properties:
               sections: {enum: [straight, arc, clothoid, intersection]}
-              road_elements: {enum: [start_box, starting_line, crosswalk, barred_area, side_road_junction, parking_area]}
+              elements: {enum: [start_box, starting_line, crosswalk, barred_area, side_road_junction, parking_area]}
               features: {enum: [traffic_sign, surface_marking, static_obstacle, artifact]}
               zones: {enum: [centerline, missing_marking, no_passing, expressway, speed_limit, grade]}
               actors: {enum: [dynamic_obstacle, pedestrian]}
@@ -589,7 +595,7 @@ $defs:
           allow:
             properties:
               sections: {enum: [straight, arc, clothoid, intersection]}
-              road_elements: {enum: [start_box, starting_line, crosswalk, barred_area, side_road_junction, parking_area]}
+              elements: {enum: [start_box, starting_line, crosswalk, barred_area, side_road_junction, parking_area]}
               features: {enum: [traffic_sign, surface_marking, landmark, artifact]}
               zones: {enum: [centerline, missing_marking, no_passing, expressway, speed_limit, grade]}
               actors: false
