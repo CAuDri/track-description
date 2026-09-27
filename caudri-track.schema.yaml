@@ -25,15 +25,19 @@ x-caudri:
     curvature: 1/m
     grade: percent
   coordinates:
-    axes: {x: map_x, y: map_y, z: upward}
-    origin: root_anchor
+    # Geometry and explicit poses are always expressed in the Map frame.
+    axes: {x: root_forward_tangent, y: left, z: upward}
+    origin: root
     positive_yaw: ccw
+    # Rendering/scenario placement applies p_world = Rz(map_orientation) * p_map + t_world.
+    # World translation is supplied by the scenario; it is not track geometry.
+    world_rotation: root.map_orientation
 
 type: object
 
 # Each track description references the main schema, which fixes the catalog and regulations.
 # At least one road section must be defined as the root anchor of the track.
-required: [$schema, id, root, road_sections]
+required: [$schema, id, root, sections]
 properties:
   $schema:
     description: (Immutable) URL of caudri-track.schema.yaml or local file path.
@@ -44,20 +48,17 @@ properties:
   metadata: {$ref: catalog.yaml#/$defs/metadata}
 
   # Track-wide overrides of road properties.
-  # TODO: (author): Change to "road", "defaults" or "road.defalts" to match the Catalog?
-  road_defaults: {$ref: catalog.yaml#/$defs/road}
+  road: {$ref: catalog.yaml#/$defs/road}
 
   # A single section needs to be defined as the root (starting point) of the track.
   # It will implicitly define the map frame and origin of the track coordinate system.
-  # TODO: (author): Change to "root_section"?
-  root: {$ref: catalog.yaml#/$defs/root_placement}
+  root: {$ref: catalog.yaml#/$defs/root}
 
   # The track is described as a directed graph of road sections (ie. straight sections, curves or intersections).
   # Sections are connected by "ports" with each type of section having at least one entry and one or more exit ports.
-  # TODO: (author): Change to "sections" to match semantics?
-  road_sections:
+  sections:
     type: object
-    additionalProperties: {$ref: catalog.yaml#/$defs/road_sections}
+    additionalProperties: {$ref: catalog.yaml#/$defs/sections}
     propertyNames: {$ref: catalog.yaml#/$defs/identifier}
     minProperties: 1
 

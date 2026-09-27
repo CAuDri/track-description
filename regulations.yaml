@@ -9,24 +9,28 @@ $id: regulations.yaml
 title: CAuDri Regulations / 2026-05-06
 x-caudri:
   version: "1.0"
-  release_uri: # TODO before release
   ruleset: '2026-05-06'
 
-  # # 5% default tolerance for all dimensions
-  # dimension_tolerance: 0.05 # TODO: actually necessary to be specified?
+  # Physical fabrication tolerance for dimensions and angles in appendix figures,
+  # unless the figure states otherwise. Not applied to ideal Track Description validation.
+  figure_tolerance: 0.05
 
 $defs:
   global:
     $defs:
       validation:
         properties:
-          root_anchor_port: {const: exit}     # To be able to place a start box
+          root_port: {const: exit}     # To be able to place a start box
           connected_network: {const: true}    # Road must be closed for the competition
 
-          # TODO: why define here and not obstacle local?
-          obstacle_width: {minimum: 0.1, maximum: 0.4}
-          obstacle_height: {minimum: 0.1, maximum: 0.24}
-          obstacle_length: {minimum: 0.1}
+  # Shared dimensions for static and dynamic obstacles, not other objects.
+  obstacles:
+    $defs:
+      size:
+        properties:
+          width: {minimum: 0.1, maximum: 0.4}
+          height: {minimum: 0.1, maximum: 0.24}
+          length: {minimum: 0.1}
 
   road:
     $defs:
@@ -41,8 +45,6 @@ $defs:
       rendering:
         properties:
           marking_color: {const: '#FFFFFF'}
-          # TODO: What exactly are the wide markings?
-          wide_marking_width: {minimum: 0.036, maximum: 0.04}
           centerline_dashed_stroke_length: {const: 0.2}
           centerline_dashed_gap_length: {const: 0.2}
           centerline_double_total_width: {minimum: 0.056, maximum: 0.06}
@@ -57,7 +59,7 @@ $defs:
           obstacle_spacing: {minimum: 1.0}
           marking_type_minimum_length: {minimum: 1.0}
 
-  road_sections:
+  sections:
     $defs:
       arc:
         $defs:
@@ -80,7 +82,6 @@ $defs:
 
           validation:
             properties:
-              arm_count: {minimum: 3, maximum: 4} # Sum of all ports # TODO: also use "ports" instead of "arms"?
               dynamic_obstacle_count: {maximum: 1}
             $defs:
               # Controlled ports are those with a stop or give-way line where the vehicle must yield
@@ -93,12 +94,13 @@ $defs:
 
           simulation:
             properties:
-            # TODO: what exactly are those values?
-              priority_obstacle_distance_before_stop_line: {minimum: 0.2375, maximum: 0.2625}
-              priority_obstacle_distance_after_stop_line: {minimum: 0.19, maximum: 0.21}
+              # Nominal extent of the priority area in appendix A.4.6, relative to
+              # the theoretical stop line on the obstacle's approach lane.
+              priority_obstacle_distance_before_stop_line: {const: 0.25}
+              priority_obstacle_distance_after_stop_line: {const: 0.2}
 
   # Road elements: start area, lines, crosswalks, junctions and parking.
-  road_elements:
+  road_elements: # TODO: Rename to "elements" for consistency?
     $defs:
       start_box:
         $defs:
@@ -111,10 +113,10 @@ $defs:
 
           rendering:
             properties:
-              stop_panel_width: {minimum: 0.1425, maximum: 0.1575}
-              stop_panel_height: {minimum: 0.1425, maximum: 0.1575}
-              stop_qr_width: {minimum: 0.1425, maximum: 0.1575}
-              stop_qr_height: {minimum: 0.1425, maximum: 0.1575}
+              stop_panel_width: {const: 0.15}
+              stop_panel_height: {const: 0.15}
+              stop_qr_width: {const: 0.15}
+              stop_qr_height: {const: 0.15}
               qr_payload: {const: STOP}
               qr_version: {const: 1}
               qr_error_correction: {const: H}
@@ -137,12 +139,6 @@ $defs:
             properties:
               pattern: {enum: [checkered, solid]}
 
-          rendering:
-            $defs:
-              solid: # TODO: Why the nested $defs? Why only solid and no checkered?
-                properties:
-                  width: {minimum: 0.018, maximum: 0.02}
-
           validation:
             properties:
               # Only tracks with a single starting line are valid competition tracks.
@@ -157,8 +153,8 @@ $defs:
               sign_distance: {minimum: 0.3, maximum: 0.5}
               # Waiting areas for pedestrians are always placed on both sides of the crosswalk, this can be overridden.
               waiting_area_sides: {const: [left, right]}
-              waiting_area_lateral_extent: {minimum: 0.19, maximum: 0.21}
-              waiting_area_longitudinal_extent: {minimum: 0.4275, maximum: 0.4725}
+              waiting_area_lateral_extent: {const: 0.2}
+              waiting_area_longitudinal_extent: {const: 0.45}
 
           rendering:
             properties:
@@ -170,13 +166,13 @@ $defs:
         $defs:
           parameters:
             properties:
-              outline_side_angle: {minimum: 57.0, maximum: 63.0}
+              outline_side_angle: {const: 60.0}
               priority_sign_distance: {minimum: 0.3, maximum: 0.5}
 
           rendering:
             properties:
               outline_width: {minimum: 0.018, maximum: 0.02}
-              hatch_angle: {minimum: 25.65, maximum: 28.35}
+              hatch_angle: {const: 27.0}
               hatch_width: {minimum: 0.036, maximum: 0.04}
               # Measured on the outside track boundary along the direction of travel
               hatch_longitudinal_gap: {const: 0.15}
@@ -206,9 +202,9 @@ $defs:
           parameters:
             properties:
               announcement_sign_distance: {minimum: 0.3, maximum: 0.5}
-              perpendicular_spot_extent_along_road: {minimum: 0.3325, maximum: 0.3675}
-              perpendicular_spot_extent_lateral: {minimum: 0.475, maximum: 0.525}
-              parallel_lateral_depth: {minimum: 0.285, maximum: 0.315}
+              perpendicular_spot_extent_along_road: {const: 0.35}
+              perpendicular_spot_extent_lateral: {const: 0.5}
+              parallel_lateral_depth: {const: 0.3}
               boundary_side_angle: {minimum: 45, maximum: 60}
 
           rendering:
@@ -279,20 +275,20 @@ $defs:
                   - guide_left_multiple
                   - guide_right_multiple
               lateral_offset: {minimum: 0.075, maximum: 0.125}
-              lower_edge_height: {minimum: 0.1425, maximum: 0.1575}
+              lower_edge_height: {const: 0.15}
 
           rendering:
             properties:
-              standard_width: {minimum: 0.1425, maximum: 0.1575}
-              standard_height: {minimum: 0.1425, maximum: 0.1575}
-              round_diameter: {minimum: 0.095, maximum: 0.105}
+              standard_width: {const: 0.15}
+              standard_height: {const: 0.15}
+              round_diameter: {const: 0.1}
               # A.2: axis-aligned bounding sizes, including the diamond's diagonal.
-              priority_width: {minimum: 0.095, maximum: 0.105}
-              priority_height: {minimum: 0.095, maximum: 0.105}
-              guide_width: {minimum: 0.095, maximum: 0.105}
-              guide_height: {minimum: 0.095, maximum: 0.105}
-              guide_multiple_width: {minimum: 0.285, maximum: 0.315}
-              guide_multiple_height: {minimum: 0.095, maximum: 0.105}
+              priority_width: {const: 0.1}
+              priority_height: {const: 0.1}
+              guide_width: {const: 0.1}
+              guide_height: {const: 0.1}
+              guide_multiple_width: {const: 0.3}
+              guide_multiple_height: {const: 0.1}
 
           validation:
             properties:
@@ -319,7 +315,6 @@ $defs:
                   - speed_limit_begin
                   - speed_limit_end
                   - mandatory_direction
-                  - intersection_turn_lines # TODO: Intersection turn lines should not be an additional surface marking but be implicitly rendered as part of the intersection lane markings when a mandatory turning direction is given and don't need to be specified in the track description!
 
           rendering:
             $defs:
@@ -335,25 +330,24 @@ $defs:
 
               speed_limit_begin:
                 properties:
-                  digit_width: {minimum: 0.057, maximum: 0.063}
-                  digit_height: {minimum: 0.38, maximum: 0.42}
-                  total_width: {minimum: 0.1425, maximum: 0.1575}
+                  digit_width: {const: 0.06}
+                  digit_height: {const: 0.4}
+                  total_width: {const: 0.15}
 
               speed_limit_end:
                 properties:
-                  total_width: {minimum: 0.19, maximum: 0.21}
-                  total_height: {minimum: 0.475, maximum: 0.525}
+                  total_width: {const: 0.2}
+                  total_height: {const: 0.5}
 
               mandatory_direction:
                 properties:
-                  width: {minimum: 0.0665, maximum: 0.0735}
-                  length: {minimum: 0.475, maximum: 0.525}
+                  width: {const: 0.07}
+                  length: {const: 0.5}
 
       landmark:
         $defs:
           parameters:
             properties:
-              # TODO: Maybe allow additional payloads for debug purposes?
               identifier: {minimum: 0, maximum: 9}
               sign_sides: {const: [left, right]}
               sign_orientation: {const: face_adjacent_lane}
@@ -361,11 +355,10 @@ $defs:
           rendering:
             properties:
               sign_shape: {const: square}
-              sign_width: {minimum: 0.1425, maximum: 0.1575}
-              sign_height: {minimum: 0.1425, maximum: 0.1575}
+              sign_width: {const: 0.15}
+              sign_height: {const: 0.15}
               qr_version: {const: 1}
               qr_error_correction: {const: H}
-              qr_payloads: {const: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']}
               qr_profiles:
                 # Constrain supplied leaves so a track can override one subfield.
                 # Unspecified profiles/members inherit their catalog/rule values.
@@ -382,6 +375,20 @@ $defs:
                   '9': {properties: {mode: {const: byte}, mask_pattern: {const: 5}}}
                 additionalProperties: false
 
+        # Supplied QR content must match the navigation identifier. Omission keeps the derived default.
+        # Partial overrides without an identifier may use any legal payload; recheck after inheritance.
+        anyOf:
+          - properties: {parameters: {properties: {identifier: {const: 0}}}, rendering: {properties: {qr_payload: {const: '0'}}}}
+          - properties: {parameters: {properties: {identifier: {const: 1}}}, rendering: {properties: {qr_payload: {const: '1'}}}}
+          - properties: {parameters: {properties: {identifier: {const: 2}}}, rendering: {properties: {qr_payload: {const: '2'}}}}
+          - properties: {parameters: {properties: {identifier: {const: 3}}}, rendering: {properties: {qr_payload: {const: '3'}}}}
+          - properties: {parameters: {properties: {identifier: {const: 4}}}, rendering: {properties: {qr_payload: {const: '4'}}}}
+          - properties: {parameters: {properties: {identifier: {const: 5}}}, rendering: {properties: {qr_payload: {const: '5'}}}}
+          - properties: {parameters: {properties: {identifier: {const: 6}}}, rendering: {properties: {qr_payload: {const: '6'}}}}
+          - properties: {parameters: {properties: {identifier: {const: 7}}}, rendering: {properties: {qr_payload: {const: '7'}}}}
+          - properties: {parameters: {properties: {identifier: {const: 8}}}, rendering: {properties: {qr_payload: {const: '8'}}}}
+          - properties: {parameters: {properties: {identifier: {const: 9}}}, rendering: {properties: {qr_payload: {const: '9'}}}}
+
   zones:
     $defs:
       centerline:
@@ -394,7 +401,7 @@ $defs:
         $defs:
           validation:
             properties:
-              length: {maximum: 1} # TODO: Markings can not be missing for more than 1 meter??
+              length: {maximum: 1} # One continuous gap, including gaps across section boundaries.
               simultaneous_count_outside_intersections: {maximum: 2}
 
       speed_limit:
@@ -470,16 +477,18 @@ $defs:
 
           rendering:
             properties:
-              box_width: {minimum: 0.095, maximum: 0.105}
-              box_height: {minimum: 0.1425, maximum: 0.1575}
-              pictogram_width: {minimum: 0.07125, maximum: 0.07875}   # TODO: Those values seem to be a bit off? Are they calculated?
-              pictogram_height: {minimum: 0.114, maximum: 0.126}
-              pictogram_stroke_width: {minimum: 0.01425, maximum: 0.01575}
+              box_width: {const: 0.1}
+              box_height: {const: 0.15}
+              pictogram_width: {const: 0.075}
+              pictogram_height: {const: 0.12}
+              pictogram_stroke_width: {const: 0.015}
 
           validation:
             properties:
               count_per_crosswalk: {maximum: 1}
 
+  # A designated route starts at the starting line, follows mandatory turns and
+  # returns to the starting line. This shared meaning is enforced by the graph validator.
   # Disciplines: allowed types, simulator settings and counts of derived objects.
   discipline: {type: string, enum: [freedrive_course, obstacle_evasion_course, navigation_course]}
 
@@ -492,19 +501,12 @@ $defs:
         x-caudri:
           course:
             closure: required
-            designated_route:
-              requirement: required
-
-              # TODO: If it is implicit why add explicit definition? I think we can remove the next 4 fields and only declare the requirement for the designated route.
-              implicit: true
-              starts_at: starting_line
-              follows_mandatory_directions: true
-              returns_to: starting_line
+            designated_route: {requirement: required}
 
         $defs:
           allow:
             properties:
-              road_sections: {enum: [straight, arc, clothoid, intersection]}
+              sections: {enum: [straight, arc, clothoid, intersection]}
               road_elements: {enum: [start_box, starting_line, side_road_junction, parking_area]}
               features: {enum: [traffic_sign, surface_marking, artifact]}
               zones: {enum: [centerline, missing_marking, no_passing, expressway, speed_limit, grade]}
@@ -512,7 +514,7 @@ $defs:
 
           allow_variants:
             properties:
-              road_sections.intersection: {enum: [stop, give_way, priority_to_right]}
+              sections.intersection: {enum: [stop, give_way, priority_to_right]}
 
           simulation:
             type: object
@@ -533,17 +535,12 @@ $defs:
         x-caudri:
           course:
             closure: required
-            designated_route:
-              requirement: required
-              implicit: true
-              starts_at: starting_line
-              follows_mandatory_directions: true
-              returns_to: starting_line
+            designated_route: {requirement: required}
 
         $defs:
           allow:
             properties:
-              road_sections: {enum: [straight, arc, clothoid, intersection]}
+              sections: {enum: [straight, arc, clothoid, intersection]}
               road_elements: {enum: [start_box, starting_line, crosswalk, barred_area, side_road_junction, parking_area]}
               features: {enum: [traffic_sign, surface_marking, static_obstacle, artifact]}
               zones: {enum: [centerline, missing_marking, no_passing, expressway, speed_limit, grade]}
@@ -551,7 +548,7 @@ $defs:
 
           allow_variants:
             properties:
-              road_sections.intersection: {enum: [stop, give_way, priority_to_right]}
+              sections.intersection: {enum: [stop, give_way, priority_to_right]}
 
           simulation:
             type: object
@@ -591,7 +588,7 @@ $defs:
         $defs:
           allow:
             properties:
-              road_sections: {enum: [straight, arc, clothoid, intersection]}
+              sections: {enum: [straight, arc, clothoid, intersection]}
               road_elements: {enum: [start_box, starting_line, crosswalk, barred_area, side_road_junction, parking_area]}
               features: {enum: [traffic_sign, surface_marking, landmark, artifact]}
               zones: {enum: [centerline, missing_marking, no_passing, expressway, speed_limit, grade]}
@@ -599,7 +596,7 @@ $defs:
 
           allow_variants:
             properties:
-              road_sections.intersection: {enum: [stop, give_way, priority_to_right]}
+              sections.intersection: {enum: [stop, give_way, priority_to_right]}
 
           simulation:
             type: object
