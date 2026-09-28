@@ -10,7 +10,6 @@ $id: catalog.yaml
 title: CAuDri Track Catalog
 x-caudri:
   version: "1.0"
-  assets_base: assets/
   regulations: regulations.yaml
 
 $defs:
@@ -20,8 +19,8 @@ $defs:
         type: object
         properties:
           asset_path:
-            description: Base path or URI against which relative Catalog asset references are resolved. Renderer configuration
-              may override this location without changing a Track Description.
+            description: Base path or URI for relative Catalog asset references, resolved relative to this catalog file.
+              Renderer configuration may override this location without changing a Track Description.
             type: string
             default: assets/
             format: uri-reference
@@ -160,15 +159,18 @@ $defs:
 
   # Generic size also serves artifacts and markers; only obstacles use these limits.
   # Shared by static_obstacle features and dynamic_obstacle actors.
-  obstacles: # TODO: Define locally at the obstacle type?
+  obstacles:
     $defs:
       size:
+        description: Box dimensions; omitted fields use the shared defaults, including when size is absent.
         allOf:
           - {$ref: '#/$defs/size/$defs/patch'}
           - {$ref: regulations.yaml#/$defs/obstacles/$defs/size}
         properties:
+          length: {default: 0.3}
+          width: {default: 0.2}
           height: {default: 0.15}
-
+        default: {}
 
   # Local position on a (linear) section, relative to its entry port.
   # The position does not change when inverting the direction of travel on the section.
@@ -293,9 +295,9 @@ $defs:
 
     $defs:
       straight:
-        $ref: '#/$defs/road_section_base'
+        $ref: '#/$defs/section_base'
         description: Straight reference-line primitive.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: straight}
           parameters:
@@ -305,18 +307,10 @@ $defs:
               length: {type: number, exclusiveMinimum: 0}
             additionalProperties: false
           elements:
-            type: object
             additionalProperties:
-              oneOf:
-                - {const: false}
-                - {$ref: '#/$defs/elements/$defs/crosswalk'}
-                - {$ref: '#/$defs/elements/$defs/barred_area'}
-                - {$ref: '#/$defs/elements/$defs/side_road_junction'}
-                - {$ref: '#/$defs/elements/$defs/parking_area'}
-                - {$ref: '#/$defs/elements/$defs/starting_line'}
-            propertyNames: {$ref: '#/$defs/identifier'}
-            default: {}
-          features: # TODO: Why do we use object types for the elements but arrays for the features? 
+              properties:
+                type: {enum: [crosswalk, barred_area, side_road_junction, parking_area, starting_line]}
+          features:
             additionalProperties:
               properties:
                 at: {$ref: '#/$defs/local_position'}
@@ -326,9 +320,9 @@ $defs:
           ports: {fixed: [entry, exit]}
 
       arc:
-        $ref: '#/$defs/road_section_base'
+        $ref: '#/$defs/section_base'
         description: Constant-curvature circular arc primitive.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: arc}
           parameters:
@@ -347,14 +341,9 @@ $defs:
                 maximum: 360
             additionalProperties: false
           elements:
-            type: object
             additionalProperties:
-              oneOf:
-                - {const: false}
-                - {$ref: '#/$defs/elements/$defs/starting_line'}
-                - {$ref: '#/$defs/elements/$defs/start_box'}
-            propertyNames: {$ref: '#/$defs/identifier'}
-            default: {}
+              properties:
+                type: {enum: [starting_line, start_box]}
           features:
             additionalProperties:
               properties:
@@ -377,9 +366,9 @@ $defs:
       # Clothoids are curved transition sections with a linear curvature change.
       # Entry and exit curvature must differ. This must be checked by the validator.
       clothoid:
-        $ref: '#/$defs/road_section_base'
+        $ref: '#/$defs/section_base'
         description: Linear-curvature transition primitive.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: clothoid}
           parameters:
@@ -395,13 +384,9 @@ $defs:
                 type: number
             additionalProperties: false
           elements:
-            type: object
             additionalProperties:
-              oneOf:
-                - {const: false}
-                - {$ref: '#/$defs/elements/$defs/starting_line'}
-            propertyNames: {$ref: '#/$defs/identifier'}
-            default: {}
+              properties:
+                type: {enum: [starting_line]}
           features:
             additionalProperties:
               properties:
@@ -412,9 +397,8 @@ $defs:
           ports: {fixed: [entry, exit]}
 
       intersection:
-        $ref: '#/$defs/road_section_base'
+        $ref: '#/$defs/section_base'
         description: Three- or four-arm intersection.
-        required: [type]
         properties:
           type: {const: intersection}
           parameters:
@@ -466,16 +450,19 @@ $defs:
               mandatory_marking_distance: {type: number, default: 0.15}
             additionalProperties: false
           elements:
-            type: object
             additionalProperties: {const: false}
-            propertyNames: {$ref: '#/$defs/identifier'}
-            default: {}
           features:
             additionalProperties:
               properties:
                 at: {$ref: '#/$defs/sections/$defs/intersection/$defs/local_position'}
                 type: {enum: [traffic_sign, surface_marking, custom_marker]}
-          simulation: {$ref: '#/$defs/sections/$defs/intersection/$defs/simulation'}
+          simulation:
+            $ref: regulations.yaml#/$defs/sections/$defs/intersection/$defs/simulation
+            type: object
+            properties:
+              priority_obstacle_distance_before_stop_line: {type: number, default: 0.25}
+              priority_obstacle_distance_after_stop_line: {type: number, default: 0.2}
+            additionalProperties: false
         unevaluatedProperties: false
         x-caudri:
           ports: {fixed: [entry], optional: [left, straight, right], default: [left, straight, right]}
@@ -541,14 +528,6 @@ $defs:
                   controlled_port_count: {type: integer}
                 additionalProperties: false
 
-          simulation:
-            $ref: regulations.yaml#/$defs/sections/$defs/intersection/$defs/simulation
-            type: object
-            properties:
-              priority_obstacle_distance_before_stop_line: {type: number, default: 0.25}
-              priority_obstacle_distance_after_stop_line: {type: number, default: 0.2}
-            additionalProperties: false
-
           local_position:
             description: Cartesian position in the intersection frame; yaw is relative to its x-axis.
             type: object
@@ -575,9 +554,8 @@ $defs:
       # `lower_edge_height` applies equally to the STOP panel and QR code.
       # The mechanical start box shares this Element's footprint but has no independent track description object.
       start_box:
-        $ref: '#/$defs/road_element_base'
+        $ref: '#/$defs/element_base'
         description: Start-area markings behind the root exit.
-        required: [type]
         properties:
           type: {const: start_box}
           parameters:
@@ -589,19 +567,6 @@ $defs:
               lower_edge_height: {type: number, default: 0.15}
             additionalProperties: false
 
-          rendering: {$ref: '#/$defs/elements/$defs/start_box/$defs/rendering'}
-          simulation: {$ref: '#/$defs/elements/$defs/start_box/$defs/simulation'}
-          features:
-            type: object
-            additionalProperties:
-              properties:
-                type: {enum: [custom_marker]}
-        unevaluatedProperties: false
-        x-caudri:
-          compatibility: {root_only: true}
-          defaults: {slot: start_box, enabled: true}
-
-        $defs:
           rendering:
             $ref: regulations.yaml#/$defs/elements/$defs/start_box/$defs/rendering
             type: object
@@ -618,7 +583,23 @@ $defs:
               qr_overlay: {type: string}
               qr_artwork: {type: string}
             additionalProperties: false
+          simulation:
+            $ref: regulations.yaml#/$defs/elements/$defs/start_box/$defs/simulation
+            type: object
+            properties:
+              gate_open_duration: {type: number, exclusiveMinimum: 0}
+            additionalProperties: false
+          features:
+            type: object
+            additionalProperties:
+              properties:
+                type: {enum: [custom_marker]}
+        unevaluatedProperties: false
+        x-caudri:
+          compatibility: {root_only: true}
+          defaults: {slot: start_box, enabled: true}
 
+        $defs:
           validation:
             $ref: regulations.yaml#/$defs/elements/$defs/start_box/$defs/validation
             type: object
@@ -627,19 +608,12 @@ $defs:
               root_section_direction: {type: string}
             additionalProperties: false
 
-          simulation:
-            $ref: regulations.yaml#/$defs/elements/$defs/start_box/$defs/simulation
-            type: object
-            properties:
-              gate_open_duration: {type: number, exclusiveMinimum: 0}
-            additionalProperties: false
-
       # The root starting line starts at the specified root port and extends forward.
       # If the root port is an exit port, the starting line extends into the connected successor section.
       # The root starting line defines the map origin on the centerline at the trailing edge of the starting line.
       # If the starting line is disabled, the map origin is still defined at the theoretical position.
       starting_line:
-        $ref: '#/$defs/road_element_base'
+        $ref: '#/$defs/element_base'
         description: Starting line marking at the root entry/exit or at a section-local position.
         # For testing/debugging purposes, the starting line can also be painted solid.
         if:
@@ -652,7 +626,6 @@ $defs:
         else:
           properties:
             rendering: {$ref: '#/$defs/elements/$defs/starting_line/$defs/rendering/$defs/checkered'}
-        required: [type]
         properties:
           type: {const: starting_line}
           parameters:
@@ -710,9 +683,9 @@ $defs:
             additionalProperties: false
 
       crosswalk:
-        $ref: '#/$defs/road_element_base'
+        $ref: '#/$defs/element_base'
         description: Zebra crossing with roadside signs and pedestrian waiting areas.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: crosswalk}
           parameters:
@@ -773,9 +746,9 @@ $defs:
             # Waiting areas are derived from parameters.waiting_area_sides.
 
       barred_area:
-        $ref: '#/$defs/road_element_base'
+        $ref: '#/$defs/element_base'
         description: Trapezoidal hatched marking blocking one lane.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: barred_area}
           parameters:
@@ -794,7 +767,18 @@ $defs:
               priority_sign_distance: {type: number, default: 0.3}
             additionalProperties: false
 
-          rendering: {$ref: '#/$defs/elements/$defs/barred_area/$defs/rendering'}
+          rendering:
+            $ref: regulations.yaml#/$defs/elements/$defs/barred_area/$defs/rendering
+            type: object
+            properties:
+              # Outline and hatch angles are measured against the outer lane boundary.
+              # hatch_longitudinal_gap is the free gap along that boundary, not the
+              # center-to-center pitch and not a lateral or perpendicular distance.
+              outline_width: {type: number, default: 0.02}
+              hatch_angle: {type: number, default: 27}
+              hatch_width: {type: number, default: 0.04}
+              hatch_longitudinal_gap: {type: number, default: 0.15}
+            additionalProperties: false
           features:
             type: object
             properties:
@@ -812,19 +796,6 @@ $defs:
               parameters: {sign: oncoming_traffic_priority}
 
         $defs:
-          rendering:
-            $ref: regulations.yaml#/$defs/elements/$defs/barred_area/$defs/rendering
-            type: object
-            properties:
-              # Outline and hatch angles are measured against the outer lane boundary.
-              # hatch_longitudinal_gap is the free gap along that boundary, not the
-              # center-to-center pitch and not a lateral or perpendicular distance.
-              outline_width: {type: number, default: 0.02}
-              hatch_angle: {type: number, default: 27}
-              hatch_width: {type: number, default: 0.04}
-              hatch_longitudinal_gap: {type: number, default: 0.15}
-            additionalProperties: false
-
           validation:
             $ref: regulations.yaml#/$defs/elements/$defs/barred_area/$defs/validation
             type: object
@@ -835,9 +806,9 @@ $defs:
             additionalProperties: false
 
       side_road_junction:
-        $ref: '#/$defs/road_element_base'
+        $ref: '#/$defs/element_base'
         description: Dashed non-traversable outer marking.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: side_road_junction}
           parameters:
@@ -849,14 +820,6 @@ $defs:
               direction: {$ref: '#/$defs/direction'}
             additionalProperties: false
 
-          rendering: {$ref: '#/$defs/elements/$defs/side_road_junction/$defs/rendering'}
-          features:
-            type: object
-            additionalProperties:
-              const: false
-        unevaluatedProperties: false
-
-        $defs:
           rendering:
             $ref: regulations.yaml#/$defs/elements/$defs/side_road_junction/$defs/rendering
             type: object
@@ -864,7 +827,13 @@ $defs:
               stroke_length: {type: number}
               gap_length: {type: number}
             additionalProperties: false
+          features:
+            type: object
+            additionalProperties:
+              const: false
+        unevaluatedProperties: false
 
+        $defs:
           validation:
             $ref: regulations.yaml#/$defs/elements/$defs/side_road_junction/$defs/validation
             type: object
@@ -872,23 +841,11 @@ $defs:
               length: {type: number, exclusiveMinimum: 0}
             additionalProperties: false
 
-      # `parallel_parking` and `perpendicular_parking` determine type and side;
-      # omit a slot or set it to `false` to disable it. Distances and extents are
-      # independent, so opposite bays need not align.
-      # Announcement distance is measured along the designated route before the
-      # first Parking Area. Spot `extent_along_road` is always parallel to the road;
-      # `extent_lateral` is depth away from it, regardless of parking type.
-      # Parallel depth starts at the road's outer marking line. A Parking Area is
-      # enclosed by a three-sided trapezoidal outline; the existing road boundary
-      # is its open fourth side. Its sloped ends use the configured default angle,
-      # which must satisfy the Regulations range.
-      # `direction` defines approach order. Lot distances are measured from the
-      # Parking Area range start, Spot distances from their Lot origin; backward
-      # direction reverses the order used for increasing parallel-spot lengths. # TODO: Rephrase and move the comments to the required properties
       parking_area:
-        $ref: '#/$defs/road_element_base'
-        description: Straight planar area containing parallel or perpendicular parking lots.
-        required: [type, parameters]
+        $ref: '#/$defs/element_base'
+        description: Straight planar area containing parallel or perpendicular parking lots. Each bay has a three-sided
+          trapezoidal outline; the existing road boundary is its open fourth side.
+        required: [parameters]
         properties:
           type: {const: parking_area}
           parameters:
@@ -903,22 +860,30 @@ $defs:
             required: [range]
             properties:
               range: {$ref: '#/$defs/range'}
-              direction: {$ref: '#/$defs/direction'}
+              direction:
+                $ref: '#/$defs/direction'
+                description: Approach direction and direction-relative bay sides. Backward reverses the approach order used
+                  for increasing parallel-spot lengths; distance coordinates remain relative to the range start.
               parallel_parking:
-                description: Parallel parking bay on the direction-relative right side.
+                description: Parallel parking bay on the direction-relative right side. Omit or set to false to disable.
+                  Its distances and extents are independent of the opposite bay.
                 oneOf:
                   - {const: false}
                   - {$ref: '#/$defs/elements/$defs/parking_area/$defs/parallel_parking_lot'}
 
               perpendicular_parking:
-                description: Perpendicular parking bay on the direction-relative left side.
+                description: Perpendicular parking bay on the direction-relative left side. Omit or set to false to disable.
+                  Its distances and extents are independent of the opposite bay.
                 oneOf:
                   - {const: false}
                   - {$ref: '#/$defs/elements/$defs/parking_area/$defs/perpendicular_parking_lot'}
 
               # Angle between a sloped end of the bay outline and the outer road marking.
               boundary_side_angle: {type: number, default: 60}
-              announcement_sign_distance: {type: number, default: 0.3}
+              announcement_sign_distance:
+                description: Distance along the designated route before the first Parking Area.
+                type: number
+                default: 0.3
             additionalProperties: false
 
           rendering:
@@ -974,7 +939,8 @@ $defs:
                 type: number
                 exclusiveMinimum: 0
               extent_lateral:
-                description: Default depth of this lot's spots, measured away from the road.
+                description: Default depth of this lot's spots, measured away from the road. For parallel parking,
+                  measurement starts at the road's outer marking line.
                 type: number
                 exclusiveMinimum: 0
               spots: {$ref: '#/$defs/elements/$defs/parking_area/$defs/parking_spots'}
@@ -984,7 +950,7 @@ $defs:
                   properties:
                     type: {enum: [static_obstacle, custom_marker]}
                     at: {$ref: '#/$defs/local_position'}
-              metadata: {type: object}
+              metadata: {$ref: '#/$defs/metadata'}
             additionalProperties: false
 
           parking_spots:
@@ -1016,12 +982,12 @@ $defs:
                     obstacle:
                       properties:
                         type: {const: static_obstacle}
-                metadata: {type: object}
+                metadata: {$ref: '#/$defs/metadata'}
               additionalProperties: false
               x-caudri:
                 expansion:
                   # Generated only for blocked spots; features.obstacle can override or disable this slot.
-                  # The renderer derives its position and footprint from the spot and obstacle limits.
+                  # The renderer derives its position and footprint from the spot and obstacle limit.
                   # Height inherits the shared 0.15 m obstacle default.
                   obstacle:
                     when: {state: blocked}
@@ -1060,7 +1026,7 @@ $defs:
       traffic_sign:
         $ref: '#/$defs/features/$defs/traffic_sign/$defs/patch'
         description: Physical roadside traffic sign.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           parameters:
             if:
@@ -1071,29 +1037,30 @@ $defs:
             then:
               required: [displayed_value]
             required: [sign]
+          size: {$ref: '#/$defs/size'}
         unevaluatedProperties: false
         x-caudri:
           variants:
-            stop: {shape: octagon, size: standard}
-            give_way: {shape: triangle, size: standard}
-            priority_road: {shape: diamond, size: priority}
-            mandatory_left: {shape: circle, size: round}
-            mandatory_right: {shape: circle, size: round}
-            crosswalk: {shape: square, size: standard}
-            parking_zone: {shape: square, size: standard}
-            oncoming_traffic_priority: {shape: circle, size: round}
-            speed_limit_begin: {shape: square, size: standard}
-            speed_limit_end: {shape: square, size: standard}
-            no_passing_begin: {shape: circle, size: round}
-            no_passing_end: {shape: circle, size: round}
-            expressway_begin: {shape: square, size: standard}
-            expressway_end: {shape: square, size: standard}
-            uphill_grade: {shape: triangle, size: standard}
-            downhill_grade: {shape: triangle, size: standard}
-            guide_left: {shape: square, size: guide}
-            guide_left_multiple: {shape: rectangle, size: guide_multiple}
-            guide_right: {shape: square, size: guide}
-            guide_right_multiple: {shape: rectangle, size: guide_multiple}
+            stop: {shape: octagon, size: standard, asset: traffic_sign/stop.svg}
+            give_way: {shape: triangle, size: standard, asset: traffic_sign/give_way.svg}
+            priority_road: {shape: diamond, size: priority, asset: traffic_sign/priority_road.svg}
+            mandatory_left: {shape: circle, size: round, asset: traffic_sign/mandatory_left.svg}
+            mandatory_right: {shape: circle, size: round, asset: traffic_sign/mandatory_right.svg}
+            crosswalk: {shape: square, size: standard, asset: traffic_sign/crosswalk.svg}
+            parking_zone: {shape: square, size: standard, asset: traffic_sign/parking_zone.svg}
+            oncoming_traffic_priority: {shape: circle, size: round, asset: traffic_sign/oncoming_traffic_priority.svg}
+            speed_limit_begin: {shape: square, size: standard, asset: 'traffic_sign/speed_limit_begin/{displayed_value}.svg'}
+            speed_limit_end: {shape: square, size: standard, asset: 'traffic_sign/speed_limit_end/{displayed_value}.svg'}
+            no_passing_begin: {shape: circle, size: round, asset: traffic_sign/no_passing_begin.svg}
+            no_passing_end: {shape: circle, size: round, asset: traffic_sign/no_passing_end.svg}
+            expressway_begin: {shape: square, size: standard, asset: traffic_sign/expressway_begin.svg}
+            expressway_end: {shape: square, size: standard, asset: traffic_sign/expressway_end.svg}
+            uphill_grade: {shape: triangle, size: standard, asset: 'traffic_sign/uphill_grade/{displayed_value}.svg'}
+            downhill_grade: {shape: triangle, size: standard, asset: 'traffic_sign/downhill_grade/{displayed_value}.svg'}
+            guide_left: {shape: square, size: guide, asset: traffic_sign/guide_left.svg}
+            guide_left_multiple: {shape: rectangle, size: guide_multiple, asset: traffic_sign/guide_left_multiple.svg}
+            guide_right: {shape: square, size: guide, asset: traffic_sign/guide_right.svg}
+            guide_right_multiple: {shape: rectangle, size: guide_multiple, asset: traffic_sign/guide_right_multiple.svg}
 
         $defs:
           parameters:
@@ -1129,7 +1096,7 @@ $defs:
             $ref: regulations.yaml#/$defs/features/$defs/traffic_sign/$defs/rendering
             type: object
             properties:
-              # Variant schemas below supply asset defaults; an explicit asset wins.
+              # x-caudri.variants supplies the asset template; an explicit asset wins.
               asset: {type: string, format: uri-template}
               standard_width: {type: number, default: 0.15}
               standard_height: {type: number, default: 0.15}
@@ -1142,127 +1109,6 @@ $defs:
               guide_multiple_width: {type: number, default: 0.3}
               guide_multiple_height: {type: number, default: 0.1}
             additionalProperties: false
-
-            $defs:
-              stop:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/stop.svg, format: uri-template}
-                additionalProperties: false
-
-              give_way:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/give_way.svg, format: uri-template}
-                additionalProperties: false
-
-              priority_road:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/priority_road.svg, format: uri-template}
-                additionalProperties: false
-
-              mandatory_left:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/mandatory_left.svg, format: uri-template}
-                additionalProperties: false
-
-              mandatory_right:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/mandatory_right.svg, format: uri-template}
-                additionalProperties: false
-
-              crosswalk:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/crosswalk.svg, format: uri-template}
-                additionalProperties: false
-
-              parking_zone:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/parking_zone.svg, format: uri-template}
-                additionalProperties: false
-
-              oncoming_traffic_priority:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/oncoming_traffic_priority.svg, format: uri-template}
-                additionalProperties: false
-
-              speed_limit_begin:
-                type: object
-                properties:
-                  asset: {type: string, default: 'traffic_sign/speed_limit_begin/{displayed_value}.svg', format: uri-template}
-                additionalProperties: false
-
-              speed_limit_end:
-                type: object
-                properties:
-                  asset: {type: string, default: 'traffic_sign/speed_limit_end/{displayed_value}.svg', format: uri-template}
-                additionalProperties: false
-
-              no_passing_begin:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/no_passing_begin.svg, format: uri-template}
-                additionalProperties: false
-
-              no_passing_end:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/no_passing_end.svg, format: uri-template}
-                additionalProperties: false
-
-              expressway_begin:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/expressway_begin.svg, format: uri-template}
-                additionalProperties: false
-
-              expressway_end:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/expressway_end.svg, format: uri-template}
-                additionalProperties: false
-
-              uphill_grade:
-                type: object
-                properties:
-                  asset: {type: string, default: 'traffic_sign/uphill_grade/{displayed_value}.svg', format: uri-template}
-                additionalProperties: false
-
-              downhill_grade:
-                type: object
-                properties:
-                  asset: {type: string, default: 'traffic_sign/downhill_grade/{displayed_value}.svg', format: uri-template}
-                additionalProperties: false
-
-              guide_left:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/guide_left.svg, format: uri-template}
-                additionalProperties: false
-
-              guide_left_multiple:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/guide_left_multiple.svg, format: uri-template}
-                additionalProperties: false
-
-              guide_right:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/guide_right.svg, format: uri-template}
-                additionalProperties: false
-
-              guide_right_multiple:
-                type: object
-                properties:
-                  asset: {type: string, default: traffic_sign/guide_right_multiple.svg, format: uri-template}
-                additionalProperties: false
 
           validation:
             $ref: regulations.yaml#/$defs/features/$defs/traffic_sign/$defs/validation
@@ -1277,7 +1123,6 @@ $defs:
 
           patch:
             $ref: '#/$defs/feature_base'
-            required: [type]
             properties:
               type: {const: traffic_sign}
               parameters: {$ref: '#/$defs/features/$defs/traffic_sign/$defs/parameters'}
@@ -1290,7 +1135,7 @@ $defs:
       surface_marking:
         $ref: '#/$defs/features/$defs/surface_marking/$defs/patch'
         description: Explicit road-surface marking.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           parameters:
             allOf:
@@ -1305,6 +1150,7 @@ $defs:
                     marking: {const: mandatory_direction}
                 then: {required: [target]}
             required: [marking]
+          size: {$ref: '#/$defs/size'}
         unevaluatedProperties: false
 
         $defs:
@@ -1439,26 +1285,20 @@ $defs:
                 then:
                   properties:
                     rendering: {$ref: '#/$defs/features/$defs/surface_marking/$defs/rendering/$defs/mandatory_direction'}
-            required: [type]
             properties:
               type: {const: surface_marking}
               parameters: {$ref: '#/$defs/features/$defs/surface_marking/$defs/parameters'}
               rendering: {$ref: '#/$defs/features/$defs/surface_marking/$defs/rendering'}
             unevaluatedProperties: false
 
-      # faces uses section-forward travel: the right sign faces forward, the left backward.
-      # Each QR code is integral to its sign. Standalone QR Features are not a
-      # supported Catalog type. One sign stands on each side and faces traffic in
-      # the adjacent lane, making the Landmark detectable in both directions.
-      # Identifiers are unique and contiguous from zero. Placements must remain
-      # unobstructed by Road Elements and obstacles. # TODO: Move comments to corresponding properties
       landmark:
         $ref: '#/$defs/features/$defs/landmark/$defs/patch'
         description: Landmark represented by roadside signs with integral QR codes.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           parameters:
             required: [identifier]
+          size: {$ref: '#/$defs/size'}
         unevaluatedProperties: false
 
         $defs:
@@ -1467,14 +1307,17 @@ $defs:
             type: object
             properties:
               identifier:
-                description: Unique numeric navigation identifier, corresponds to the QR code payload.
+                description: Unique numeric navigation identifier, contiguous from zero. Encoded as the QR payload unless
+                  rendering.qr_payload explicitly overrides the content.
                 type: integer
               sign_sides:
+                description: One sign on each roadside.
                 type: array
                 items: {$ref: '#/$defs/side'}
                 default: [left, right]
               faces:
-                description: Travel direction from which each roadside sign is visible, as for traffic_sign.faces.
+                description: Travel direction from which each sign is visible, as for traffic_sign.faces. In section-forward
+                  orientation the right sign faces forward and the left sign backward, each facing its adjacent lane.
                 type: object
                 properties:
                   left: {type: string, enum: [forward, backward], default: backward}
@@ -1511,7 +1354,6 @@ $defs:
             allOf:
               - {$ref: '#/$defs/feature_base'}
               - {$ref: regulations.yaml#/$defs/features/$defs/landmark}
-            required: [type]
             properties:
               type: {const: landmark}
               parameters: {$ref: '#/$defs/features/$defs/landmark/$defs/parameters'}
@@ -1521,63 +1363,61 @@ $defs:
       static_obstacle:
         $ref: '#/$defs/features/$defs/static_obstacle/$defs/patch'
         description: Stationary box obstacle or parked vehicle.
-        required: [type, size]
-        properties:
-          size: {$ref: '#/$defs/obstacles/$defs/size', required: [length, width]} # TODO: Height and width can also have default parameters
         unevaluatedProperties: false
 
         $defs:
-          parameters: {type: object, additionalProperties: false}
-
           patch:
             $ref: '#/$defs/feature_base'
-            required: [type]
             properties:
               type: {const: static_obstacle}
-              parameters: {$ref: '#/$defs/features/$defs/static_obstacle/$defs/parameters'}
-              simulation: {$ref: '#/$defs/features/$defs/static_obstacle/$defs/simulation'}
+              parameters: {type: object, additionalProperties: false}
+              simulation:
+                type: object
+                properties:
+                  fixed_to_ground: {type: boolean, default: false}
+                additionalProperties: false
               size: {$ref: '#/$defs/obstacles/$defs/size'}
             unevaluatedProperties: false
-
-          simulation:
-            type: object
-            properties:
-              fixed_to_ground: {type: boolean, default: false}
-            additionalProperties: false
 
       # Artifacts belong outside valid lane markings and are not part of track
       # geometry, even when they visually resemble an old marking or obstacle.
       artifact:
+        $ref: '#/$defs/features/$defs/artifact/$defs/patch'
         description: Non-track physical object or old marking.
-        $ref: '#/$defs/feature_base'
-        required: [type]
+        # Full objects need both planar extents when size is specified; patches may change one field.
         properties:
-          type: {const: artifact}
-          parameters:
-            type: object
-            properties: {}
-            additionalProperties: false
-        unevaluatedProperties: false
+          size: {$ref: '#/$defs/size'}
+
+        $defs:
+          patch:
+            $ref: '#/$defs/feature_base'
+            properties:
+              type: {const: artifact}
+              parameters: {type: object, additionalProperties: false}
+            unevaluatedProperties: false
 
       custom_marker:
+        $ref: '#/$defs/features/$defs/custom_marker/$defs/patch'
         description: Non-competition visualization or debugging marker.
-        $ref: '#/$defs/feature_base'
-        required: [type]
+        # Full objects need both planar extents when size is specified; patches may change one field.
         properties:
-          type: {const: custom_marker}
-          parameters:
-            type: object
-            properties: {}
-            additionalProperties: true
-          rendering:
-            type: object
+          size: {$ref: '#/$defs/size'}
+
+        $defs:
+          patch:
+            $ref: '#/$defs/feature_base'
             properties:
-              asset:
-                description: SVG resource rendered at the marker's pose and object-aligned size.
-                type: string
-                format: uri-reference
-            additionalProperties: false
-        unevaluatedProperties: false
+              type: {const: custom_marker}
+              parameters: {type: object}
+              rendering:
+                type: object
+                properties:
+                  asset:
+                    description: SVG resource rendered at the marker's pose and object-aligned size.
+                    type: string
+                    format: uri-reference
+                additionalProperties: false
+            unevaluatedProperties: false
 
       # Typed partial overrides share schemas with complete feature objects.
       patch:
@@ -1586,12 +1426,8 @@ $defs:
           - {$ref: '#/$defs/features/$defs/surface_marking/$defs/patch'}
           - {$ref: '#/$defs/features/$defs/landmark/$defs/patch'}
           - {$ref: '#/$defs/features/$defs/static_obstacle/$defs/patch'}
-          - {$ref: '#/$defs/features/$defs/artifact'}
-          - {$ref: '#/$defs/features/$defs/custom_marker'}
-
-    # Complete features need both planar extents when size is supplied; patches may change one field.
-    properties:
-      size: {$ref: '#/$defs/size'}
+          - {$ref: '#/$defs/features/$defs/artifact/$defs/patch'}
+          - {$ref: '#/$defs/features/$defs/custom_marker/$defs/patch'}
 
   zones:
     oneOf:
@@ -1603,6 +1439,17 @@ $defs:
       - {$ref: '#/$defs/zones/$defs/grade'}
 
     $defs:
+      parameters:
+        type: object
+        # Exactly one interval; the containing scope further restricts range versus span.
+        oneOf:
+          - {required: [range]}
+          - {required: [span]}
+        properties:
+          direction: {$ref: '#/$defs/direction'}
+          range: {$ref: '#/$defs/range'}
+          span: {$ref: '#/$defs/span'}
+
       # The existing Zone direction determines track graph traversal. 
       # For `mixed`, it also identifies the side carrying the dashed component.
       # `backward` swaps the solid and dashed sides. 
@@ -1610,22 +1457,17 @@ $defs:
       centerline:
         $ref: '#/$defs/zone_base'
         description: Override of the inherited centerline style.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: centerline}
           parameters:
-            oneOf:
-              - {required: [range]}
-              - {required: [span]}
-            $ref: regulations.yaml#/$defs/zones/$defs/centerline/$defs/parameters
-            type: object
+            allOf:
+              - {$ref: '#/$defs/zones/$defs/parameters'}
+              - {$ref: regulations.yaml#/$defs/zones/$defs/centerline/$defs/parameters}
             required: [style]
             properties:
               style: {type: string}
-              direction: {$ref: '#/$defs/direction'}
-              range: {$ref: '#/$defs/range'}
-              span: {$ref: '#/$defs/span'}
-            additionalProperties: false
+            unevaluatedProperties: false
         unevaluatedProperties: false
 
       # Use `range` only when nested in one Section and `span` only at track root.
@@ -1633,26 +1475,20 @@ $defs:
       missing_marking:
         $ref: '#/$defs/zone_base'
         description: Missing lane markings over a local range or graph-spanning path.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: missing_marking}
           parameters:
-            oneOf:
-              - {required: [range]}
-              - {required: [span]}
-            type: object
+            $ref: '#/$defs/zones/$defs/parameters'
             required: [markings]
             properties:
-              range: {$ref: '#/$defs/range'}
-              span: {$ref: '#/$defs/span'}
-              direction: {$ref: '#/$defs/direction'}
               markings:
                 description: Marking roles are resolved in Section-local orientation before applying travel direction.
                 type: array
                 items: {enum: [left_boundary, centerline, right_boundary]}
                 minItems: 1
                 uniqueItems: true
-            additionalProperties: false
+            unevaluatedProperties: false
         unevaluatedProperties: false
 
         $defs:
@@ -1674,24 +1510,24 @@ $defs:
       speed_limit:
         $ref: '#/$defs/zone_base'
         description: Directed speed-limit interval.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: speed_limit}
           parameters:
-            oneOf:
-              - {required: [range]}
-              - {required: [span]}
-            $ref: regulations.yaml#/$defs/zones/$defs/speed_limit/$defs/parameters
-            type: object
+            allOf:
+              - {$ref: '#/$defs/zones/$defs/parameters'}
+              - {$ref: regulations.yaml#/$defs/zones/$defs/speed_limit/$defs/parameters}
             required: [value_kmh]
             properties:
               value_kmh: {type: integer, exclusiveMinimum: 0}
-              direction: {$ref: '#/$defs/direction'}
-              range: {$ref: '#/$defs/range'}
-              span: {$ref: '#/$defs/span'}
-            additionalProperties: false
+            unevaluatedProperties: false
 
-          simulation: {$ref: '#/$defs/zones/$defs/speed_limit/$defs/simulation'}
+          simulation:
+            $ref: regulations.yaml#/$defs/zones/$defs/speed_limit/$defs/simulation
+            type: object
+            properties:
+              displayed_to_vehicle_speed_scale: {type: number} # TODO: This is fixed for our competition (1:10 scale) and can be removed
+            additionalProperties: false
         unevaluatedProperties: false
         x-caudri:
           expansion:
@@ -1713,38 +1549,26 @@ $defs:
               parameters: {marking: speed_limit_end}
               parameters_from: {displayed_value: owner.parameters.value_kmh}
 
-        $defs:
-          simulation:
-            $ref: regulations.yaml#/$defs/zones/$defs/speed_limit/$defs/simulation
-            type: object
-            properties:
-              displayed_to_vehicle_speed_scale: {type: number}
-            additionalProperties: false
-
       # This Zone defaults to a `double_solid` centerline.
       # With `mixed`, direction selects the protected driving lane, whose adjacent component is SOLID 
       # (unlike a centerline Zone, whose direction selects the DASHED side).
       no_passing:
         $ref: '#/$defs/zone_base'
         description: Directed no-passing interval.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: no_passing}
           parameters:
-            oneOf:
-              - {required: [range]}
-              - {required: [span]}
-            $ref: regulations.yaml#/$defs/zones/$defs/no_passing/$defs/parameters
-            type: object
+            allOf:
+              - {$ref: '#/$defs/zones/$defs/parameters'}
+              - {$ref: regulations.yaml#/$defs/zones/$defs/no_passing/$defs/parameters}
             properties:
               centerline: {type: string, default: double_solid}
               direction:
                 $ref: '#/$defs/direction'
                 description: Protected driving direction; with mixed lines its adjacent component is solid. Forward protects
                   the right lane, backward the left lane.
-              range: {$ref: '#/$defs/range'}
-              span: {$ref: '#/$defs/span'}
-            additionalProperties: false
+            unevaluatedProperties: false
         unevaluatedProperties: false
         x-caudri:
           expansion:
@@ -1771,19 +1595,12 @@ $defs:
       expressway:
         $ref: '#/$defs/zone_base'
         description: Directed expressway interval.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: expressway}
           parameters:
-            oneOf:
-              - {required: [range]}
-              - {required: [span]}
-            type: object
-            properties:
-              direction: {$ref: '#/$defs/direction'}
-              range: {$ref: '#/$defs/range'}
-              span: {$ref: '#/$defs/span'}
-            additionalProperties: false
+            $ref: '#/$defs/zones/$defs/parameters'
+            unevaluatedProperties: false
         unevaluatedProperties: false
         x-caudri:
           expansion:
@@ -1809,15 +1626,13 @@ $defs:
       grade:
         $ref: '#/$defs/zone_base'
         description: Directed signed road-grade interval.
-        required: [type, parameters]
+        required: [parameters]
         properties:
           type: {const: grade}
           parameters:
-            oneOf:
-              - {required: [range]}
-              - {required: [span]}
-            $ref: regulations.yaml#/$defs/zones/$defs/grade/$defs/parameters
-            type: object
+            allOf:
+              - {$ref: '#/$defs/zones/$defs/parameters'}
+              - {$ref: regulations.yaml#/$defs/zones/$defs/grade/$defs/parameters}
             required: [grade_percent]
             properties:
               grade_percent: {type: number}
@@ -1825,13 +1640,11 @@ $defs:
                 $ref: '#/$defs/direction'
                 description: Direction in which positive grade_percent climbs. With backward, positive grade descends
                   along increasing section distance.
-              range: {$ref: '#/$defs/range'}
-              span: {$ref: '#/$defs/span'}
               warning_sign_advance:
                 description: Distance before the first non-zero grade in each sign's approach direction.
                 type: number
                 default: 1.0
-            additionalProperties: false
+            unevaluatedProperties: false
         unevaluatedProperties: false
         x-caudri:
           expansion:
@@ -1856,7 +1669,7 @@ $defs:
       dynamic_obstacle:
         $ref: '#/$defs/actor_base'
         description: Moving obstacle following the road network.
-        required: [type, spawn, size]
+        required: [spawn]
         properties:
           type: {const: dynamic_obstacle}
           parameters:
@@ -1867,7 +1680,7 @@ $defs:
                   route.
                 $ref: '#/$defs/span'
             additionalProperties: false
-          size: {$ref: '#/$defs/obstacles/$defs/size', required: [length, width]}
+          size: {$ref: '#/$defs/obstacles/$defs/size'}
           simulation: {$ref: '#/$defs/actors/$defs/dynamic_obstacle/$defs/simulation'}
         unevaluatedProperties: false
 
@@ -1886,7 +1699,7 @@ $defs:
             properties:
               type: {const: follow_route}
               parameters:
-                $ref: regulations.yaml#/$defs/actors/$defs/dynamic_obstacle/$defs/behaviors/$defs/follow_route/$defs/parameters
+                $ref: regulations.yaml#/$defs/actors/$defs/dynamic_obstacle/$defs/behavior/$defs/follow_route/$defs/parameters
                 type: object
                 properties:
                   lane: {enum: [left, right]}
@@ -1912,7 +1725,7 @@ $defs:
       pedestrian:
         $ref: '#/$defs/actor_base'
         description: Pedestrian associated with a crosswalk.
-        required: [type, parameters, simulation]
+        required: [parameters, simulation]
         properties:
           type: {const: pedestrian}
           parameters:
@@ -1925,19 +1738,6 @@ $defs:
                 pattern: ^[a-z][a-z0-9_-]*\.[a-z][a-z0-9_-]*$
             additionalProperties: false
 
-          rendering: {$ref: '#/$defs/actors/$defs/pedestrian/$defs/rendering'}
-          simulation: {$ref: '#/$defs/actors/$defs/pedestrian/$defs/simulation'}
-        unevaluatedProperties: false
-
-        $defs:
-          simulation:
-            type: object
-            required: [behavior]
-            properties:
-              speed: {type: number, exclusiveMinimum: 0}
-              behavior: {$ref: '#/$defs/actors/$defs/pedestrian/$defs/behavior'}
-            additionalProperties: false
-
           rendering:
             $ref: regulations.yaml#/$defs/actors/$defs/pedestrian/$defs/rendering
             type: object
@@ -1948,6 +1748,18 @@ $defs:
               pictogram_width: {type: number, default: 0.075}
               pictogram_height: {type: number, default: 0.12}
               pictogram_stroke_width: {type: number, default: 0.015}
+            additionalProperties: false
+          simulation: {$ref: '#/$defs/actors/$defs/pedestrian/$defs/simulation'}
+          size: {$ref: '#/$defs/size'}
+        unevaluatedProperties: false
+
+        $defs:
+          simulation:
+            type: object
+            required: [behavior]
+            properties:
+              speed: {type: number, exclusiveMinimum: 0}
+              behavior: {$ref: '#/$defs/actors/$defs/pedestrian/$defs/behavior'}
             additionalProperties: false
 
           validation:
@@ -1965,7 +1777,7 @@ $defs:
             properties:
               type: {const: crosswalk_traverse}
               parameters:
-                $ref: regulations.yaml#/$defs/actors/$defs/pedestrian/$defs/behaviors/$defs/crosswalk_traverse/$defs/parameters
+                $ref: regulations.yaml#/$defs/actors/$defs/pedestrian/$defs/behavior/$defs/crosswalk_traverse/$defs/parameters
                 type: object
                 required: [direction]
                 properties:
@@ -2000,14 +1812,19 @@ $defs:
     propertyNames: {$ref: '#/$defs/identifier'}
     default: {}
 
-  road_section_base:
+  # Global object (section, element, feature, etc.) definitions referenced by other objects.
+  # Open bases share identity and metadata. Concrete types close their own fields.
+  object_base:
     type: object
     required: [type]
     properties:
       type: {$ref: '#/$defs/identifier'}
-      parameters:
-        type: object
-        default: {}
+      parameters: {type: object, default: {}}
+      metadata: {$ref: '#/$defs/metadata'}
+
+  section_base:
+    $ref: '#/$defs/object_base'
+    properties:
       road: {$ref: '#/$defs/road'}
       elements:
         type: object
@@ -2019,65 +1836,40 @@ $defs:
         default: {}
       zones: {$ref: '#/$defs/section_zones'}
       features: {$ref: '#/$defs/feature_slots'}
-      metadata: {$ref: '#/$defs/metadata'}
 
-  road_element_base:
-    type: object
-    required: [type]
+  element_base:
+    $ref: '#/$defs/object_base'
     properties:
-      type: {$ref: '#/$defs/identifier'}
-      parameters:
-        type: object
-        default: {}
       features:
         $ref: '#/$defs/feature_slots'
         additionalProperties:
           properties:
             at: {$ref: '#/$defs/local_position'}
-      metadata: {$ref: '#/$defs/metadata'}
 
   zone_base:
-    type: object
-    required: [type]
+    $ref: '#/$defs/object_base'
     properties:
-      type: {$ref: '#/$defs/identifier'}
-      parameters:
-        type: object
-        default: {}
       features:
         $ref: '#/$defs/feature_slots'
         additionalProperties:
           properties:
             at: {$ref: '#/$defs/local_position'}
-      metadata: {$ref: '#/$defs/metadata'}
 
   actor_base:
-    type: object
-    required: [type]
+    $ref: '#/$defs/object_base'
     properties:
-      type: {$ref: '#/$defs/identifier'}
       spawn: {$ref: '#/$defs/actor_spawn'}
-      size: {$ref: '#/$defs/size'}
-      parameters:
-        type: object
-        default: {}
-      metadata: {$ref: '#/$defs/metadata'}
 
   feature_base:
-    type: object
+    $ref: '#/$defs/object_base'
     not: {required: [at, pose]}
     properties:
-      type: {$ref: '#/$defs/identifier'}
-      parameters:
-        type: object
-        default: {}
       at: {$ref: '#/$defs/position'}
       pose: {$ref: '#/$defs/pose'}
 
       size: {$ref: '#/$defs/size/$defs/patch'}
-      metadata: {$ref: '#/$defs/metadata'}
 
-  # Explicit root features and partial overrides of generated feature slots.
+  # Explicit root features and partial overrides of generated feature slots.s
   root_feature:
     $ref: '#/$defs/features'
     oneOf:

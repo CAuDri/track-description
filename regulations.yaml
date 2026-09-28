@@ -2,6 +2,8 @@
 #
 # This is a machine-readable version of the CAuDri-Challenge regulations. 
 # It contains limits and constraints for the track layout and simulation. 
+#
+# It will be 
 
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: regulations.yaml
@@ -11,8 +13,7 @@ x-caudri:
   version: "1.0"
   ruleset: '2026-05-06'
 
-  # Physical fabrication tolerance for dimensions and angles in appendix figures,
-  # unless the figure states otherwise. Not applied to ideal Track Description validation.
+  # Physical fabrication tolerance for dimensions and angles
   figure_tolerance: 0.05
 
 $defs:
@@ -20,8 +21,8 @@ $defs:
     $defs:
       validation:
         properties:
-          root_port: {const: exit}     # To be able to place a start box
-          connected_network: {const: true}    # Road must be closed for the competition
+          root_port: {const: exit}          # To be able to place a start box at the root exit
+          connected_network: {const: true}  # Road must be closed for the competition
 
   # Shared dimensions for static and dynamic obstacles, not other objects.
   obstacles:
@@ -461,7 +462,7 @@ $defs:
             properties:
               speed: {maximum: 0.6}
 
-          behaviors:
+          behavior:
             $defs:
               follow_route:
                 $defs:
@@ -473,7 +474,7 @@ $defs:
 
       pedestrian:
         $defs:
-          behaviors:
+          behavior:
             $defs:
               crosswalk_traverse:
                 $defs:

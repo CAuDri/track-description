@@ -78,6 +78,7 @@ properties:
   # A valid path is not guaranteed to exist. A zone can also be nested in a section using "range", a root zone uses "span".
   zones: {$ref: catalog.yaml#/$defs/root_zones}
 
+  # Like elements, features are mappings keyed by object/slot ID, not arrays.
   # Features such as traffic signs, obstacles, etc. can be defined section- or element-local, or as a root feature with a global scope.
   features:
     type: object
