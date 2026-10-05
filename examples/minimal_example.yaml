@@ -1,0 +1,29 @@
+# This is a minimal example of a valid track description.
+# You can use this file as a template for your own track descriptions.
+
+id: minimal_example
+$schema: ../caudri-track.schema.yaml
+
+# Using a left arc as the root section, a start box will be added automatically.
+# Set to 'false' in the element to disable start box and starting line.
+root:
+  section: start_curve
+
+sections:
+  start_curve:
+    type: arc
+    parameters: 
+      radius: 1.5
+      direction: left
+    # elements:
+    #   start_box: false
+    #   starting_line: false
+
+  straight:
+    type: straight
+    parameters: 
+      length: 2.0
+
+connections: 
+  - [start_curve.exit, straight.entry]
+

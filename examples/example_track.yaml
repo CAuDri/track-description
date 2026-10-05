@@ -1,0 +1,174 @@
+$schema: ../caudri-track.schema.yaml
+id: example_figure_eight
+discipline: obstacle_evasion_course
+metadata:
+  name: Figure-eight authoring showcase
+  description: A closed course demonstrating defaults, per-object overrides and generated features.
+  tags: [example, defaults, overrides]
+
+root:
+  section: start_arc
+  port: exit
+  map_orientation: 15 # Rotate the entire track 15° counterclockwise in the world frame. Primarily used for rendering on SVG/PNG.
+
+road:
+  lane_width: 0.42 # Override: 0.42 per lane instead of 0.40.
+  rendering:
+    surface_color: "#222222" # Visual override
+
+# Sections, elements, zones and features are mappings keyed by identifier, meaning that each object can be given a unique name. The order of keys is here is not significant.
+sections:
+  start_arc:
+    type: arc
+    parameters:
+      radius: 1.5
+      angle: 180
+    elements:
+      # Reserved root slot names: these also exist implicitly unless disabled.
+      start_box:
+        type: start_box
+      starting_line:
+        type: starting_line
+        rendering:
+          checker_size: 0.0125 # Four rows across the 0.05 m line width
+
+  start_straight:
+    type: straight
+    parameters:
+      length: 4.7
+    elements:
+      crossing_default:
+        type: crosswalk
+        parameters:
+          distance: 2.4 # First edge, measured from this section's entry.
+
+  junction:
+    type: intersection
+    parameters:
+      corner_radius: 0.05
+    # No parameters needed: priority_to_right, angle 90, port_distance 0.8,
+    # and the left/straight/right arms are the defaults.
+
+  lobe_b_out:
+    type: straight
+    parameters:
+      length: 0.7
+
+  lobe_b_corner:
+    type: arc
+    parameters:
+      radius: 1.5
+      angle: 90
+      direction: right
+
+  lobe_b_outer:
+    type: straight
+    parameters:
+      length: 4.0
+    zones:
+      slow_section:
+        type: speed_limit
+        parameters:
+          range:
+            start: 0.6
+            end: 3.4
+          value_kmh: 20
+
+  lobe_b_return:
+    type: arc
+    parameters:
+      radius: 1.5
+      angle: 180
+      direction: right
+
+  lobe_b_in:
+    type: straight
+    parameters:
+      length: 4.7
+    elements:
+      crossing_custom:
+        type: crosswalk
+        parameters:
+          distance: 2.0
+          sign_distance: 0.4 # Layout override within the permitted 0.30–0.50 m range.
+        rendering:
+          stripe_width: 0.038 # Appearance override within the permitted 0.036–0.040 m.
+        features:
+          # Patch one generated sign by its catalog slot ID. The sign variant,
+          # facing direction and artwork still come from the crosswalk expansion.
+          sign_forward:
+            type: traffic_sign
+            parameters:
+              lateral_offset: 0.12
+
+  lobe_a_out:
+    type: straight
+    parameters:
+      length: 0.7
+
+  lobe_a_corner:
+    type: arc
+    parameters:
+      radius: 1.5
+      angle: 90
+
+  lobe_a_outer:
+    type: straight
+    parameters:
+      length: 4.0
+    road:
+      rendering:
+        surface_color: "#282840" # Section-local override of the global surface color.
+    features:
+      crate_custom:
+        type: static_obstacle
+        at: { distance: 2.0, offset: -0.21 }
+        size:
+          length: 0.4
+          width: 0.25
+        simulation:
+          fixed_to_ground: true # Used for simulation purposes, independent of rendering/layout.
+
+connections:
+  - [start_arc.exit, start_straight.entry]
+  - [start_straight.exit, junction.left]
+  - [junction.right, lobe_b_out.entry]
+  - [lobe_b_out.exit, lobe_b_corner.entry]
+  - [lobe_b_corner.exit, lobe_b_outer.entry]
+  - [lobe_b_outer.exit, lobe_b_return.entry]
+  - [lobe_b_return.exit, lobe_b_in.entry]
+  - [lobe_b_in.exit, junction.entry]
+  - [junction.straight, lobe_a_out.entry]
+  - [lobe_a_out.exit, lobe_a_corner.entry]
+  - [lobe_a_corner.exit, lobe_a_outer.entry]
+  - [lobe_a_outer.exit, start_arc.entry]
+
+# A root-level zone uses a graph span instead of a local range. This example
+# crosses a section boundary without a junction, so the path is unambiguous.
+zones:
+  approach_start:
+    type: speed_limit
+    parameters:
+      span:
+        start: { section: lobe_a_outer, distance: 0.6 }
+        end: { section: start_arc, distance: 1.0 }
+      value_kmh: 30
+
+# An explicit feature at track scope needs either `at` with a section ID or
+# a full Map-frame `pose`. It is not a patch of an implicitly generated slot.
+features:
+  crate_default:
+    type: static_obstacle
+    at: { section: lobe_b_outer, distance: 2.0, offset: -0.21 }
+
+# Actors are independent moving objects. This one spawns before 'crossing_custom'.
+# Spawn direction defaults to forward, the route can be derived from the course.
+actors:
+  moving_vehicle:
+    type: dynamic_obstacle
+    spawn:
+      at: { section: lobe_b_in, distance: 0.4, offset: -0.21 }
+    simulation:
+      speed: 0.35 # Simulation speed in m/s
+      behavior:
+        type: follow_route # Right lane, no passing or lane changes, no extra stops.
