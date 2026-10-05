@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Assemble CAuDri roads, resolve paths and check their planar occupied areas."""
+""" This validation step checks the geometric validity of a CAuDri track description, including the consistency of connected sections, the integrity of road surfaces, and the placement of objects.
+
+A full list of all performed checks and usage instructions can be found in `docs/validation.md`.
+"""
 
 from __future__ import annotations
 
@@ -825,7 +828,11 @@ class GeometryModel:
                 if obj.end <= obj.start:
                     raise ValueError("Occupied interval must have positive length")
                 is_root_line = obj.kind == "starting_line" and obj.slot == "starting_line" and obj.section == self.track["root"]["section"]
-                if not is_root_line and (obj.start < -self.tolerance or obj.end > section.curve.length+self.tolerance):
+                # The start box extends straight back from the arc exit;
+                # its footprint is checked independently of the arc's length.
+                if obj.kind != "start_box" and not is_root_line and (
+                    obj.start < -self.tolerance or obj.end > section.curve.length+self.tolerance
+                ):
                     raise ValueError(f"Interval [{obj.start:g}, {obj.end:g}] exceeds section length {section.curve.length:g}")
                 if obj.kind == "start_box":
                     # Like the renderer, the straight starting bay is tangent

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Check measurable CAuDri competition rules on an expanded planar track."""
+""" This last validation step checks the regulatory compliance of a CAuDri track description, including the presence and placement of required traffic signs, the spacing of obstacles and zones, and the consistency of overlapping zones and a lot more.
+
+A full list of all performed checks and usage instructions can be found in `docs/validation.md`.
+"""
 
 from __future__ import annotations
 

@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-"""Validate CAuDri track structure, references and local parameter relationships.
+"""This validation step checks the syntax and structural integrity of a CAuDri track description, including the presence and placement of required fields, the consistency of references, and the ordering of local parameters.
 
-The CLI accepts either an authored track or an exported snapshot. It expands
-first, then validates. Python callers can reuse an ExpansionResult directly.
-Run from this directory or import as scripts.validate_schema from the repo root.
+A full list of all performed checks and usage instructions can be found in `docs/validation.md`.
 """
 
 from __future__ import annotations

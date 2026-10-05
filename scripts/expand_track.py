@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Resolve defaults, inheritance and generated features in a CAuDri Track Description.
+"""This module expands a CAuDri track description into a fully equivalent expanded track, applying defaults, constants and catalog-based variants.
 
-Run this file directly, or import expand_track/load_track from it.
+Addional diagnostics are collected for any missing or conflicting values, and the provenance of each value is recorded. (i.e. whether it was manually defined or derived from a default).
+
+Run this file directly, or import expand_track/load_track.
 """
 
 from __future__ import annotations

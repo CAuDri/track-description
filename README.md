@@ -69,7 +69,7 @@ Four root-level properties are always required in a track description:
 Local file paths and URLs to the schema file are supported.
 It is recommended to simply point to one of our GitHub releases, i.e. [https://raw.githubusercontent.com/CAuDri/track-description/v0.1.0/caudri-track.schema.json](https://raw.githubusercontent.com/CAuDri/track-description/v0.1.0/caudri-track.schema.json). (TODO: Check link)
 
-From there, you can start adding sections, elements, features and zones to the track description.
+From there, you can start adding sections, elements, features and zones to the track.
 For more information, take a look at the [Semantics](#semantics) section below, the [example tracks](examples) or check out the [docs/catalog.md](docs/catalog.md) for a full overview of all available features and properties.
 
 An example track might look something like this:
@@ -259,6 +259,10 @@ __This convention stays true for the position of all nested elements, zones and 
 
 Example track descriptions can be found in the [examples](examples) folder.
 Use our [track-renderer](https://github.com/CAuDri/track-renderer) to visualize them.
+
+## Known Issues and Limitations
+
+- Turn announcement signs on steep curves are not placed automatically, they currently need to be added manually, otherwise the validation will issue a warning.
 
 ## License
 
