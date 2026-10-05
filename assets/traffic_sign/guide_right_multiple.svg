@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <title>Guide right, multiple chevrons</title>
+  <rect width="300" height="100" rx="3" fill="white"/>
+  <g fill="#c1121c" transform="translate(300 0) scale(-1 1)"><path transform="translate(0 0)" d="M50 0H100L50 50L100 100H50L0 50Z"/><path transform="translate(100 0)" d="M50 0H100L50 50L100 100H50L0 50Z"/><path transform="translate(200 0)" d="M50 0H100L50 50L100 100H50L0 50Z"/></g>
+  <rect x="0.25" y="0.25" width="299.5" height="99.5" rx="3" fill="none" stroke="#373535" stroke-width="0.5"/>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100mm" height="150mm" viewBox="0 0 100 150">
+  <title>CAuDri pedestrian pictogram</title>
+  <rect x="1.5" y="1.5" width="97" height="147" rx="6" fill="#FFFFFF" stroke="#2050A0" stroke-width="3"/>
+  <g transform="translate(12.5 15)" fill="none" stroke="#221F20" stroke-width="15" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M 10 35 L 37.5 62 L 65 35"/>
+    <path d="M 37.5 55 L 37.5 91"/>
+    <path d="M 10 115 L 37.5 88 L 65 115"/>
+    <circle cx="37.5" cy="15" r="15" fill="#221F20" stroke="none"/>
+  </g>
+</svg>
