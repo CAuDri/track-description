@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" viewBox="0 0 793 161" width="793" height="161" role="img" aria-labelledby="title description" data-meters-to-pixels="120">
+  <title id="title">Straight with two staggered barred areas</title>
+  <desc id="description">A 5 m straight section with a left barred area from 0.58 to 2.02 m and a right barred area from 2.98 to 4.42 m in the nominal direction. Orange entry and blue exit arrows point to the right. The road extends 4 cm beyond the outer markings and ends flush at the ports.</desc>
+  <g id="rendering" inkscape:groupmode="layer" inkscape:label="Rendering" sodipodi:insensitive="true">
+    <g transform="translate(696.5 80.4) scale(120 -120)">
+      <rect id="lateral-road-padding" x="-5" y="-0.47" width="5" height="0.94" fill="#1A1A1A" />
+      <g id="layer-0" data-layer="0">
+        <g id="geometry-0" data-geometry-id="/sections/road#road_surface" data-object-id="/sections/road" data-role="road_surface" data-purpose="physical">
+          <path d="M-5,0.43 L0,0.43 L0,-0.43 L-5,-0.43 Z" fill="#1A1A1A" fill-rule="evenodd" />
+        </g>
+      </g>
+      <g id="layer-20" data-layer="20">
+        <g id="geometry-1" data-geometry-id="/sections/road#centerline/0/0/0" data-object-id="/sections/road" data-role="centerline/0/0/0" data-purpose="physical">
+          <polyline points="-5,0 -4.8,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-2" data-geometry-id="/sections/road#centerline/0/0/1" data-object-id="/sections/road" data-role="centerline/0/0/1" data-purpose="physical">
+          <polyline points="-4.6,0 -4.4,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-3" data-geometry-id="/sections/road#centerline/0/0/10" data-object-id="/sections/road" data-role="centerline/0/0/10" data-purpose="physical">
+          <polyline points="-1,0 -0.8,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-4" data-geometry-id="/sections/road#centerline/0/0/11" data-object-id="/sections/road" data-role="centerline/0/0/11" data-purpose="physical">
+          <polyline points="-0.6,0 -0.4,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-5" data-geometry-id="/sections/road#centerline/0/0/12" data-object-id="/sections/road" data-role="centerline/0/0/12" data-purpose="physical">
+          <polyline points="-0.2,0 0,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-6" data-geometry-id="/sections/road#centerline/0/0/2" data-object-id="/sections/road" data-role="centerline/0/0/2" data-purpose="physical">
+          <polyline points="-4.2,0 -4,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-7" data-geometry-id="/sections/road#centerline/0/0/3" data-object-id="/sections/road" data-role="centerline/0/0/3" data-purpose="physical">
+          <polyline points="-3.8,0 -3.6,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-8" data-geometry-id="/sections/road#centerline/0/0/4" data-object-id="/sections/road" data-role="centerline/0/0/4" data-purpose="physical">
+          <polyline points="-3.4,0 -3.2,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-9" data-geometry-id="/sections/road#centerline/0/0/5" data-object-id="/sections/road" data-role="centerline/0/0/5" data-purpose="physical">
+          <polyline points="-3,0 -2.8,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-10" data-geometry-id="/sections/road#centerline/0/0/6" data-object-id="/sections/road" data-role="centerline/0/0/6" data-purpose="physical">
+          <polyline points="-2.6,0 -2.4,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-11" data-geometry-id="/sections/road#centerline/0/0/7" data-object-id="/sections/road" data-role="centerline/0/0/7" data-purpose="physical">
+          <polyline points="-2.2,0 -2,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-12" data-geometry-id="/sections/road#centerline/0/0/8" data-object-id="/sections/road" data-role="centerline/0/0/8" data-purpose="physical">
+          <polyline points="-1.8,0 -1.6,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-13" data-geometry-id="/sections/road#centerline/0/0/9" data-object-id="/sections/road" data-role="centerline/0/0/9" data-purpose="physical">
+          <polyline points="-1.4,0 -1.2,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-14" data-geometry-id="/sections/road#left_boundary/0/0" data-object-id="/sections/road" data-role="left_boundary/0/0" data-purpose="physical">
+          <polyline points="-5,0.42 0,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-15" data-geometry-id="/sections/road#right_boundary/0/0" data-object-id="/sections/road" data-role="right_boundary/0/0" data-purpose="physical">
+          <polyline points="-5,-0.42 0,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+      </g>
+      <g id="layer-30" data-layer="30">
+        <g id="geometry-16" data-geometry-id="/sections/road/elements/left_barred_area#hatch/0" data-object-id="/sections/road/elements/left_barred_area" data-role="hatch/0" data-purpose="physical">
+          <path d="M-4.34018080171,0.291749093148 L-4.37690237089,0.355352716693 L-4.01312718188,0.17 L-4.10123475247,0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-17" data-geometry-id="/sections/road/elements/left_barred_area#hatch/1" data-object-id="/sections/road/elements/left_barred_area" data-role="hatch/1" data-purpose="physical">
+          <path d="M-4.31452759815,0.4 L-4.22642002757,0.4 L-3.7750196113,0.17 L-3.86312718188,0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-18" data-geometry-id="/sections/road/elements/left_barred_area#hatch/2" data-object-id="/sections/road/elements/left_barred_area" data-role="hatch/2" data-purpose="physical">
+          <path d="M-4.07642002757,0.4 L-3.98831245698,0.4 L-3.53691204072,0.17 L-3.6250196113,0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-19" data-geometry-id="/sections/road/elements/left_barred_area#hatch/3" data-object-id="/sections/road/elements/left_barred_area" data-role="hatch/3" data-purpose="physical">
+          <path d="M-3.83831245698,0.4 L-3.7502048864,0.4 L-3.29880447013,0.17 L-3.38691204072,0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-20" data-geometry-id="/sections/road/elements/left_barred_area#hatch/4" data-object-id="/sections/road/elements/left_barred_area" data-role="hatch/4" data-purpose="physical">
+          <path d="M-3.6002048864,0.4 L-3.51209731582,0.4 L-3.1143327594,0.197328835599 L-3.13011106999,0.17 L-3.14880447013,0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-21" data-geometry-id="/sections/road/elements/left_barred_area#hatch/5" data-object-id="/sections/road/elements/left_barred_area" data-role="hatch/5" data-purpose="physical">
+          <path d="M-3.36209731582,0.4 L-3.27398974523,0.4 L-3.0602092976,0.291073421325 L-3.08023674452,0.256384865714 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-22" data-geometry-id="/sections/road/elements/left_barred_area#hatch/6" data-object-id="/sections/road/elements/left_barred_area" data-role="hatch/6" data-purpose="physical">
+          <path d="M-3.12398974523,0.4 L-3.03588217465,0.4 L-3.00608583579,0.384818007051 L-3.02611328271,0.35012945144 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-23" data-geometry-id="/sections/road/elements/left_barred_area#outline" data-object-id="/sections/road/elements/left_barred_area" data-role="outline" data-purpose="physical">
+          <polyline points="-4.42,0.41 -4.2756624327,0.16 -3.1243375673,0.16 -2.98,0.41 -4.42,0.41" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-24" data-geometry-id="/sections/road/elements/right_barred_area#hatch/0" data-object-id="/sections/road/elements/right_barred_area" data-role="hatch/0" data-purpose="physical">
+          <path d="M-0.754427680237,-0.4 L-0.84253525082,-0.4 L-0.653059478198,-0.303457271786 L-0.633032031278,-0.338145827398 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-25" data-geometry-id="/sections/road/elements/right_barred_area#hatch/1" data-object-id="/sections/road/elements/right_barred_area" data-role="hatch/1" data-purpose="physical">
+          <path d="M-0.99253525082,-0.4 L-1.0806428214,-0.4 L-0.707182940002,-0.209712686061 L-0.687155493082,-0.244401241672 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-26" data-geometry-id="/sections/road/elements/right_barred_area#hatch/2" data-object-id="/sections/road/elements/right_barred_area" data-role="hatch/2" data-purpose="physical">
+          <path d="M-1.2306428214,-0.4 L-1.31875039199,-0.4 L-0.867349975721,-0.17 L-0.779242405137,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-27" data-geometry-id="/sections/road/elements/right_barred_area#hatch/3" data-object-id="/sections/road/elements/right_barred_area" data-role="hatch/3" data-purpose="physical">
+          <path d="M-1.46875039199,-0.4 L-1.55685796257,-0.4 L-1.1054575463,-0.17 L-1.01734997572,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-28" data-geometry-id="/sections/road/elements/right_barred_area#hatch/4" data-object-id="/sections/road/elements/right_barred_area" data-role="hatch/4" data-purpose="physical">
+          <path d="M-1.70685796257,-0.4 L-1.79496553315,-0.4 L-1.34356511689,-0.17 L-1.2554575463,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-29" data-geometry-id="/sections/road/elements/right_barred_area#hatch/5" data-object-id="/sections/road/elements/right_barred_area" data-role="hatch/5" data-purpose="physical">
+          <path d="M-1.94496553315,-0.4 L-2.00267949192,-0.4 L-1.99001200931,-0.378059276506 L-1.58167268747,-0.17 L-1.49356511689,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-30" data-geometry-id="/sections/road/elements/right_barred_area#hatch/6" data-object-id="/sections/road/elements/right_barred_area" data-role="hatch/6" data-purpose="physical">
+          <path d="M-1.92749484603,-0.26977637336 L-1.89077327685,-0.206172749815 L-1.81978025805,-0.17 L-1.73167268747,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-31" data-geometry-id="/sections/road/elements/right_barred_area#outline" data-object-id="/sections/road/elements/right_barred_area" data-role="outline" data-purpose="physical">
+          <polyline points="-2.02,-0.41 -1.8756624327,-0.16 -0.724337567297,-0.16 -0.58,-0.41 -2.02,-0.41" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="ports" inkscape:groupmode="layer" inkscape:label="Ports and labels">
+    <g id="port-entry" data-port-ref="road.entry" data-nominal-direction="incoming">
+      <path d="M 27.50000 80.40000 L 70.50000 80.40000" fill="none" stroke="#E87918" stroke-width="4" stroke-linecap="butt" />
+      <polygon points="84.50000,80.40000 70.50000,86.40000 70.50000,74.40000" fill="#E87918" />
+      <circle cx="96.50000" cy="80.40000" r="9" fill="#E87918" stroke="#E87918" stroke-width="2.25" />
+      <text x="56.50000" y="59.40000" fill="#E87918" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="middle">entry</text>
+    </g>
+    <g id="port-exit" data-port-ref="road.exit" data-nominal-direction="outgoing" transform="translate(240 0)">
+      <path d="M 456.50000 80.40000 L 499.50000 80.40000" fill="none" stroke="#1673B8" stroke-width="4" stroke-linecap="butt" />
+      <polygon points="513.50000,80.40000 499.50000,86.40000 499.50000,74.40000" fill="#1673B8" />
+      <circle cx="456.50000" cy="80.40000" r="9" fill="#1673B8" stroke="#1673B8" stroke-width="2.25" />
+      <text x="476.50000" y="59.40000" fill="#1673B8" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="start">exit</text>
+    </g>
+  </g>
+  <g id="barred-area-labels" inkscape:groupmode="layer" inkscape:label="Barred area labels" font-family="DejaVu Sans, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">
+    <text x="252.5" y="15" data-element-ref="road.left_barred_area">side: left</text>
+    <text x="540.5" y="156" data-element-ref="road.right_barred_area">side: right</text>
+  </g>
+</svg>

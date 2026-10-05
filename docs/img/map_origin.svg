@@ -1,0 +1,332 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 672 340" width="672" height="340" role="img" aria-labelledby="title description" data-meters-to-pixels="150">
+  <title id="title">Map origin at the root exit</title>
+  <desc id="description">A 70-degree left arc of radius 1.75 m with a 2 m start box, followed by a 2 m straight. The origin is the root exit. Positive x follows the straight; positive y points left. A dark-blue obstacle at the back of the start box points along positive x.</desc>
+  <g id="rendering" inkscape:groupmode="layer" inkscape:label="Rendering">
+    <g transform="translate(338.87 231.767) scale(150 -150)">
+      <path id="road-padding" d="M-1.40864706,0.0341604038 L-1.44056211,0.0608662364 L-1.441143,0.0613618187 L-1.47254246,0.088671992 L-1.47311379,0.0891785723 L-1.50398623,0.117083135 L-1.50454778,0.117600528 L-1.53488194,0.146089311 L-1.53543351,0.14661733 L-1.56521834,0.175679952 L-1.56575973,0.176218403 L-1.59498437,0.205844274 L-1.59551539,0.206392961 L-1.6241692,0.236571285 L-1.62468965,0.237130009 L-1.65276218,0.267849789 L-1.65327186,0.268418346 L-1.68075289,0.299668388 L-1.68125163,0.30024657 L-1.70813114,0.332015486 L-1.70861875,0.332603083 L-1.73488694,0.364879298 L-1.73536325,0.365476095 L-1.76101055,0.398247846 L-1.76147539,0.398853627 L-1.78649246,0.432108973 L-1.78694564,0.432723516 L-1.81132336,0.466450338 L-1.81176473,0.46707342 L-1.83549422,0.501259427 L-1.83592362,0.501890821 L-1.85899623,0.536523558 L-1.8594135,0.537163032 L-1.88182082,0.572229878 L-1.8822258,0.572877201 L-1.90395967,0.608365377 L-1.90435223,0.609020313 L-1.92540473,0.644916887 L-1.92578471,0.645579196 L-1.94614817,0.681871088 L-1.94651543,0.68254053 L-1.96618243,0.719214515 L-1.96653685,0.719890846 L-1.98550021,0.75693356 L-1.98584166,0.757616533 L-2.00409449,0.795014478 L-2.00442284,0.795703844 L-2.02195847,0.833443392 L-2.0222736,0.8341389 L-2.03908565,0.872206298 L-2.03938744,0.872907695 L-2.05546978,0.911289072 L-2.05575814,0.911996102 L-2.07110491,0.950677472 L-2.07137972,0.951389877 L-2.08598533,0.990357144 L-2.08611047,0.990717883 L-1.20280484,1.31221484 L-1.19422908,1.28933501 L-1.18521815,1.26662304 L-1.17577532,1.24408722 L-1.16590404,1.22173575 L-1.1556079,1.19957678 L-1.14489066,1.17761839 L-1.13375623,1.15586857 L-1.12220865,1.13433525 L-1.11025214,1.11302628 L-1.09789106,1.09194942 L-1.0851299,1.07111236 L-1.07197333,1.05052268 L-1.05842613,1.03018789 L-1.04449324,1.0101154 L-1.03017973,0.990312527 L-1.01549083,0.97078648 L-1.00043188,0.951544378 L-0.985008382,0.932593234 L-0.969225944,0.913939951 L-0.95309032,0.895591329 L-0.93660739,0.877554052 L-0.919783161,0.859834694 L-0.902623764,0.842439712 L-0.885135451,0.825375445 L-0.867324596,0.80864811 L-0.849197687,0.792263803 L-0.830761332,0.776228495 L-0.812022248,0.760548028 L-0.792987263,0.745228117 L-0.773663314,0.730274345 L-0.754057443,0.71569216 L-0.734176793,0.701486876 L-0.71402861,0.68766367 L-0.693620236,0.674227578 L-0.672959106,0.661183497 L-0.652052751,0.648536181 L-0.630908788,0.636290237 L-0.609534922,0.624450128 L-0.587938942,0.613020169 L-0.566128718,0.602004525 L-0.544112196,0.59140721 L-0.5218974,0.581232085 L-0.499492425,0.571482859 L-0.476905436,0.562163083 L-0.454144662,0.553276155 L-0.431218398,0.544825312 L-0.408134999,0.536813634 L-0.384902875,0.529244041 L-0.361530493,0.52211929 L-0.33802637,0.515441978 L-0.31439907,0.509214539 L-0.290657203,0.503439241 L-0.266809421,0.498118189 L-0.242864413,0.493253322 L-0.218830906,0.488846413 L-0.194717657,0.484899068 L-0.170533453,0.481412724 L-0.146287107,0.478388653 L-0.121987454,0.475827956 L-0.0976433484,0.473731567 L-0.0732636618,0.47210025 L-0.0488572781,0.470934598 L-0.0244330907,0.470235037 L0.000190896836,0.47 L2,0.47 L2,-0.47 L-2.63299062e-17,-0.47 L-0.00019159185,-0.469995297 L-0.000381784977,-0.469998178 L-0.0419944519,-0.469600983 L-0.0427578827,-0.469586407 L-0.084355386,-0.468394966 L-0.0851183995,-0.468365821 L-0.126685581,-0.466380567 L-0.127447899,-0.466336863 L-0.168969612,-0.463558521 L-0.169730957,-0.463500273 L-0.210377522,-0.46 L-2,-0.46 L-2.00196271,-0.459951818 L-2.00392069,-0.459807389 L-2.00586922,-0.45956706 L-2.00780361,-0.459231411 L-2.00971921,-0.45880125 L-2.01161139,-0.458277613 L-2.01347559,-0.457661763 L-2.01530734,-0.456955181 L-2.0171022,-0.456159572 L-2.01885587,-0.455276851 L-2.02056411,-0.454309144 L-2.02222281,-0.453258784 L-2.02382797,-0.452128301 L-2.02537573,-0.450920418 L-2.02686236,-0.449638045 L-2.02828427,-0.448284271 L-2.02963805,-0.446862358 L-2.03092042,-0.445375731 L-2.0321283,-0.443827972 L-2.03325878,-0.442222809 L-2.03430914,-0.44056411 L-2.03527685,-0.438855869 L-2.03615957,-0.437102204 L-2.03695518,-0.435307337 L-2.03766176,-0.433475594 L-2.03827761,-0.431611387 L-2.03880125,-0.429719207 L-2.03923141,-0.427803613 L-2.03956706,-0.425869219 L-2.03980739,-0.423920686 L-2.03995182,-0.421962707 L-2.04,-0.42 L-2.04,-0.01 L-2.03995182,-0.00803729303 L-2.03980739,-0.00607931439 L-2.03956706,-0.00413078102 L-2.03923141,-0.00219638712 L-2.03880125,-0.000280792804 L-2.03827761,0.00161138709 L-2.03766176,0.00347559414 L-2.03695518,0.00530733729 L-2.03615957,0.00710220374 L-2.03527685,0.00885586947 L-2.03430914,0.0105641098 L-2.03325878,0.0122228093 L-2.0321283,0.0138279722 L-2.03092042,0.0153757314 L-2.02963805,0.0168623582 L-2.02828427,0.0182842712 L-2.02686236,0.019638045 L-2.02537573,0.0209204181 L-2.02382797,0.0221283013 L-2.02222281,0.0232587845 L-2.02056411,0.0243091444 L-2.01885587,0.0252768506 L-2.0171022,0.0261595717 L-2.01530734,0.0269551813 L-2.01347559,0.0276617626 L-2.01161139,0.0282776134 L-2.00971921,0.0288012501 L-2.00780361,0.0292314112 L-2.00586922,0.0295670604 L-2.00392069,0.0298073891 L-2.00196271,0.0299518182 L-2,0.03 L-1.40348938,0.03 L-1.40805681,0.0336760002 L-1.40864706,0.0341604038 Z" fill="#1A1A1A" fill-rule="evenodd" />
+      <g id="layer-0" data-layer="0">
+        <g id="geometry-0" data-geometry-id="/sections/start_curve#road_surface" data-object-id="/sections/start_curve" data-role="road_surface" data-purpose="physical">
+          <path d="M-1.24039425944,1.29853341081 L-1.23155049446,1.27493855177 L-1.2222579532,1.25151680485 L-1.21252002184,1.22827670492 L-1.2023402489,1.20522672066 L-1.19172234386,1.18237525146 L-1.18067017588,1.15973062439 L-1.16918777238,1.13730109115 L-1.15727931753,1.11509482503 L-1.14494915077,1.09311991798 L-1.1322017652,1.07138437766 L-1.11904180596,1.04989612449 L-1.10547406854,1.02866298875 L-1.091503497,1.00769270781 L-1.07713518222,0.986992923215 L-1.06237436,0.966571177957 L-1.04722640918,0.946434913708 L-1.03169684967,0.926591468113 L-1.01579134042,0.907048072109 L-0.999515677389,0.887811847301 L-0.982875791426,0.868889803357 L-0.965877746093,0.850288835458 L-0.948527735469,0.832015721787 L-0.930832081887,0.814077121056 L-0.912797233633,0.796479570081 L-0.894429762594,0.779229481399 L-0.875736361868,0.762333140932 L-0.856723843319,0.745796705697 L-0.837399135096,0.729626201561 L-0.817769279113,0.713827521047 L-0.797841428478,0.698406421185 L-0.777622844888,0.683368521415 L-0.757120895983,0.668719301539 L-0.736343052662,0.654464099723 L-0.715296886359,0.640608110555 L-0.693990066284,0.62715638315 L-0.67243035663,0.61411381931 L-0.650625613743,0.601485171737 L-0.62858378326,0.589275042302 L-0.606312897209,0.57748788037 L-0.583821071089,0.566127981177 L-0.561116500909,0.555199484262 L-0.5382074602,0.544706371964 L-0.515102297005,0.534652467966 L-0.49180943083,0.525041435906 L-0.468337349584,0.515876778038 L-0.444694606478,0.507161833958 L-0.420889816915,0.498899779387 L-0.396931655346,0.491093625012 L-0.372828852111,0.483746215392 L-0.348590190259,0.476860227919 L-0.324224502343,0.470438171841 L-0.299740667205,0.464482387354 L-0.275147606742,0.458995044741 L-0.250454282651,0.453978143586 L-0.225669693164,0.449433512047 L-0.200802869771,0.445362806183 L-0.175862873928,0.441767509357 L-0.150858793756,0.438648931694 L-0.125799740727,0.436008209602 L-0.100694846345,0.433846305358 L-0.0755532588196,0.432164006759 L-0.0503841397302,0.430961926833 L-0.0251966606894,0.430240503618 L0,0.43 L-2.22044604925e-16,-0.43 L-0.0416126668961,-0.429602804631 L-0.0832101701604,-0.42841136326 L-0.124777351687,-0.42642611005 L-0.166299064419,-0.423647768424 L-0.207760177867,-0.420077350809 L-0.249145583628,-0.415716158262 L-0.290440200881,-0.410565780001 L-0.331628981894,-0.40462809282 L-0.372696917497,-0.397905260408 L-0.41362904256,-0.390399732562 L-0.454410441438,-0.382114244292 L-0.495026253415,-0.373051814825 L-0.535461678111,-0.363215746504 L-0.575701980882,-0.352609623589 L-0.615732498184,-0.341237310943 L-0.655538642919,-0.329102952631 L-0.695105909753,-0.316210970406 L-0.734419880395,-0.302566062099 L-0.773466228858,-0.288173199906 L-0.812230726674,-0.273037628579 L-0.850699248084,-0.25716486351 L-0.888857775179,-0.240560688726 L-0.926692403016,-0.223231154779 L-0.964189344677,-0.205182576541 L-1.0013349363,-0.186421530903 L-1.03811564205,-0.16695485438 L-1.07451805906,-0.146789640617 L-1.11052892231,-0.125933237806 L-1.14613510947,-0.104393246009 L-1.18132364565,-0.0821775143859 L-1.21608170818,-0.0592941383365 L-1.25039663125,-0.03575145655 L-1.2842559105,-0.0115580479659 L-1.31764720764,0.0132772713517 L-1.3505583549,0.0387454514268 L-1.38297735948,0.0648372116692 L-1.4148924079,0.0915430442568 L-1.44629187036,0.118853217599 L-1.47716430489,0.146757779886 L-1.50749846161,0.17524656271 L-1.53728328675,0.204309184775 L-1.56650792676,0.233935055679 L-1.59516173218,0.264113379772 L-1.6232342616,0.294833160089 L-1.65071528538,0.326083202361 L-1.67759478948,0.35785211909 L-1.703862979,0.390128333701 L-1.72951028183,0.422900084761 L-1.75452735213,0.456155430262 L-1.77890507367,0.489882251976 L-1.80263456323,0.524068259868 L-1.82570717379,0.558700996577 L-1.84811449772,0.593767841953 L-1.8698483698,0.629256017659 L-1.89090087021,0.665152591823 L-1.91126432744,0.701444483756 L-1.93093132106,0.738118468712 L-1.94989468441,0.775161182712 L-1.96814750728,0.812559127413 L-1.98568313833,0.850298675026 L-2.00249518759,0.888366073282 L-2.01857752877,0.926747450441 L-2.03392430146,0.965428820354 L-2.04852991331,1.00439608755 Z" fill="#1A1A1A" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-1" data-geometry-id="/sections/start_curve/elements/start_box#surface" data-object-id="/sections/start_curve/elements/start_box" data-role="surface" data-purpose="physical">
+          <path d="M-2,-0.01 L-1.26936992244,-0.01 L-1.23581986923,-0.0337178170376 L-1.20182677452,-0.0567961711372 L-1.16740282485,-0.0792267887076 L-1.1325603612,-0.101001628371 L-1.0973118746,-0.122112883846 L-1.06167000163,-0.142552986747 L-1.0256475199,-0.162314609295 L-0.989257343478,-0.181390666948 L-0.952512518243,-0.199774320938 L-0.915426217216,-0.217458980725 L-0.878011735839,-0.234438306355 L-0.840282487205,-0.250706210741 L-0.802251997252,-0.266256861837 L-0.763933899913,-0.281084684735 L-0.725341932228,-0.295184363658 L-0.686489929419,-0.308550843872 L-0.647391819931,-0.321179333492 L-0.60806162044,-0.333065305205 L-0.568513430824,-0.344204497888 L-0.52876142911,-0.35459291814 L-0.488819866394,-0.364226841713 L-0.448703061729,-0.373102814843 L-0.408425396991,-0.381217655495 L-0.368001311724,-0.388568454497 L-0.327445297967,-0.395152576587 L-0.286771895052,-0.400967661358 L-0.245995684397,-0.406011624101 L-0.205131284274,-0.410282656555 L-0.164193344575,-0.413779227555 L-0.123196541553,-0.416500083579 L-0.0821555725629,-0.418444249202 L-0.0410851507959,-0.419611027439 L-3.33066907388e-16,-0.42 L-2,-0.42 Z" fill="#1A1A1A" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-2" data-geometry-id="/sections/straight#road_surface" data-object-id="/sections/straight" data-role="road_surface" data-purpose="physical">
+          <path d="M2.63299061817e-17,0.43 L2,0.43 L2,-0.43 L-2.63299061817e-17,-0.43 Z" fill="#1A1A1A" fill-rule="evenodd" />
+        </g>
+      </g>
+      <g id="layer-20" data-layer="20">
+        <g id="geometry-3" data-geometry-id="/sections/start_curve#centerline/0/0/0" data-object-id="/sections/start_curve" data-role="centerline/0/0/0" data-purpose="physical">
+          <polyline points="-1.64446208638,1.15146474918 -1.63234105005,1.11915715403 -1.61958535941,1.08709483063 -1.60619997386,1.05529024481 -1.59219009765,1.02375576219" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-4" data-geometry-id="/sections/start_curve#centerline/0/0/1" data-object-id="/sections/start_curve" data-role="centerline/0/0/1" data-purpose="physical">
+          <polyline points="-1.49898465351,0.846924693878 -1.48151234281,0.818538149946 -1.46350253821,0.790489541138 -1.44496177368,0.762789043515 -1.42589677583,0.735446706837 -1.40631446147,0.708472450929 -1.38622193505,0.681876062072" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-5" data-geometry-id="/sections/start_curve#centerline/0/0/2" data-object-id="/sections/start_curve" data-role="centerline/0/0/2" data-purpose="physical">
+          <polyline points="-1.25537315907,0.530763258642 -1.23192328116,0.507074004884 -1.20802646047,0.483835685698 -1.18369136678,0.461056731966 -1.15892682889,0.438745407912 -1.1337418314,0.416909808102 -1.10814551144,0.395557854509" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-6" data-geometry-id="/sections/start_curve#centerline/0/0/3" data-object-id="/sections/start_curve" data-role="centerline/0/0/3" data-purpose="physical">
+          <polyline points="-0.946459873378,0.278023876523 -0.918252240088,0.260264176582 -0.88971146413,0.243044954023 -0.860847900121,0.226372455993 -0.831672019787,0.210252731289 -0.80219440816,0.194691628159 -0.772425759742,0.179694792186" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-7" data-geometry-id="/sections/start_curve#centerline/0/0/4" data-object-id="/sections/start_curve" data-role="centerline/0/0/4" data-purpose="physical">
+          <polyline points="-0.588313796112,0.101853502475 -0.556815707401,0.090947177456 -0.525115605494,0.0806427581652 -0.493224991214,0.0709439830541 -0.461155434501,0.0618543708465 -0.428918570218,0.053377219261 -0.396526093924,0.0455156038153" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-8" data-geometry-id="/sections/start_curve#centerline/0/0/5" data-object-id="/sections/start_curve" data-role="centerline/0/0/5" data-purpose="physical">
+          <polyline points="-0.199564910088,0.0114161375816 -0.174708479132,0.00874271076345 -0.149816393991,0.00642463653227" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-9" data-geometry-id="/sections/start_curve#left_boundary/0/0" data-object-id="/sections/start_curve" data-role="left_boundary/0/0" data-purpose="physical">
+          <polyline points="-1.24979118565,1.29511320938 -1.24095504752,1.27153310456 -1.23167406347,1.24812451606 -1.22195156045,1.22489583518 -1.2117910237,1.20185538871 -1.20119609547,1.17901143599 -1.19017057373,1.15637216589 -1.1787184108,1.13394569393 -1.16684371196,1.11174005933 -1.15455073393,1.08976322217 -1.14184388337,1.06802306051 -1.12872771534,1.04652736753 -1.11520693158,1.02528384883 -1.10128637889,1.00430011958 -1.0869710474,0.983583701822 -1.07226606872,0.963142021793 -1.05717671416,0.942982407232 -1.04170839281,0.923112084768 -1.0258666496,0.903538177327 -1.00965716334,0.884267701582 -0.993085744644,0.86530756543 -0.976158333889,0.846664565524 -0.95888099905,0.828345384832 -0.941259933545,0.810356590241 -0.923301454008,0.792704630207 -0.905011998025,0.775395832438 -0.886398121831,0.758436401629 -0.867466497951,0.741832417238 -0.848223912818,0.725589831306 -0.828677264333,0.709714466323 -0.808833559395,0.694212013141 -0.788699911389,0.679088028933 -0.768283537636,0.664347935203 -0.747591756807,0.649997015843 -0.726631986298,0.636040415235 -0.705411739569,0.622483136411 -0.683938623456,0.609330039256 -0.662220335441,0.596585838769 -0.640264660892,0.584255103372 -0.618079470272,0.572342253272 -0.595672716321,0.560851558875 -0.573052431202,0.549787139257 -0.550226723622,0.539152960687 -0.527203775927,0.528952835207 -0.503991841168,0.519190419262 -0.480599240141,0.509869212391 -0.457034358406,0.500992555972 -0.433305643281,0.492563632027 -0.409421600814,0.484585462077 -0.385390792731,0.477060906061 -0.361221833371,0.469992661312 -0.336923386597,0.463383261587 -0.312504162688,0.457235076163 -0.287972915217,0.451550308983 -0.263338437917,0.44633099787 -0.238609561523,0.441579013792 -0.213795150612,0.437296060197 -0.188904100421,0.433483672397 -0.16394533366,0.430143217023 -0.138927797313,0.427275891528 -0.113860459433,0.424882723765" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-10" data-geometry-id="/sections/start_curve#left_boundary/1/0" data-object-id="/sections/start_curve" data-role="left_boundary/1/0" data-purpose="physical">
+          <polyline points="-0.113860459433,0.424882723765 -0.0911285457807,0.423125632117 -0.0683698521504,0.421758469511 -0.0455910666475,0.420781637713 -0.0227988832817,0.420195423785 2.22044604925e-16,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-11" data-geometry-id="/sections/start_curve#right_boundary/0/0" data-object-id="/sections/start_curve" data-role="right_boundary/0/0" data-purpose="physical">
+          <polyline points="-2.03913298711,1.00781628898 -2.02471613016,0.96934348638 -2.00957347197,0.931150526202 -1.99371044074,0.893251099503 -1.97713272288,0.855658792114 -1.95984626103,0.818387079772 -1.94185725187,0.781449323291 -1.92317214394,0.744858763773 -1.9037976353,0.708628517857 -1.88374067114,0.672771573022 -1.86300844129,0.63730078293 -1.84160837765,0.602228862816 -1.81954815152,0.567568384934 -1.79683567083,0.533331774047 -1.77347907734,0.499531302973 -1.7494867437,0.466179088189 -1.72486727047,0.433287085484 -1.699629483,0.400867085673 -1.67378242829,0.368930710376 -1.64733537176,0.337489407844 -1.62029779389,0.306554448859 -1.59267938687,0.276136922697 -1.56449005108,0.246247733147 -1.53573989157,0.216897594605 -1.50643921443,0.188097028232 -1.47659852309,0.159856358188 -1.44622851457,0.132185707921 -1.4153400756,0.105094996546 -1.38394427881,0.0785939352892 -1.35205237865,0.0526920240009 -1.31967580743,0.0273985477557 -1.28682617121,0.00272257352175 -1.25351524562,-0.0213270530892 -1.21975497163,-0.0447417109926 -1.18555745133,-0.0675130067214 -1.15093494351,-0.0896327774353 -1.11589985932,-0.111093093846 -1.08046475783,-0.131886263061 -1.04464234145,-0.15200483134 -1.0084454515,-0.171441586767 -0.971887063471,-0.190189561836 -0.934980282487,-0.20824203595 -0.897738338541,-0.225592537826 -0.860174581776,-0.242234847819 -0.822302477695,-0.258163000151 -0.784135602335,-0.273371285046 -0.745687637399,-0.287854250782 -0.706972365354,-0.30160670564 -0.668003664485,-0.314623719769 -0.628795503929,-0.326900626953 -0.589361938658,-0.338433026281 -0.549717104448,-0.349216783726 -0.509875212806,-0.359248033629 -0.46985054588,-0.36852318008 -0.429657451338,-0.377038898213 -0.389310337222,-0.384792135392 -0.348823666789,-0.39178011231 -0.308211953319,-0.398000323983 -0.267489754919,-0.403450540647 -0.226671669301,-0.40812880856 -0.185772328548,-0.4120334507" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-12" data-geometry-id="/sections/start_curve#right_boundary/1/0" data-object-id="/sections/start_curve" data-role="right_boundary/1/0" data-purpose="physical">
+          <polyline points="-0.185772328548,-0.4120334507 -0.1486834168,-0.41490028444 -0.111550811403,-0.417130918167 -0.0743854245302,-0.418724696364 -0.037198177986,-0.419681150666 -3.33066907388e-16,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-13" data-geometry-id="/sections/straight#centerline/1/0/0" data-object-id="/sections/straight" data-role="centerline/1/0/0" data-purpose="physical">
+          <polyline points="0.2,0 0.4,0" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-14" data-geometry-id="/sections/straight#centerline/1/0/1" data-object-id="/sections/straight" data-role="centerline/1/0/1" data-purpose="physical">
+          <polyline points="0.6,0 0.8,0" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-15" data-geometry-id="/sections/straight#centerline/1/0/2" data-object-id="/sections/straight" data-role="centerline/1/0/2" data-purpose="physical">
+          <polyline points="1,0 1.2,0" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-16" data-geometry-id="/sections/straight#centerline/1/0/3" data-object-id="/sections/straight" data-role="centerline/1/0/3" data-purpose="physical">
+          <polyline points="1.4,0 1.6,0" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-17" data-geometry-id="/sections/straight#centerline/1/0/4" data-object-id="/sections/straight" data-role="centerline/1/0/4" data-purpose="physical">
+          <polyline points="1.8,0 2,0" fill="none" stroke="#FFFFFF" stroke-width="0.013333333333333334" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-18" data-geometry-id="/sections/straight#left_boundary/0/0" data-object-id="/sections/straight" data-role="left_boundary/0/0" data-purpose="physical">
+          <polyline points="2.57175827821e-17,0.42 0.2,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-19" data-geometry-id="/sections/straight#left_boundary/1/0" data-object-id="/sections/straight" data-role="left_boundary/1/0" data-purpose="physical">
+          <polyline points="0.2,0.42 2,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-20" data-geometry-id="/sections/straight#right_boundary/0/0" data-object-id="/sections/straight" data-role="right_boundary/0/0" data-purpose="physical">
+          <polyline points="-2.57175827821e-17,-0.42 0.2,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-21" data-geometry-id="/sections/straight#right_boundary/1/0" data-object-id="/sections/straight" data-role="right_boundary/1/0" data-purpose="physical">
+          <polyline points="0.2,-0.42 2,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+      </g>
+      <g id="layer-30" data-layer="30">
+        <g id="geometry-22" data-geometry-id="/sections/start_curve/elements/start_box#inner_boundary" data-object-id="/sections/start_curve/elements/start_box" data-role="inner_boundary" data-purpose="physical">
+          <polyline points="-2,-0.01 -1.26936992244,-0.01" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-23" data-geometry-id="/sections/start_curve/elements/start_box#outer_boundary" data-object-id="/sections/start_curve/elements/start_box" data-role="outer_boundary" data-purpose="physical">
+          <polyline points="-2,-0.42 0,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-24" data-geometry-id="/sections/start_curve/elements/start_box#rear_boundary" data-object-id="/sections/start_curve/elements/start_box" data-role="rear_boundary" data-purpose="physical">
+          <polyline points="-2,-0.01 -2,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" stroke-opacity=".6" />
+        </g>
+        <g id="geometry-25" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/0" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/0" data-purpose="physical">
+          <path d="M-2.51052593825e-17,-0.41 L0.0166666666667,-0.41 L0.0166666666667,-0.393333333333 L-2.40847203832e-17,-0.393333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-26" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/10" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/10" data-purpose="physical">
+          <path d="M-1.48998693896e-17,-0.243333333333 L0.0166666666667,-0.243333333333 L0.0166666666667,-0.226666666667 L-1.38793303903e-17,-0.226666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-27" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/12" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/12" data-purpose="physical">
+          <path d="M-1.2858791391e-17,-0.21 L0.0166666666667,-0.21 L0.0166666666667,-0.193333333333 L-1.18382523918e-17,-0.193333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-28" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/14" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/14" data-purpose="physical">
+          <path d="M-1.08177133925e-17,-0.176666666667 L0.0166666666667,-0.176666666667 L0.0166666666667,-0.16 L-9.79717439318e-18,-0.16 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-29" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/16" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/16" data-purpose="physical">
+          <path d="M-8.77663539389e-18,-0.143333333333 L0.0166666666667,-0.143333333333 L0.0166666666667,-0.126666666667 L-7.7560963946e-18,-0.126666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-30" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/18" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/18" data-purpose="physical">
+          <path d="M-6.73555739531e-18,-0.11 L0.0166666666667,-0.11 L0.0166666666667,-0.0933333333333 L-5.71501839602e-18,-0.0933333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-31" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/2" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/2" data-purpose="physical">
+          <path d="M-2.30641813839e-17,-0.376666666667 L0.0166666666667,-0.376666666667 L0.0166666666667,-0.36 L-2.20436423847e-17,-0.36 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-32" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/20" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/20" data-purpose="physical">
+          <path d="M-4.69447939673e-18,-0.0766666666667 L0.0166666666667,-0.0766666666667 L0.0166666666667,-0.06 L-3.67394039744e-18,-0.06 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-33" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/22" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/22" data-purpose="physical">
+          <path d="M-2.65340139815e-18,-0.0433333333333 L0.0166666666667,-0.0433333333333 L0.0166666666667,-0.0266666666667 L-1.63286239886e-18,-0.0266666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-34" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/24" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/24" data-purpose="physical">
+          <path d="M-6.12323399574e-19,-0.01 L0.0166666666667,-0.01 L0.0166666666667,0.00666666666667 L4.08215599716e-19,0.00666666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-35" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/26" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/26" data-purpose="physical">
+          <path d="M1.42875459901e-18,0.0233333333333 L0.0166666666667,0.0233333333333 L0.0166666666667,0.04 L2.44929359829e-18,0.04 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-36" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/28" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/28" data-purpose="physical">
+          <path d="M3.46983259758e-18,0.0566666666667 L0.0166666666667,0.0566666666667 L0.0166666666667,0.0733333333333 L4.49037159687e-18,0.0733333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-37" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/30" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/30" data-purpose="physical">
+          <path d="M5.51091059616e-18,0.09 L0.0166666666667,0.09 L0.0166666666667,0.106666666667 L6.53144959545e-18,0.106666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-38" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/32" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/32" data-purpose="physical">
+          <path d="M7.55198859474e-18,0.123333333333 L0.0166666666667,0.123333333333 L0.0166666666667,0.14 L8.57252759403e-18,0.14 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-39" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/34" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/34" data-purpose="physical">
+          <path d="M9.59306659332e-18,0.156666666667 L0.0166666666667,0.156666666667 L0.0166666666667,0.173333333333 L1.06136055926e-17,0.173333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-40" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/36" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/36" data-purpose="physical">
+          <path d="M1.16341445919e-17,0.19 L0.0166666666667,0.19 L0.0166666666667,0.206666666667 L1.26546835912e-17,0.206666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-41" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/38" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/38" data-purpose="physical">
+          <path d="M1.36752225905e-17,0.223333333333 L0.0166666666667,0.223333333333 L0.0166666666667,0.24 L1.46957615898e-17,0.24 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-42" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/4" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/4" data-purpose="physical">
+          <path d="M-2.10231033854e-17,-0.343333333333 L0.0166666666667,-0.343333333333 L0.0166666666667,-0.326666666667 L-2.00025643861e-17,-0.326666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-43" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/40" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/40" data-purpose="physical">
+          <path d="M1.57163005891e-17,0.256666666667 L0.0166666666667,0.256666666667 L0.0166666666667,0.273333333333 L1.67368395883e-17,0.273333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-44" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/42" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/42" data-purpose="physical">
+          <path d="M1.77573785876e-17,0.29 L0.0166666666667,0.29 L0.0166666666667,0.306666666667 L1.87779175869e-17,0.306666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-45" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/44" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/44" data-purpose="physical">
+          <path d="M1.97984565862e-17,0.323333333333 L0.0166666666667,0.323333333333 L0.0166666666667,0.34 L2.08189955855e-17,0.34 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-46" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/46" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/46" data-purpose="physical">
+          <path d="M2.18395345848e-17,0.356666666667 L0.0166666666667,0.356666666667 L0.0166666666667,0.373333333333 L2.28600735841e-17,0.373333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-47" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/48" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/48" data-purpose="physical">
+          <path d="M2.38806125834e-17,0.39 L0.0166666666667,0.39 L0.0166666666667,0.406666666667 L2.49011515827e-17,0.406666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-48" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/6" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/6" data-purpose="physical">
+          <path d="M-1.89820253868e-17,-0.31 L0.0166666666667,-0.31 L0.0166666666667,-0.293333333333 L-1.79614863875e-17,-0.293333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-49" data-geometry-id="/sections/start_curve/elements/starting_line#checker/0/8" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/0/8" data-purpose="physical">
+          <path d="M-1.69409473882e-17,-0.276666666667 L0.0166666666667,-0.276666666667 L0.0166666666667,-0.26 L-1.59204083889e-17,-0.26 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-50" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/1" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/1" data-purpose="physical">
+          <path d="M0.0166666666667,-0.393333333333 L0.0333333333333,-0.393333333333 L0.0333333333333,-0.376666666667 L0.0166666666667,-0.376666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-51" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/11" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/11" data-purpose="physical">
+          <path d="M0.0166666666667,-0.226666666667 L0.0333333333333,-0.226666666667 L0.0333333333333,-0.21 L0.0166666666667,-0.21 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-52" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/13" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/13" data-purpose="physical">
+          <path d="M0.0166666666667,-0.193333333333 L0.0333333333333,-0.193333333333 L0.0333333333333,-0.176666666667 L0.0166666666667,-0.176666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-53" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/15" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/15" data-purpose="physical">
+          <path d="M0.0166666666667,-0.16 L0.0333333333333,-0.16 L0.0333333333333,-0.143333333333 L0.0166666666667,-0.143333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-54" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/17" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/17" data-purpose="physical">
+          <path d="M0.0166666666667,-0.126666666667 L0.0333333333333,-0.126666666667 L0.0333333333333,-0.11 L0.0166666666667,-0.11 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-55" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/19" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/19" data-purpose="physical">
+          <path d="M0.0166666666667,-0.0933333333333 L0.0333333333333,-0.0933333333333 L0.0333333333333,-0.0766666666667 L0.0166666666667,-0.0766666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-56" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/21" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/21" data-purpose="physical">
+          <path d="M0.0166666666667,-0.06 L0.0333333333333,-0.06 L0.0333333333333,-0.0433333333333 L0.0166666666667,-0.0433333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-57" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/23" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/23" data-purpose="physical">
+          <path d="M0.0166666666667,-0.0266666666667 L0.0333333333333,-0.0266666666667 L0.0333333333333,-0.01 L0.0166666666667,-0.01 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-58" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/25" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/25" data-purpose="physical">
+          <path d="M0.0166666666667,0.00666666666667 L0.0333333333333,0.00666666666667 L0.0333333333333,0.0233333333333 L0.0166666666667,0.0233333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-59" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/27" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/27" data-purpose="physical">
+          <path d="M0.0166666666667,0.04 L0.0333333333333,0.04 L0.0333333333333,0.0566666666667 L0.0166666666667,0.0566666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-60" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/29" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/29" data-purpose="physical">
+          <path d="M0.0166666666667,0.0733333333333 L0.0333333333333,0.0733333333333 L0.0333333333333,0.09 L0.0166666666667,0.09 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-61" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/3" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/3" data-purpose="physical">
+          <path d="M0.0166666666667,-0.36 L0.0333333333333,-0.36 L0.0333333333333,-0.343333333333 L0.0166666666667,-0.343333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-62" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/31" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/31" data-purpose="physical">
+          <path d="M0.0166666666667,0.106666666667 L0.0333333333333,0.106666666667 L0.0333333333333,0.123333333333 L0.0166666666667,0.123333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-63" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/33" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/33" data-purpose="physical">
+          <path d="M0.0166666666667,0.14 L0.0333333333333,0.14 L0.0333333333333,0.156666666667 L0.0166666666667,0.156666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-64" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/35" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/35" data-purpose="physical">
+          <path d="M0.0166666666667,0.173333333333 L0.0333333333333,0.173333333333 L0.0333333333333,0.19 L0.0166666666667,0.19 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-65" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/37" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/37" data-purpose="physical">
+          <path d="M0.0166666666667,0.206666666667 L0.0333333333333,0.206666666667 L0.0333333333333,0.223333333333 L0.0166666666667,0.223333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-66" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/39" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/39" data-purpose="physical">
+          <path d="M0.0166666666667,0.24 L0.0333333333333,0.24 L0.0333333333333,0.256666666667 L0.0166666666667,0.256666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-67" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/41" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/41" data-purpose="physical">
+          <path d="M0.0166666666667,0.273333333333 L0.0333333333333,0.273333333333 L0.0333333333333,0.29 L0.0166666666667,0.29 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-68" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/43" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/43" data-purpose="physical">
+          <path d="M0.0166666666667,0.306666666667 L0.0333333333333,0.306666666667 L0.0333333333333,0.323333333333 L0.0166666666667,0.323333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-69" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/45" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/45" data-purpose="physical">
+          <path d="M0.0166666666667,0.34 L0.0333333333333,0.34 L0.0333333333333,0.356666666667 L0.0166666666667,0.356666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-70" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/47" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/47" data-purpose="physical">
+          <path d="M0.0166666666667,0.373333333333 L0.0333333333333,0.373333333333 L0.0333333333333,0.39 L0.0166666666667,0.39 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-71" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/49" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/49" data-purpose="physical">
+          <path d="M0.0166666666667,0.406666666667 L0.0333333333333,0.406666666667 L0.0333333333333,0.41 L0.0166666666667,0.41 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-72" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/5" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/5" data-purpose="physical">
+          <path d="M0.0166666666667,-0.326666666667 L0.0333333333333,-0.326666666667 L0.0333333333333,-0.31 L0.0166666666667,-0.31 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-73" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/7" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/7" data-purpose="physical">
+          <path d="M0.0166666666667,-0.293333333333 L0.0333333333333,-0.293333333333 L0.0333333333333,-0.276666666667 L0.0166666666667,-0.276666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-74" data-geometry-id="/sections/start_curve/elements/starting_line#checker/1/9" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/1/9" data-purpose="physical">
+          <path d="M0.0166666666667,-0.26 L0.0333333333333,-0.26 L0.0333333333333,-0.243333333333 L0.0166666666667,-0.243333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-75" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/0" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/0" data-purpose="physical">
+          <path d="M0.0333333333333,-0.41 L0.05,-0.41 L0.05,-0.393333333333 L0.0333333333333,-0.393333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-76" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/10" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/10" data-purpose="physical">
+          <path d="M0.0333333333333,-0.243333333333 L0.05,-0.243333333333 L0.05,-0.226666666667 L0.0333333333333,-0.226666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-77" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/12" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/12" data-purpose="physical">
+          <path d="M0.0333333333333,-0.21 L0.05,-0.21 L0.05,-0.193333333333 L0.0333333333333,-0.193333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-78" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/14" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/14" data-purpose="physical">
+          <path d="M0.0333333333333,-0.176666666667 L0.05,-0.176666666667 L0.05,-0.16 L0.0333333333333,-0.16 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-79" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/16" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/16" data-purpose="physical">
+          <path d="M0.0333333333333,-0.143333333333 L0.05,-0.143333333333 L0.05,-0.126666666667 L0.0333333333333,-0.126666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-80" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/18" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/18" data-purpose="physical">
+          <path d="M0.0333333333333,-0.11 L0.05,-0.11 L0.05,-0.0933333333333 L0.0333333333333,-0.0933333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-81" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/2" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/2" data-purpose="physical">
+          <path d="M0.0333333333333,-0.376666666667 L0.05,-0.376666666667 L0.05,-0.36 L0.0333333333333,-0.36 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-82" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/20" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/20" data-purpose="physical">
+          <path d="M0.0333333333333,-0.0766666666667 L0.05,-0.0766666666667 L0.05,-0.06 L0.0333333333333,-0.06 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-83" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/22" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/22" data-purpose="physical">
+          <path d="M0.0333333333333,-0.0433333333333 L0.05,-0.0433333333333 L0.05,-0.0266666666667 L0.0333333333333,-0.0266666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-84" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/24" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/24" data-purpose="physical">
+          <path d="M0.0333333333333,-0.01 L0.05,-0.01 L0.05,0.00666666666667 L0.0333333333333,0.00666666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-85" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/26" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/26" data-purpose="physical">
+          <path d="M0.0333333333333,0.0233333333333 L0.05,0.0233333333333 L0.05,0.04 L0.0333333333333,0.04 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-86" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/28" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/28" data-purpose="physical">
+          <path d="M0.0333333333333,0.0566666666667 L0.05,0.0566666666667 L0.05,0.0733333333333 L0.0333333333333,0.0733333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-87" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/30" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/30" data-purpose="physical">
+          <path d="M0.0333333333333,0.09 L0.05,0.09 L0.05,0.106666666667 L0.0333333333333,0.106666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-88" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/32" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/32" data-purpose="physical">
+          <path d="M0.0333333333333,0.123333333333 L0.05,0.123333333333 L0.05,0.14 L0.0333333333333,0.14 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-89" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/34" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/34" data-purpose="physical">
+          <path d="M0.0333333333333,0.156666666667 L0.05,0.156666666667 L0.05,0.173333333333 L0.0333333333333,0.173333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-90" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/36" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/36" data-purpose="physical">
+          <path d="M0.0333333333333,0.19 L0.05,0.19 L0.05,0.206666666667 L0.0333333333333,0.206666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-91" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/38" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/38" data-purpose="physical">
+          <path d="M0.0333333333333,0.223333333333 L0.05,0.223333333333 L0.05,0.24 L0.0333333333333,0.24 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-92" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/4" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/4" data-purpose="physical">
+          <path d="M0.0333333333333,-0.343333333333 L0.05,-0.343333333333 L0.05,-0.326666666667 L0.0333333333333,-0.326666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-93" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/40" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/40" data-purpose="physical">
+          <path d="M0.0333333333333,0.256666666667 L0.05,0.256666666667 L0.05,0.273333333333 L0.0333333333333,0.273333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-94" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/42" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/42" data-purpose="physical">
+          <path d="M0.0333333333333,0.29 L0.05,0.29 L0.05,0.306666666667 L0.0333333333333,0.306666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-95" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/44" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/44" data-purpose="physical">
+          <path d="M0.0333333333333,0.323333333333 L0.05,0.323333333333 L0.05,0.34 L0.0333333333333,0.34 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-96" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/46" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/46" data-purpose="physical">
+          <path d="M0.0333333333333,0.356666666667 L0.05,0.356666666667 L0.05,0.373333333333 L0.0333333333333,0.373333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-97" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/48" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/48" data-purpose="physical">
+          <path d="M0.0333333333333,0.39 L0.05,0.39 L0.05,0.406666666667 L0.0333333333333,0.406666666667 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-98" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/6" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/6" data-purpose="physical">
+          <path d="M0.0333333333333,-0.31 L0.05,-0.31 L0.05,-0.293333333333 L0.0333333333333,-0.293333333333 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+        <g id="geometry-99" data-geometry-id="/sections/start_curve/elements/starting_line#checker/2/8" data-object-id="/sections/start_curve/elements/starting_line" data-role="checker/2/8" data-purpose="physical">
+          <path d="M0.0333333333333,-0.276666666667 L0.05,-0.276666666667 L0.05,-0.26 L0.0333333333333,-0.26 Z" fill="#FFFFFF" fill-rule="evenodd" fill-opacity=".6" />
+        </g>
+      </g>
+      <g id="layer-50" data-layer="50">
+        <g id="geometry-100" data-geometry-id="/features/vehicle#footprint" data-object-id="/features/vehicle" data-role="footprint" data-purpose="projection" data-part-id="/features/vehicle#body">
+          <path d="M-1.895,-0.315 L-1.595,-0.315 L-1.595,-0.115 L-1.895,-0.115 Z" fill="#1E3A8A" fill-rule="evenodd" fill-opacity="1" stroke="#5C8BDE" stroke-width="0.008" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="annotations" inkscape:groupmode="layer" inkscape:label="Annotations" font-family="DejaVu Sans, sans-serif">
+    <polyline points="338.86995,231.76698 473.86995,231.76698" fill="none" stroke="#E45756" stroke-width="4.8" stroke-linecap="butt" stroke-linejoin="round" />
+    <polygon points="488.86994806581316,231.76698140652908 473.86994806581316,238.0669814065291 473.86994806581316,225.46698140652907" fill="#E45756" />
+    <polyline points="338.86995,231.76698 338.86995,96.76698" fill="none" stroke="#16B970" stroke-width="4.8" stroke-linecap="butt" stroke-linejoin="round" />
+    <polygon points="338.86994806581316,81.76698140652908 345.1699480658132,96.76698140652908 332.56994806581315,96.76698140652908" fill="#16B970" />
+    <circle cx="338.86994806581316" cy="231.76698140652908" r="4" fill="#59B8DD" stroke="#D1D5DB" stroke-width="1" />
+    <text x="350.87" y="260.267" fill="#B8C0C7" font-size="12" text-anchor="start">map (0, 0)</text>
+    <text x="488.87" y="213.767" fill="#E45756" font-size="16" text-anchor="middle">x</text>
+    <text x="338.87" y="65.267" fill="#16B970" font-size="16" text-anchor="middle">y</text>
+    <polyline points="77.11995,264.01698 116.61995,264.01698" fill="none" stroke="#5C8BDE" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="round" />
+    <polygon points="126.61994806581316,264.0169814065291 116.61994806581316,268.2169814065291 116.61994806581316,259.8169814065291" fill="#5C8BDE" />
+  </g>
+</svg>

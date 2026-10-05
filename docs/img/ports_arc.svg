@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 458 321" width="458" height="321" role="img" aria-labelledby="title description" data-meters-to-pixels="120">
+  <title id="title">60 degree arc ports, radius 2.4 m</title>
+  <desc id="description">Orange entry and blue exit. Road width 0.86 m with 0.04 m surface overhang on either side; surface ends flush at ports.</desc>
+  <g id="rendering">
+    <path d="M 96.5 240 A 288 288 0 0 0 345.91531628991834 96.0" fill="none" stroke="#1A1A1A" stroke-width="112.8" stroke-linecap="butt" />
+    <path d="M 96.5 189.6 A 237.6 237.6 0 0 0 302.2676359391826 70.8" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" />
+    <path d="M 96.5 290.4 A 338.4 338.4 0 0 0 389.562996640654 121.19999999999999" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" />
+    <path d="M 96.5 240 A 288 288 0 0 0 345.91531628991834 96.0" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" stroke-dasharray="24 24" />
+  </g>
+  <g id="ports" inkscape:groupmode="layer" inkscape:label="Ports and labels">
+    <g id="port-entry" data-port-ref="road.entry" data-nominal-direction="incoming" transform="translate(0 76.63655)">
+      <path d="M 27.50000 163.36345 L 70.50000 163.36345" fill="none" stroke="#E87918" stroke-width="4" stroke-linecap="butt" />
+      <polygon points="84.50000,163.36345 70.50000,169.36345 70.50000,157.36345" fill="#E87918" />
+      <circle cx="96.50000" cy="163.36345" r="9" fill="#E87918" stroke="#E87918" stroke-width="2.25" />
+      <text x="56.50000" y="142.36345" fill="#E87918" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="middle">entry</text>
+    </g>
+    <g id="port-exit" data-port-ref="road.exit" data-nominal-direction="outgoing" transform="translate(93.53074628991834 22.63655)">
+      <path d="M 252.38457 73.36345 L 273.88457 36.12436" fill="none" stroke="#1673B8" stroke-width="4" stroke-linecap="butt" />
+      <polygon points="280.88457,24.00000 279.08073,39.12436 268.68842,33.12436" fill="#1673B8" />
+      <circle cx="252.38457" cy="73.36345" r="9" fill="#1673B8" stroke="#1673B8" stroke-width="2.25" />
+      <text x="287.38457" y="48.91858" fill="#1673B8" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="start">exit</text>
+    </g>
+  </g>
+</svg>

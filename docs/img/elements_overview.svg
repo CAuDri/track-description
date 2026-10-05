@@ -1,0 +1,525 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" viewBox="0 0 1176 258" width="1176" height="258" role="img" aria-labelledby="title description" data-meters-to-pixels="120" data-centerline-phase-degrees="90">
+  <title id="title">Road elements on a straight section</title>
+  <desc id="description">A 9.4 m horizontal straight, from left to right: barred area, checkered starting line, left side-road junction, crosswalk, and a compact parking area with perpendicular spaces. Barred-area and crosswalk signs are shown; element type labels appear below the road. The dark road surface extends 4 cm beyond its outer markings and ends flush at both ports.</desc>
+  <g id="rendering" inkscape:groupmode="layer" inkscape:label="Rendering" sodipodi:insensitive="true">
+    <g transform="translate(1152 140.4) scale(120 -120)">
+      <path id="road-padding" d="M-2.71519237886,0.97 L-0.734807621135,0.97 L-0.446132486541,0.47 L0,0.47 L0,-0.47 L-9.4,-0.47 L-9.4,0.47 L-3.00386751346,0.47 L-2.71519237886,0.97 Z" fill="#1A1A1A" fill-rule="evenodd" />
+      <g id="layer-0" data-layer="0">
+        <g id="geometry-0" data-geometry-id="/sections/road#road_surface" data-object-id="/sections/road" data-role="road_surface" data-purpose="physical">
+          <path d="M-9.4,0.43 L0,0.43 L0,-0.43 L-9.4,-0.43 Z" fill="#1A1A1A" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-1" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking#surface" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking" data-role="surface" data-purpose="physical">
+          <path d="M-2.975,0.42 L-2.68632486541,0.92 L-0.763675134595,0.92 L-0.475,0.42 Z" fill="#1A1A1A" fill-rule="evenodd" />
+        </g>
+      </g>
+      <g id="layer-20" data-layer="20">
+        <g id="geometry-2" data-geometry-id="/sections/road#centerline/0/0/0" data-object-id="/sections/road" data-role="centerline/0/0/0" data-purpose="physical">
+          <polyline points="-9.4,0 -9.3,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-3" data-geometry-id="/sections/road#centerline/0/0/1" data-object-id="/sections/road" data-role="centerline/0/0/1" data-purpose="physical">
+          <polyline points="-9.1,0 -8.9,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-4" data-geometry-id="/sections/road#centerline/0/0/2" data-object-id="/sections/road" data-role="centerline/0/0/2" data-purpose="physical">
+          <polyline points="-8.7,0 -8.5,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-5" data-geometry-id="/sections/road#centerline/0/0/3" data-object-id="/sections/road" data-role="centerline/0/0/3" data-purpose="physical">
+          <polyline points="-8.3,0 -8.1,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-6" data-geometry-id="/sections/road#centerline/0/0/4" data-object-id="/sections/road" data-role="centerline/0/0/4" data-purpose="physical">
+          <polyline points="-7.9,0 -7.7,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-7" data-geometry-id="/sections/road#centerline/0/0/5" data-object-id="/sections/road" data-role="centerline/0/0/5" data-purpose="physical">
+          <polyline points="-7.5,0 -7.3,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-8" data-geometry-id="/sections/road#centerline/0/0/6" data-object-id="/sections/road" data-role="centerline/0/0/6" data-purpose="physical">
+          <polyline points="-7.1,0 -6.91,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-9" data-geometry-id="/sections/road#centerline/2/0/0" data-object-id="/sections/road" data-role="centerline/2/0/0" data-purpose="physical">
+          <polyline points="-6.56,0 -6.5,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-10" data-geometry-id="/sections/road#centerline/2/0/1" data-object-id="/sections/road" data-role="centerline/2/0/1" data-purpose="physical">
+          <polyline points="-6.3,0 -6.1,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-11" data-geometry-id="/sections/road#centerline/2/0/2" data-object-id="/sections/road" data-role="centerline/2/0/2" data-purpose="physical">
+          <polyline points="-5.9,0 -5.7,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-12" data-geometry-id="/sections/road#centerline/2/0/3" data-object-id="/sections/road" data-role="centerline/2/0/3" data-purpose="physical">
+          <polyline points="-5.5,0 -5.3,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-13" data-geometry-id="/sections/road#centerline/2/0/4" data-object-id="/sections/road" data-role="centerline/2/0/4" data-purpose="physical">
+          <polyline points="-5.1,0 -4.9,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-14" data-geometry-id="/sections/road#centerline/2/0/5" data-object-id="/sections/road" data-role="centerline/2/0/5" data-purpose="physical">
+          <polyline points="-4.7,0 -4.5,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-15" data-geometry-id="/sections/road#centerline/4/0/0" data-object-id="/sections/road" data-role="centerline/4/0/0" data-purpose="physical">
+          <polyline points="-3.8,0 -3.7,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-16" data-geometry-id="/sections/road#centerline/4/0/1" data-object-id="/sections/road" data-role="centerline/4/0/1" data-purpose="physical">
+          <polyline points="-3.5,0 -3.3,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-17" data-geometry-id="/sections/road#centerline/4/0/2" data-object-id="/sections/road" data-role="centerline/4/0/2" data-purpose="physical">
+          <polyline points="-3.1,0 -2.9,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-18" data-geometry-id="/sections/road#centerline/4/0/3" data-object-id="/sections/road" data-role="centerline/4/0/3" data-purpose="physical">
+          <polyline points="-2.7,0 -2.5,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-19" data-geometry-id="/sections/road#centerline/4/0/4" data-object-id="/sections/road" data-role="centerline/4/0/4" data-purpose="physical">
+          <polyline points="-2.3,0 -2.1,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-20" data-geometry-id="/sections/road#centerline/4/0/5" data-object-id="/sections/road" data-role="centerline/4/0/5" data-purpose="physical">
+          <polyline points="-1.9,0 -1.7,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-21" data-geometry-id="/sections/road#centerline/4/0/6" data-object-id="/sections/road" data-role="centerline/4/0/6" data-purpose="physical">
+          <polyline points="-1.5,0 -1.3,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-22" data-geometry-id="/sections/road#centerline/4/0/7" data-object-id="/sections/road" data-role="centerline/4/0/7" data-purpose="physical">
+          <polyline points="-1.1,0 -0.9,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-23" data-geometry-id="/sections/road#centerline/4/0/8" data-object-id="/sections/road" data-role="centerline/4/0/8" data-purpose="physical">
+          <polyline points="-0.7,0 -0.5,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-24" data-geometry-id="/sections/road#centerline/4/0/9" data-object-id="/sections/road" data-role="centerline/4/0/9" data-purpose="physical">
+          <polyline points="-0.3,0 -0.1,0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-25" data-geometry-id="/sections/road#left_boundary/0/0" data-object-id="/sections/road" data-role="left_boundary/0/0" data-purpose="physical">
+          <polyline points="-9.4,0.42 -6.91,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-26" data-geometry-id="/sections/road#left_boundary/1/0" data-object-id="/sections/road" data-role="left_boundary/1/0" data-purpose="physical">
+          <polyline points="-6.91,0.42 -6.56,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-27" data-geometry-id="/sections/road#left_boundary/2/0" data-object-id="/sections/road" data-role="left_boundary/2/0" data-purpose="physical">
+          <polyline points="-6.56,0.42 -6.05,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-28" data-geometry-id="/sections/road#left_boundary/2/1" data-object-id="/sections/road" data-role="left_boundary/2/1" data-purpose="physical">
+          <polyline points="-5.09,0.42 -4.5,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-29" data-geometry-id="/sections/road#left_boundary/3/0" data-object-id="/sections/road" data-role="left_boundary/3/0" data-purpose="physical">
+          <polyline points="-4.5,0.42 -3.8,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-30" data-geometry-id="/sections/road#left_boundary/4/0" data-object-id="/sections/road" data-role="left_boundary/4/0" data-purpose="physical">
+          <polyline points="-3.8,0.42 0,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-31" data-geometry-id="/sections/road#right_boundary/0/0" data-object-id="/sections/road" data-role="right_boundary/0/0" data-purpose="physical">
+          <polyline points="-9.4,-0.42 -6.91,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-32" data-geometry-id="/sections/road#right_boundary/1/0" data-object-id="/sections/road" data-role="right_boundary/1/0" data-purpose="physical">
+          <polyline points="-6.91,-0.42 -6.56,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-33" data-geometry-id="/sections/road#right_boundary/2/0" data-object-id="/sections/road" data-role="right_boundary/2/0" data-purpose="physical">
+          <polyline points="-6.56,-0.42 -4.5,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-34" data-geometry-id="/sections/road#right_boundary/3/0" data-object-id="/sections/road" data-role="right_boundary/3/0" data-purpose="physical">
+          <polyline points="-4.5,-0.42 -3.8,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-35" data-geometry-id="/sections/road#right_boundary/4/0" data-object-id="/sections/road" data-role="right_boundary/4/0" data-purpose="physical">
+          <polyline points="-3.8,-0.42 0,-0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-36" data-geometry-id="/sections/road/elements/junction#boundary/0" data-object-id="/sections/road/elements/junction" data-role="boundary/0" data-purpose="physical">
+          <polyline points="-6.05,0.42 -5.95,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-37" data-geometry-id="/sections/road/elements/junction#boundary/1" data-object-id="/sections/road/elements/junction" data-role="boundary/1" data-purpose="physical">
+          <polyline points="-5.9,0.42 -5.8,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-38" data-geometry-id="/sections/road/elements/junction#boundary/2" data-object-id="/sections/road/elements/junction" data-role="boundary/2" data-purpose="physical">
+          <polyline points="-5.75,0.42 -5.65,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-39" data-geometry-id="/sections/road/elements/junction#boundary/3" data-object-id="/sections/road/elements/junction" data-role="boundary/3" data-purpose="physical">
+          <polyline points="-5.6,0.42 -5.5,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-40" data-geometry-id="/sections/road/elements/junction#boundary/4" data-object-id="/sections/road/elements/junction" data-role="boundary/4" data-purpose="physical">
+          <polyline points="-5.45,0.42 -5.35,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-41" data-geometry-id="/sections/road/elements/junction#boundary/5" data-object-id="/sections/road/elements/junction" data-role="boundary/5" data-purpose="physical">
+          <polyline points="-5.3,0.42 -5.2,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-42" data-geometry-id="/sections/road/elements/junction#boundary/6" data-object-id="/sections/road/elements/junction" data-role="boundary/6" data-purpose="physical">
+          <polyline points="-5.15,0.42 -5.09,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+      </g>
+      <g id="layer-30" data-layer="30">
+        <g id="geometry-43" data-geometry-id="/sections/road/elements/barred#hatch/0" data-object-id="/sections/road/elements/barred" data-role="hatch/0" data-purpose="physical">
+          <path d="M-7.68442768024,-0.4 L-7.77253525082,-0.4 L-7.5830594782,-0.303457271786 L-7.56303203128,-0.338145827398 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-44" data-geometry-id="/sections/road/elements/barred#hatch/1" data-object-id="/sections/road/elements/barred" data-role="hatch/1" data-purpose="physical">
+          <path d="M-7.92253525082,-0.4 L-8.0106428214,-0.4 L-7.63718294,-0.209712686061 L-7.61715549308,-0.244401241672 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-45" data-geometry-id="/sections/road/elements/barred#hatch/2" data-object-id="/sections/road/elements/barred" data-role="hatch/2" data-purpose="physical">
+          <path d="M-8.1606428214,-0.4 L-8.24875039199,-0.4 L-7.79734997572,-0.17 L-7.70924240514,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-46" data-geometry-id="/sections/road/elements/barred#hatch/3" data-object-id="/sections/road/elements/barred" data-role="hatch/3" data-purpose="physical">
+          <path d="M-8.39875039199,-0.4 L-8.48685796257,-0.4 L-8.0354575463,-0.17 L-7.94734997572,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-47" data-geometry-id="/sections/road/elements/barred#hatch/4" data-object-id="/sections/road/elements/barred" data-role="hatch/4" data-purpose="physical">
+          <path d="M-8.63685796257,-0.4 L-8.72496553315,-0.4 L-8.27356511689,-0.17 L-8.1854575463,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-48" data-geometry-id="/sections/road/elements/barred#hatch/5" data-object-id="/sections/road/elements/barred" data-role="hatch/5" data-purpose="physical">
+          <path d="M-8.87496553315,-0.4 L-8.93267949192,-0.4 L-8.92001200931,-0.378059276506 L-8.51167268747,-0.17 L-8.42356511689,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-49" data-geometry-id="/sections/road/elements/barred#hatch/6" data-object-id="/sections/road/elements/barred" data-role="hatch/6" data-purpose="physical">
+          <path d="M-8.85749484603,-0.26977637336 L-8.82077327685,-0.206172749815 L-8.74978025805,-0.17 L-8.66167268747,-0.17 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-50" data-geometry-id="/sections/road/elements/barred#outline" data-object-id="/sections/road/elements/barred" data-role="outline" data-purpose="physical">
+          <polyline points="-8.95,-0.41 -8.8056624327,-0.16 -7.6543375673,-0.16 -7.51,-0.41 -8.95,-0.41" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-51" data-geometry-id="/sections/road/elements/crossing#stripe/0" data-object-id="/sections/road/elements/crossing" data-role="stripe/0" data-purpose="physical">
+          <path d="M-4.35,-0.38 L-3.95,-0.38 L-3.95,-0.34 L-4.35,-0.34 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-52" data-geometry-id="/sections/road/elements/crossing#stripe/1" data-object-id="/sections/road/elements/crossing" data-role="stripe/1" data-purpose="physical">
+          <path d="M-4.35,-0.3 L-3.95,-0.3 L-3.95,-0.26 L-4.35,-0.26 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-53" data-geometry-id="/sections/road/elements/crossing#stripe/2" data-object-id="/sections/road/elements/crossing" data-role="stripe/2" data-purpose="physical">
+          <path d="M-4.35,-0.22 L-3.95,-0.22 L-3.95,-0.18 L-4.35,-0.18 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-54" data-geometry-id="/sections/road/elements/crossing#stripe/3" data-object-id="/sections/road/elements/crossing" data-role="stripe/3" data-purpose="physical">
+          <path d="M-4.35,-0.14 L-3.95,-0.14 L-3.95,-0.1 L-4.35,-0.1 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-55" data-geometry-id="/sections/road/elements/crossing#stripe/4" data-object-id="/sections/road/elements/crossing" data-role="stripe/4" data-purpose="physical">
+          <path d="M-4.35,-0.06 L-3.95,-0.06 L-3.95,-0.02 L-4.35,-0.02 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-56" data-geometry-id="/sections/road/elements/crossing#stripe/5" data-object-id="/sections/road/elements/crossing" data-role="stripe/5" data-purpose="physical">
+          <path d="M-4.35,0.02 L-3.95,0.02 L-3.95,0.06 L-4.35,0.06 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-57" data-geometry-id="/sections/road/elements/crossing#stripe/6" data-object-id="/sections/road/elements/crossing" data-role="stripe/6" data-purpose="physical">
+          <path d="M-4.35,0.1 L-3.95,0.1 L-3.95,0.14 L-4.35,0.14 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-58" data-geometry-id="/sections/road/elements/crossing#stripe/7" data-object-id="/sections/road/elements/crossing" data-role="stripe/7" data-purpose="physical">
+          <path d="M-4.35,0.18 L-3.95,0.18 L-3.95,0.22 L-4.35,0.22 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-59" data-geometry-id="/sections/road/elements/crossing#stripe/8" data-object-id="/sections/road/elements/crossing" data-role="stripe/8" data-purpose="physical">
+          <path d="M-4.35,0.26 L-3.95,0.26 L-3.95,0.3 L-4.35,0.3 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-60" data-geometry-id="/sections/road/elements/crossing#stripe/9" data-object-id="/sections/road/elements/crossing" data-role="stripe/9" data-purpose="physical">
+          <path d="M-4.35,0.34 L-3.95,0.34 L-3.95,0.38 L-4.35,0.38 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-61" data-geometry-id="/sections/road/elements/crossing#waiting/left/0/0" data-object-id="/sections/road/elements/crossing" data-role="waiting/left/0/0" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/left">
+          <polyline points="-4.375,0.42 -4.375,0.47" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-62" data-geometry-id="/sections/road/elements/crossing#waiting/left/0/1" data-object-id="/sections/road/elements/crossing" data-role="waiting/left/0/1" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/left">
+          <polyline points="-4.375,0.52 -4.375,0.57" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-63" data-geometry-id="/sections/road/elements/crossing#waiting/left/1/0" data-object-id="/sections/road/elements/crossing" data-role="waiting/left/1/0" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/left">
+          <polyline points="-4.375,0.62 -4.325,0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-64" data-geometry-id="/sections/road/elements/crossing#waiting/left/1/1" data-object-id="/sections/road/elements/crossing" data-role="waiting/left/1/1" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/left">
+          <polyline points="-4.275,0.62 -4.225,0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-65" data-geometry-id="/sections/road/elements/crossing#waiting/left/1/2" data-object-id="/sections/road/elements/crossing" data-role="waiting/left/1/2" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/left">
+          <polyline points="-4.175,0.62 -4.125,0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-66" data-geometry-id="/sections/road/elements/crossing#waiting/left/1/3" data-object-id="/sections/road/elements/crossing" data-role="waiting/left/1/3" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/left">
+          <polyline points="-4.075,0.62 -4.025,0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-67" data-geometry-id="/sections/road/elements/crossing#waiting/left/1/4" data-object-id="/sections/road/elements/crossing" data-role="waiting/left/1/4" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/left">
+          <polyline points="-3.975,0.62 -3.925,0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-68" data-geometry-id="/sections/road/elements/crossing#waiting/left/2/0" data-object-id="/sections/road/elements/crossing" data-role="waiting/left/2/0" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/left">
+          <polyline points="-3.925,0.62 -3.925,0.57" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-69" data-geometry-id="/sections/road/elements/crossing#waiting/left/2/1" data-object-id="/sections/road/elements/crossing" data-role="waiting/left/2/1" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/left">
+          <polyline points="-3.925,0.52 -3.925,0.47" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-70" data-geometry-id="/sections/road/elements/crossing#waiting/right/0/0" data-object-id="/sections/road/elements/crossing" data-role="waiting/right/0/0" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/right">
+          <polyline points="-4.375,-0.42 -4.375,-0.47" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-71" data-geometry-id="/sections/road/elements/crossing#waiting/right/0/1" data-object-id="/sections/road/elements/crossing" data-role="waiting/right/0/1" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/right">
+          <polyline points="-4.375,-0.52 -4.375,-0.57" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-72" data-geometry-id="/sections/road/elements/crossing#waiting/right/1/0" data-object-id="/sections/road/elements/crossing" data-role="waiting/right/1/0" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/right">
+          <polyline points="-4.375,-0.62 -4.325,-0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-73" data-geometry-id="/sections/road/elements/crossing#waiting/right/1/1" data-object-id="/sections/road/elements/crossing" data-role="waiting/right/1/1" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/right">
+          <polyline points="-4.275,-0.62 -4.225,-0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-74" data-geometry-id="/sections/road/elements/crossing#waiting/right/1/2" data-object-id="/sections/road/elements/crossing" data-role="waiting/right/1/2" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/right">
+          <polyline points="-4.175,-0.62 -4.125,-0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-75" data-geometry-id="/sections/road/elements/crossing#waiting/right/1/3" data-object-id="/sections/road/elements/crossing" data-role="waiting/right/1/3" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/right">
+          <polyline points="-4.075,-0.62 -4.025,-0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-76" data-geometry-id="/sections/road/elements/crossing#waiting/right/1/4" data-object-id="/sections/road/elements/crossing" data-role="waiting/right/1/4" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/right">
+          <polyline points="-3.975,-0.62 -3.925,-0.62" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-77" data-geometry-id="/sections/road/elements/crossing#waiting/right/2/0" data-object-id="/sections/road/elements/crossing" data-role="waiting/right/2/0" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/right">
+          <polyline points="-3.925,-0.62 -3.925,-0.57" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-78" data-geometry-id="/sections/road/elements/crossing#waiting/right/2/1" data-object-id="/sections/road/elements/crossing" data-role="waiting/right/2/1" data-purpose="projection" data-part-id="/sections/road/elements/crossing#waiting_area/right">
+          <polyline points="-3.925,-0.52 -3.925,-0.47" fill="none" stroke="#D03030" stroke-width="0.01" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-79" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking#outline" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking" data-role="outline" data-purpose="physical">
+          <polyline points="-2.975,0.42 -2.68632486541,0.92 -0.763675134595,0.92 -0.475,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-80" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/first#outline" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/first" data-role="outline" data-purpose="physical">
+          <polyline points="-2.275,0.42 -1.925,0.42 -1.925,0.92 -2.275,0.92 -2.275,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-81" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/front#cross/0" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/front" data-role="cross/0" data-purpose="physical">
+          <polyline points="-2.625,0.42 -2.275,0.92" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-82" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/front#cross/1" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/front" data-role="cross/1" data-purpose="physical">
+          <polyline points="-2.275,0.42 -2.625,0.92" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-83" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/front#outline" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/front" data-role="outline" data-purpose="physical">
+          <polyline points="-2.625,0.42 -2.275,0.42 -2.275,0.92 -2.625,0.92 -2.625,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-84" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/rear#cross/0" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/rear" data-role="cross/0" data-purpose="physical">
+          <polyline points="-1.225,0.42 -0.875,0.92" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-85" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/rear#cross/1" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/rear" data-role="cross/1" data-purpose="physical">
+          <polyline points="-0.875,0.42 -1.225,0.92" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-86" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/rear#outline" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/rear" data-role="outline" data-purpose="physical">
+          <polyline points="-1.225,0.42 -0.875,0.42 -0.875,0.92 -1.225,0.92 -1.225,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-87" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/second#outline" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/second" data-role="outline" data-purpose="physical">
+          <polyline points="-1.925,0.42 -1.575,0.42 -1.575,0.92 -1.925,0.92 -1.925,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-88" data-geometry-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/third#outline" data-object-id="/sections/road/elements/parking/parameters/perpendicular_parking/spots/third" data-role="outline" data-purpose="physical">
+          <polyline points="-1.575,0.42 -1.225,0.42 -1.225,0.92 -1.575,0.92 -1.575,0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="geometry-89" data-geometry-id="/sections/road/elements/start#checker/0/0" data-object-id="/sections/road/elements/start" data-role="checker/0/0" data-purpose="physical">
+          <path d="M-6.76,-0.41 L-6.74333333333,-0.41 L-6.74333333333,-0.393333333333 L-6.76,-0.393333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-90" data-geometry-id="/sections/road/elements/start#checker/0/10" data-object-id="/sections/road/elements/start" data-role="checker/0/10" data-purpose="physical">
+          <path d="M-6.76,-0.243333333333 L-6.74333333333,-0.243333333333 L-6.74333333333,-0.226666666667 L-6.76,-0.226666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-91" data-geometry-id="/sections/road/elements/start#checker/0/12" data-object-id="/sections/road/elements/start" data-role="checker/0/12" data-purpose="physical">
+          <path d="M-6.76,-0.21 L-6.74333333333,-0.21 L-6.74333333333,-0.193333333333 L-6.76,-0.193333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-92" data-geometry-id="/sections/road/elements/start#checker/0/14" data-object-id="/sections/road/elements/start" data-role="checker/0/14" data-purpose="physical">
+          <path d="M-6.76,-0.176666666667 L-6.74333333333,-0.176666666667 L-6.74333333333,-0.16 L-6.76,-0.16 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-93" data-geometry-id="/sections/road/elements/start#checker/0/16" data-object-id="/sections/road/elements/start" data-role="checker/0/16" data-purpose="physical">
+          <path d="M-6.76,-0.143333333333 L-6.74333333333,-0.143333333333 L-6.74333333333,-0.126666666667 L-6.76,-0.126666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-94" data-geometry-id="/sections/road/elements/start#checker/0/18" data-object-id="/sections/road/elements/start" data-role="checker/0/18" data-purpose="physical">
+          <path d="M-6.76,-0.11 L-6.74333333333,-0.11 L-6.74333333333,-0.0933333333333 L-6.76,-0.0933333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-95" data-geometry-id="/sections/road/elements/start#checker/0/2" data-object-id="/sections/road/elements/start" data-role="checker/0/2" data-purpose="physical">
+          <path d="M-6.76,-0.376666666667 L-6.74333333333,-0.376666666667 L-6.74333333333,-0.36 L-6.76,-0.36 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-96" data-geometry-id="/sections/road/elements/start#checker/0/20" data-object-id="/sections/road/elements/start" data-role="checker/0/20" data-purpose="physical">
+          <path d="M-6.76,-0.0766666666667 L-6.74333333333,-0.0766666666667 L-6.74333333333,-0.06 L-6.76,-0.06 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-97" data-geometry-id="/sections/road/elements/start#checker/0/22" data-object-id="/sections/road/elements/start" data-role="checker/0/22" data-purpose="physical">
+          <path d="M-6.76,-0.0433333333333 L-6.74333333333,-0.0433333333333 L-6.74333333333,-0.0266666666667 L-6.76,-0.0266666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-98" data-geometry-id="/sections/road/elements/start#checker/0/24" data-object-id="/sections/road/elements/start" data-role="checker/0/24" data-purpose="physical">
+          <path d="M-6.76,-0.01 L-6.74333333333,-0.01 L-6.74333333333,0.00666666666667 L-6.76,0.00666666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-99" data-geometry-id="/sections/road/elements/start#checker/0/26" data-object-id="/sections/road/elements/start" data-role="checker/0/26" data-purpose="physical">
+          <path d="M-6.76,0.0233333333333 L-6.74333333333,0.0233333333333 L-6.74333333333,0.04 L-6.76,0.04 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-100" data-geometry-id="/sections/road/elements/start#checker/0/28" data-object-id="/sections/road/elements/start" data-role="checker/0/28" data-purpose="physical">
+          <path d="M-6.76,0.0566666666667 L-6.74333333333,0.0566666666667 L-6.74333333333,0.0733333333333 L-6.76,0.0733333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-101" data-geometry-id="/sections/road/elements/start#checker/0/30" data-object-id="/sections/road/elements/start" data-role="checker/0/30" data-purpose="physical">
+          <path d="M-6.76,0.09 L-6.74333333333,0.09 L-6.74333333333,0.106666666667 L-6.76,0.106666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-102" data-geometry-id="/sections/road/elements/start#checker/0/32" data-object-id="/sections/road/elements/start" data-role="checker/0/32" data-purpose="physical">
+          <path d="M-6.76,0.123333333333 L-6.74333333333,0.123333333333 L-6.74333333333,0.14 L-6.76,0.14 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-103" data-geometry-id="/sections/road/elements/start#checker/0/34" data-object-id="/sections/road/elements/start" data-role="checker/0/34" data-purpose="physical">
+          <path d="M-6.76,0.156666666667 L-6.74333333333,0.156666666667 L-6.74333333333,0.173333333333 L-6.76,0.173333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-104" data-geometry-id="/sections/road/elements/start#checker/0/36" data-object-id="/sections/road/elements/start" data-role="checker/0/36" data-purpose="physical">
+          <path d="M-6.76,0.19 L-6.74333333333,0.19 L-6.74333333333,0.206666666667 L-6.76,0.206666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-105" data-geometry-id="/sections/road/elements/start#checker/0/38" data-object-id="/sections/road/elements/start" data-role="checker/0/38" data-purpose="physical">
+          <path d="M-6.76,0.223333333333 L-6.74333333333,0.223333333333 L-6.74333333333,0.24 L-6.76,0.24 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-106" data-geometry-id="/sections/road/elements/start#checker/0/4" data-object-id="/sections/road/elements/start" data-role="checker/0/4" data-purpose="physical">
+          <path d="M-6.76,-0.343333333333 L-6.74333333333,-0.343333333333 L-6.74333333333,-0.326666666667 L-6.76,-0.326666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-107" data-geometry-id="/sections/road/elements/start#checker/0/40" data-object-id="/sections/road/elements/start" data-role="checker/0/40" data-purpose="physical">
+          <path d="M-6.76,0.256666666667 L-6.74333333333,0.256666666667 L-6.74333333333,0.273333333333 L-6.76,0.273333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-108" data-geometry-id="/sections/road/elements/start#checker/0/42" data-object-id="/sections/road/elements/start" data-role="checker/0/42" data-purpose="physical">
+          <path d="M-6.76,0.29 L-6.74333333333,0.29 L-6.74333333333,0.306666666667 L-6.76,0.306666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-109" data-geometry-id="/sections/road/elements/start#checker/0/44" data-object-id="/sections/road/elements/start" data-role="checker/0/44" data-purpose="physical">
+          <path d="M-6.76,0.323333333333 L-6.74333333333,0.323333333333 L-6.74333333333,0.34 L-6.76,0.34 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-110" data-geometry-id="/sections/road/elements/start#checker/0/46" data-object-id="/sections/road/elements/start" data-role="checker/0/46" data-purpose="physical">
+          <path d="M-6.76,0.356666666667 L-6.74333333333,0.356666666667 L-6.74333333333,0.373333333333 L-6.76,0.373333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-111" data-geometry-id="/sections/road/elements/start#checker/0/48" data-object-id="/sections/road/elements/start" data-role="checker/0/48" data-purpose="physical">
+          <path d="M-6.76,0.39 L-6.74333333333,0.39 L-6.74333333333,0.406666666667 L-6.76,0.406666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-112" data-geometry-id="/sections/road/elements/start#checker/0/6" data-object-id="/sections/road/elements/start" data-role="checker/0/6" data-purpose="physical">
+          <path d="M-6.76,-0.31 L-6.74333333333,-0.31 L-6.74333333333,-0.293333333333 L-6.76,-0.293333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-113" data-geometry-id="/sections/road/elements/start#checker/0/8" data-object-id="/sections/road/elements/start" data-role="checker/0/8" data-purpose="physical">
+          <path d="M-6.76,-0.276666666667 L-6.74333333333,-0.276666666667 L-6.74333333333,-0.26 L-6.76,-0.26 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-114" data-geometry-id="/sections/road/elements/start#checker/1/1" data-object-id="/sections/road/elements/start" data-role="checker/1/1" data-purpose="physical">
+          <path d="M-6.74333333333,-0.393333333333 L-6.72666666667,-0.393333333333 L-6.72666666667,-0.376666666667 L-6.74333333333,-0.376666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-115" data-geometry-id="/sections/road/elements/start#checker/1/11" data-object-id="/sections/road/elements/start" data-role="checker/1/11" data-purpose="physical">
+          <path d="M-6.74333333333,-0.226666666667 L-6.72666666667,-0.226666666667 L-6.72666666667,-0.21 L-6.74333333333,-0.21 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-116" data-geometry-id="/sections/road/elements/start#checker/1/13" data-object-id="/sections/road/elements/start" data-role="checker/1/13" data-purpose="physical">
+          <path d="M-6.74333333333,-0.193333333333 L-6.72666666667,-0.193333333333 L-6.72666666667,-0.176666666667 L-6.74333333333,-0.176666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-117" data-geometry-id="/sections/road/elements/start#checker/1/15" data-object-id="/sections/road/elements/start" data-role="checker/1/15" data-purpose="physical">
+          <path d="M-6.74333333333,-0.16 L-6.72666666667,-0.16 L-6.72666666667,-0.143333333333 L-6.74333333333,-0.143333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-118" data-geometry-id="/sections/road/elements/start#checker/1/17" data-object-id="/sections/road/elements/start" data-role="checker/1/17" data-purpose="physical">
+          <path d="M-6.74333333333,-0.126666666667 L-6.72666666667,-0.126666666667 L-6.72666666667,-0.11 L-6.74333333333,-0.11 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-119" data-geometry-id="/sections/road/elements/start#checker/1/19" data-object-id="/sections/road/elements/start" data-role="checker/1/19" data-purpose="physical">
+          <path d="M-6.74333333333,-0.0933333333333 L-6.72666666667,-0.0933333333333 L-6.72666666667,-0.0766666666667 L-6.74333333333,-0.0766666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-120" data-geometry-id="/sections/road/elements/start#checker/1/21" data-object-id="/sections/road/elements/start" data-role="checker/1/21" data-purpose="physical">
+          <path d="M-6.74333333333,-0.06 L-6.72666666667,-0.06 L-6.72666666667,-0.0433333333333 L-6.74333333333,-0.0433333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-121" data-geometry-id="/sections/road/elements/start#checker/1/23" data-object-id="/sections/road/elements/start" data-role="checker/1/23" data-purpose="physical">
+          <path d="M-6.74333333333,-0.0266666666667 L-6.72666666667,-0.0266666666667 L-6.72666666667,-0.01 L-6.74333333333,-0.01 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-122" data-geometry-id="/sections/road/elements/start#checker/1/25" data-object-id="/sections/road/elements/start" data-role="checker/1/25" data-purpose="physical">
+          <path d="M-6.74333333333,0.00666666666667 L-6.72666666667,0.00666666666667 L-6.72666666667,0.0233333333333 L-6.74333333333,0.0233333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-123" data-geometry-id="/sections/road/elements/start#checker/1/27" data-object-id="/sections/road/elements/start" data-role="checker/1/27" data-purpose="physical">
+          <path d="M-6.74333333333,0.04 L-6.72666666667,0.04 L-6.72666666667,0.0566666666667 L-6.74333333333,0.0566666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-124" data-geometry-id="/sections/road/elements/start#checker/1/29" data-object-id="/sections/road/elements/start" data-role="checker/1/29" data-purpose="physical">
+          <path d="M-6.74333333333,0.0733333333333 L-6.72666666667,0.0733333333333 L-6.72666666667,0.09 L-6.74333333333,0.09 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-125" data-geometry-id="/sections/road/elements/start#checker/1/3" data-object-id="/sections/road/elements/start" data-role="checker/1/3" data-purpose="physical">
+          <path d="M-6.74333333333,-0.36 L-6.72666666667,-0.36 L-6.72666666667,-0.343333333333 L-6.74333333333,-0.343333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-126" data-geometry-id="/sections/road/elements/start#checker/1/31" data-object-id="/sections/road/elements/start" data-role="checker/1/31" data-purpose="physical">
+          <path d="M-6.74333333333,0.106666666667 L-6.72666666667,0.106666666667 L-6.72666666667,0.123333333333 L-6.74333333333,0.123333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-127" data-geometry-id="/sections/road/elements/start#checker/1/33" data-object-id="/sections/road/elements/start" data-role="checker/1/33" data-purpose="physical">
+          <path d="M-6.74333333333,0.14 L-6.72666666667,0.14 L-6.72666666667,0.156666666667 L-6.74333333333,0.156666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-128" data-geometry-id="/sections/road/elements/start#checker/1/35" data-object-id="/sections/road/elements/start" data-role="checker/1/35" data-purpose="physical">
+          <path d="M-6.74333333333,0.173333333333 L-6.72666666667,0.173333333333 L-6.72666666667,0.19 L-6.74333333333,0.19 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-129" data-geometry-id="/sections/road/elements/start#checker/1/37" data-object-id="/sections/road/elements/start" data-role="checker/1/37" data-purpose="physical">
+          <path d="M-6.74333333333,0.206666666667 L-6.72666666667,0.206666666667 L-6.72666666667,0.223333333333 L-6.74333333333,0.223333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-130" data-geometry-id="/sections/road/elements/start#checker/1/39" data-object-id="/sections/road/elements/start" data-role="checker/1/39" data-purpose="physical">
+          <path d="M-6.74333333333,0.24 L-6.72666666667,0.24 L-6.72666666667,0.256666666667 L-6.74333333333,0.256666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-131" data-geometry-id="/sections/road/elements/start#checker/1/41" data-object-id="/sections/road/elements/start" data-role="checker/1/41" data-purpose="physical">
+          <path d="M-6.74333333333,0.273333333333 L-6.72666666667,0.273333333333 L-6.72666666667,0.29 L-6.74333333333,0.29 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-132" data-geometry-id="/sections/road/elements/start#checker/1/43" data-object-id="/sections/road/elements/start" data-role="checker/1/43" data-purpose="physical">
+          <path d="M-6.74333333333,0.306666666667 L-6.72666666667,0.306666666667 L-6.72666666667,0.323333333333 L-6.74333333333,0.323333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-133" data-geometry-id="/sections/road/elements/start#checker/1/45" data-object-id="/sections/road/elements/start" data-role="checker/1/45" data-purpose="physical">
+          <path d="M-6.74333333333,0.34 L-6.72666666667,0.34 L-6.72666666667,0.356666666667 L-6.74333333333,0.356666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-134" data-geometry-id="/sections/road/elements/start#checker/1/47" data-object-id="/sections/road/elements/start" data-role="checker/1/47" data-purpose="physical">
+          <path d="M-6.74333333333,0.373333333333 L-6.72666666667,0.373333333333 L-6.72666666667,0.39 L-6.74333333333,0.39 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-135" data-geometry-id="/sections/road/elements/start#checker/1/49" data-object-id="/sections/road/elements/start" data-role="checker/1/49" data-purpose="physical">
+          <path d="M-6.74333333333,0.406666666667 L-6.72666666667,0.406666666667 L-6.72666666667,0.41 L-6.74333333333,0.41 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-136" data-geometry-id="/sections/road/elements/start#checker/1/5" data-object-id="/sections/road/elements/start" data-role="checker/1/5" data-purpose="physical">
+          <path d="M-6.74333333333,-0.326666666667 L-6.72666666667,-0.326666666667 L-6.72666666667,-0.31 L-6.74333333333,-0.31 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-137" data-geometry-id="/sections/road/elements/start#checker/1/7" data-object-id="/sections/road/elements/start" data-role="checker/1/7" data-purpose="physical">
+          <path d="M-6.74333333333,-0.293333333333 L-6.72666666667,-0.293333333333 L-6.72666666667,-0.276666666667 L-6.74333333333,-0.276666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-138" data-geometry-id="/sections/road/elements/start#checker/1/9" data-object-id="/sections/road/elements/start" data-role="checker/1/9" data-purpose="physical">
+          <path d="M-6.74333333333,-0.26 L-6.72666666667,-0.26 L-6.72666666667,-0.243333333333 L-6.74333333333,-0.243333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-139" data-geometry-id="/sections/road/elements/start#checker/2/0" data-object-id="/sections/road/elements/start" data-role="checker/2/0" data-purpose="physical">
+          <path d="M-6.72666666667,-0.41 L-6.71,-0.41 L-6.71,-0.393333333333 L-6.72666666667,-0.393333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-140" data-geometry-id="/sections/road/elements/start#checker/2/10" data-object-id="/sections/road/elements/start" data-role="checker/2/10" data-purpose="physical">
+          <path d="M-6.72666666667,-0.243333333333 L-6.71,-0.243333333333 L-6.71,-0.226666666667 L-6.72666666667,-0.226666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-141" data-geometry-id="/sections/road/elements/start#checker/2/12" data-object-id="/sections/road/elements/start" data-role="checker/2/12" data-purpose="physical">
+          <path d="M-6.72666666667,-0.21 L-6.71,-0.21 L-6.71,-0.193333333333 L-6.72666666667,-0.193333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-142" data-geometry-id="/sections/road/elements/start#checker/2/14" data-object-id="/sections/road/elements/start" data-role="checker/2/14" data-purpose="physical">
+          <path d="M-6.72666666667,-0.176666666667 L-6.71,-0.176666666667 L-6.71,-0.16 L-6.72666666667,-0.16 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-143" data-geometry-id="/sections/road/elements/start#checker/2/16" data-object-id="/sections/road/elements/start" data-role="checker/2/16" data-purpose="physical">
+          <path d="M-6.72666666667,-0.143333333333 L-6.71,-0.143333333333 L-6.71,-0.126666666667 L-6.72666666667,-0.126666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-144" data-geometry-id="/sections/road/elements/start#checker/2/18" data-object-id="/sections/road/elements/start" data-role="checker/2/18" data-purpose="physical">
+          <path d="M-6.72666666667,-0.11 L-6.71,-0.11 L-6.71,-0.0933333333333 L-6.72666666667,-0.0933333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-145" data-geometry-id="/sections/road/elements/start#checker/2/2" data-object-id="/sections/road/elements/start" data-role="checker/2/2" data-purpose="physical">
+          <path d="M-6.72666666667,-0.376666666667 L-6.71,-0.376666666667 L-6.71,-0.36 L-6.72666666667,-0.36 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-146" data-geometry-id="/sections/road/elements/start#checker/2/20" data-object-id="/sections/road/elements/start" data-role="checker/2/20" data-purpose="physical">
+          <path d="M-6.72666666667,-0.0766666666667 L-6.71,-0.0766666666667 L-6.71,-0.06 L-6.72666666667,-0.06 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-147" data-geometry-id="/sections/road/elements/start#checker/2/22" data-object-id="/sections/road/elements/start" data-role="checker/2/22" data-purpose="physical">
+          <path d="M-6.72666666667,-0.0433333333333 L-6.71,-0.0433333333333 L-6.71,-0.0266666666667 L-6.72666666667,-0.0266666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-148" data-geometry-id="/sections/road/elements/start#checker/2/24" data-object-id="/sections/road/elements/start" data-role="checker/2/24" data-purpose="physical">
+          <path d="M-6.72666666667,-0.01 L-6.71,-0.01 L-6.71,0.00666666666667 L-6.72666666667,0.00666666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-149" data-geometry-id="/sections/road/elements/start#checker/2/26" data-object-id="/sections/road/elements/start" data-role="checker/2/26" data-purpose="physical">
+          <path d="M-6.72666666667,0.0233333333333 L-6.71,0.0233333333333 L-6.71,0.04 L-6.72666666667,0.04 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-150" data-geometry-id="/sections/road/elements/start#checker/2/28" data-object-id="/sections/road/elements/start" data-role="checker/2/28" data-purpose="physical">
+          <path d="M-6.72666666667,0.0566666666667 L-6.71,0.0566666666667 L-6.71,0.0733333333333 L-6.72666666667,0.0733333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-151" data-geometry-id="/sections/road/elements/start#checker/2/30" data-object-id="/sections/road/elements/start" data-role="checker/2/30" data-purpose="physical">
+          <path d="M-6.72666666667,0.09 L-6.71,0.09 L-6.71,0.106666666667 L-6.72666666667,0.106666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-152" data-geometry-id="/sections/road/elements/start#checker/2/32" data-object-id="/sections/road/elements/start" data-role="checker/2/32" data-purpose="physical">
+          <path d="M-6.72666666667,0.123333333333 L-6.71,0.123333333333 L-6.71,0.14 L-6.72666666667,0.14 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-153" data-geometry-id="/sections/road/elements/start#checker/2/34" data-object-id="/sections/road/elements/start" data-role="checker/2/34" data-purpose="physical">
+          <path d="M-6.72666666667,0.156666666667 L-6.71,0.156666666667 L-6.71,0.173333333333 L-6.72666666667,0.173333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-154" data-geometry-id="/sections/road/elements/start#checker/2/36" data-object-id="/sections/road/elements/start" data-role="checker/2/36" data-purpose="physical">
+          <path d="M-6.72666666667,0.19 L-6.71,0.19 L-6.71,0.206666666667 L-6.72666666667,0.206666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-155" data-geometry-id="/sections/road/elements/start#checker/2/38" data-object-id="/sections/road/elements/start" data-role="checker/2/38" data-purpose="physical">
+          <path d="M-6.72666666667,0.223333333333 L-6.71,0.223333333333 L-6.71,0.24 L-6.72666666667,0.24 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-156" data-geometry-id="/sections/road/elements/start#checker/2/4" data-object-id="/sections/road/elements/start" data-role="checker/2/4" data-purpose="physical">
+          <path d="M-6.72666666667,-0.343333333333 L-6.71,-0.343333333333 L-6.71,-0.326666666667 L-6.72666666667,-0.326666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-157" data-geometry-id="/sections/road/elements/start#checker/2/40" data-object-id="/sections/road/elements/start" data-role="checker/2/40" data-purpose="physical">
+          <path d="M-6.72666666667,0.256666666667 L-6.71,0.256666666667 L-6.71,0.273333333333 L-6.72666666667,0.273333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-158" data-geometry-id="/sections/road/elements/start#checker/2/42" data-object-id="/sections/road/elements/start" data-role="checker/2/42" data-purpose="physical">
+          <path d="M-6.72666666667,0.29 L-6.71,0.29 L-6.71,0.306666666667 L-6.72666666667,0.306666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-159" data-geometry-id="/sections/road/elements/start#checker/2/44" data-object-id="/sections/road/elements/start" data-role="checker/2/44" data-purpose="physical">
+          <path d="M-6.72666666667,0.323333333333 L-6.71,0.323333333333 L-6.71,0.34 L-6.72666666667,0.34 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-160" data-geometry-id="/sections/road/elements/start#checker/2/46" data-object-id="/sections/road/elements/start" data-role="checker/2/46" data-purpose="physical">
+          <path d="M-6.72666666667,0.356666666667 L-6.71,0.356666666667 L-6.71,0.373333333333 L-6.72666666667,0.373333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-161" data-geometry-id="/sections/road/elements/start#checker/2/48" data-object-id="/sections/road/elements/start" data-role="checker/2/48" data-purpose="physical">
+          <path d="M-6.72666666667,0.39 L-6.71,0.39 L-6.71,0.406666666667 L-6.72666666667,0.406666666667 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-162" data-geometry-id="/sections/road/elements/start#checker/2/6" data-object-id="/sections/road/elements/start" data-role="checker/2/6" data-purpose="physical">
+          <path d="M-6.72666666667,-0.31 L-6.71,-0.31 L-6.71,-0.293333333333 L-6.72666666667,-0.293333333333 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+        <g id="geometry-163" data-geometry-id="/sections/road/elements/start#checker/2/8" data-object-id="/sections/road/elements/start" data-role="checker/2/8" data-purpose="physical">
+          <path d="M-6.72666666667,-0.276666666667 L-6.71,-0.276666666667 L-6.71,-0.26 L-6.72666666667,-0.26 Z" fill="#FFFFFF" fill-rule="evenodd" />
+        </g>
+      </g>
+      <g id="layer-60" data-layer="60">
+        <g id="geometry-164" data-geometry-id="/sections/road/elements/barred/features/priority_sign#symbol" data-object-id="/sections/road/elements/barred/features/priority_sign" data-role="symbol" data-purpose="projection" data-part-id="/sections/road/elements/barred/features/priority_sign#panel">
+          <image x="-500.0" y="-500.0" width="1000" height="1000" preserveAspectRatio="none" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDE1NzUgMTU3NSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7Ij4KICAgIDxnIGlkPSJnMzQwMCIgdHJhbnNmb3JtPSJtYXRyaXgoMy4yNzU0MDgsMCwwLC0zLjI3NTQwOCwwLDE1NzQuODAzMTIzKSI+CiAgICAgICAgPGcgaWQ9ImczNDAyIj4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGgzNDA0IiBkPSJNNDgwLjM5OCwyNDAuMzk4QzQ4MC4zOTgsMTA3Ljg0NyAzNzIuOTQ5LDAuMzk4IDI0MC4zOTgsMC4zOThDMTA3Ljg0OCwwLjM5OCAwLjM5OCwxMDcuODQ3IDAuMzk4LDI0MC4zOThDMC4zOTgsMzcyLjk0OCAxMDcuODQ4LDQ4MC4zOTggMjQwLjM5OCw0ODAuMzk4QzM3Mi45NDksNDgwLjM5OCA0ODAuMzk4LDM3Mi45NDggNDgwLjM5OCwyNDAuMzk4WiIgc3R5bGU9ImZpbGw6d2hpdGU7ZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQwNiIgZD0iTTI0MC4zOTgsNDgwLjc5NkMxMDcuNjMzLDQ4MC43OTYgMCwzNzMuMTYzIDAsMjQwLjM5OEMwLDEwNy42MzIgMTA3LjYzMywtMC4wMDEgMjQwLjM5OCwtMC4wMDFDMzczLjE2NCwtMC4wMDEgNDgwLjc5NywxMDcuNjMyIDQ4MC43OTcsMjQwLjM5OEM0ODAuNzk3LDM3My4xNjMgMzczLjE2NCw0ODAuNzk2IDI0MC4zOTgsNDgwLjc5NlpNMjQwLjM5OCw0ODAuMzk4QzM3Mi45NDksNDgwLjM5OCA0ODAuMzk4LDM3Mi45NDggNDgwLjM5OCwyNDAuMzk4QzQ4MC4zOTgsMTA3Ljg0NyAzNzIuOTQ5LDAuMzk4IDI0MC4zOTgsMC4zOThDMTA3Ljg0OCwwLjM5OCAwLjM5OCwxMDcuODQ3IDAuMzk4LDI0MC4zOThDMC4zOTgsMzcyLjk0OCAxMDcuODQ4LDQ4MC4zOTggMjQwLjM5OCw0ODAuMzk4WiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cGF0aCBpZD0icGF0aDM0MDgiIGQ9Ik00NDAuMjM4LDI0MC4zOThDNDQwLjIzOCwxMzAuMDMgMzUwLjc2Niw0MC41NTggMjQwLjM5OCw0MC41NThDMTMwLjAzMSw0MC41NTggNDAuNTU5LDEzMC4wMyA0MC41NTksMjQwLjM5OEM0MC41NTksMzUwLjc2NSAxMzAuMDMxLDQ0MC4yMzcgMjQwLjM5OCw0NDAuMjM3QzM1MC43NjYsNDQwLjIzNyA0NDAuMjM4LDM1MC43NjUgNDQwLjIzOCwyNDAuMzk4WiIgc3R5bGU9ImZpbGw6bm9uZTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6cmdiKDE5MywxOCwyOCk7c3Ryb2tlLXdpZHRoOjY0LjMycHg7Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQxMCIgZD0iTTIzLjgzMiw0NTYuNTExTDIzLjgzMiw0NTYuNDg3TDIzLjgwOSw0NTYuNDg3TDIzLjgzMiw0NTYuNTExWiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cmVjdCBpZD0icGF0aDM0MTIiIHg9IjIzLjgwOSIgeT0iNDU2LjQ4OCIgd2lkdGg9IjAuMDIzIiBoZWlnaHQ9IjAuMDIzIiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQxNCIgZD0iTTIzLjgwOSw0NTYuNDg3TDIzLjgwOSw0NTYuNTExTDIzLjgzMiw0NTYuNDg3TDIzLjgwOSw0NTYuNDg3Wk0yMy44MzIsNDU2LjQ4N0wyMy44MDksNDU2LjUxMUwyMy44MDksNDU2LjQ4N0wyMy44MzIsNDU2LjQ4N1oiIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGgzNDE2IiBkPSJNMjMuODU5LDQ1Ni40ODdMMjMuODA5LDQ1Ni40ODdMMjMuODMyLDQ1Ni40ODdMMjMuODMyLDQ1Ni41MTFMMjMuODU5LDQ1Ni40ODdaIiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQxOCIgZD0iTTIzLjgwOSw0NTYuNDg3TDIzLjgwOSw0NTYuNTExTDIzLjgwOSw0NTYuNDg3TDIzLjgzMiw0NTYuNTExTDIzLjgwOSw0NTYuNDg3WiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cmVjdCBpZD0icGF0aDM0MjAiIHg9IjIzLjgwOSIgeT0iNDU2LjQ4OCIgd2lkdGg9IjAuMDIzIiBoZWlnaHQ9IjAuMDIzIiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQyMiIgZD0iTTIzLjg1OSw0NTYuNTExTDIzLjg1OSw0NTYuNDY0TDIzLjgwOSw0NTYuNDY0TDIzLjg1OSw0NTYuNTExWiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cmVjdCBpZD0icGF0aDM0MjQiIHg9IjIzLjgwOSIgeT0iNDU2LjQ2NCIgd2lkdGg9IjAuMDUxIiBoZWlnaHQ9IjAuMDQ3IiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQyNiIgZD0iTTIzLjgwOSw0NTYuNDY0TDIzLjgwOSw0NTYuNTExTDIzLjg1OSw0NTYuNDY0TDIzLjgwOSw0NTYuNDY0Wk0yMy44NTksNDU2LjQ2NEwyMy44MDksNDU2LjUxMUwyMy44MDksNDU2LjQ2NEwyMy44NTksNDU2LjQ2NFoiIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGgzNDI4IiBkPSJNMjMuODU5LDQ1Ni40NjRMMjMuODA5LDQ1Ni40NjRMMjMuODMyLDQ1Ni40NjRMMjMuODMyLDQ1Ni41MTFMMjMuODU5LDQ1Ni40NjRaIiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQzMCIgZD0iTTIzLjgwOSw0NTYuNDY0TDIzLjgwOSw0NTYuNTExTDIzLjgwOSw0NTYuNDY0TDIzLjg1OSw0NTYuNTExTDIzLjgwOSw0NTYuNDY0WiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cmVjdCBpZD0icGF0aDM0MzIiIHg9IjIzLjgwOSIgeT0iNDU2LjQ2NCIgd2lkdGg9IjAuMDUxIiBoZWlnaHQ9IjAuMDQ3IiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQzNCIgZD0iTTIzLjg1OSw0NTYuNTExTDIzLjg1OSw0NTYuNDY0TDIzLjgwOSw0NTYuNDY0TDIzLjg1OSw0NTYuNTExWiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cmVjdCBpZD0icGF0aDM0MzYiIHg9IjIzLjgwOSIgeT0iNDU2LjQ2NCIgd2lkdGg9IjAuMDUxIiBoZWlnaHQ9IjAuMDQ3IiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQzOCIgZD0iTTIzLjgwOSw0NTYuNDY0TDIzLjgwOSw0NTYuNTExTDIzLjg1OSw0NTYuNDY0TDIzLjgwOSw0NTYuNDY0Wk0yMy44NTksNDU2LjQ2NEwyMy44MDksNDU2LjUxMUwyMy44MDksNDU2LjQ2NEwyMy44NTksNDU2LjQ2NFoiIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGgzNDQwIiBkPSJNMjMuODU5LDQ1Ni40NjRMMjMuODA5LDQ1Ni40NjRMMjMuODMyLDQ1Ni40NjRMMjMuODMyLDQ1Ni41MTFMMjMuODU5LDQ1Ni40NjRaIiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQ0MiIgZD0iTTIzLjgwOSw0NTYuNDY0TDIzLjgwOSw0NTYuNTExTDIzLjgwOSw0NTYuNDY0TDIzLjg1OSw0NTYuNTExTDIzLjgwOSw0NTYuNDY0WiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cmVjdCBpZD0icGF0aDM0NDQiIHg9IjIzLjgwOSIgeT0iNDU2LjQ2NCIgd2lkdGg9IjAuMDUxIiBoZWlnaHQ9IjAuMDQ3IiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQ0NiIgZD0iTTIzLjg1OSw0NTYuNTExTDIzLjg1OSw0NTYuNDY0TDIzLjgwOSw0NTYuNDY0TDIzLjg1OSw0NTYuNTExWiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cmVjdCBpZD0icGF0aDM0NDgiIHg9IjIzLjgwOSIgeT0iNDU2LjQ2NCIgd2lkdGg9IjAuMDUxIiBoZWlnaHQ9IjAuMDQ3IiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQ1MCIgZD0iTTIzLjgwOSw0NTYuNDY0TDIzLjgwOSw0NTYuNTExTDIzLjg1OSw0NTYuNDY0TDIzLjgwOSw0NTYuNDY0Wk0yMy44NTksNDU2LjQ2NEwyMy44MDksNDU2LjUxMUwyMy44MDksNDU2LjQ2NEwyMy44NTksNDU2LjQ2NFoiIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGgzNDUyIiBkPSJNMjMuODU5LDQ1Ni40NjRMMjMuODA5LDQ1Ni40NjRMMjMuODMyLDQ1Ni40NjRMMjMuODMyLDQ1Ni41MTFMMjMuODU5LDQ1Ni40NjRaIiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQ1NCIgZD0iTTIzLjgwOSw0NTYuNDY0TDIzLjgwOSw0NTYuNTExTDIzLjgwOSw0NTYuNDY0TDIzLjg1OSw0NTYuNTExTDIzLjgwOSw0NTYuNDY0WiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cmVjdCBpZD0icGF0aDM0NTYiIHg9IjIzLjgwOSIgeT0iNDU2LjQ2NCIgd2lkdGg9IjAuMDUxIiBoZWlnaHQ9IjAuMDQ3IiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoMzQ1OCIgZD0iTTEwOC42NDgsMTkwLjc3NkwxMDguNjQ4LDIzNS4yNjVMMTUzLjEzNywxOTAuNzc2TDE1My4xMzcsMzM0LjUwM0wxODcuMzU1LDMzNC41MDNMMTg3LjM1NSwxOTAuNzc2TDIzMS44NDQsMjM1LjI2NUwyMzEuODQ0LDE5MC43NzZMMTcwLjI0NiwxMjkuMTgzTDEwOC42NDgsMTkwLjc3NloiIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGgzNDYwIiBkPSJNMzcyLjE0OCwyOTAuMDE5TDM3Mi4xNDgsMjQ1LjUzTDMyNy42NiwyOTAuMDE5TDMyNy42NiwxNDYuMjkyTDI5My40NDEsMTQ2LjI5MkwyOTMuNDQxLDI5MC4wMTlMMjQ4Ljk1MywyNDUuNTNMMjQ4Ljk1MywyOTAuMDE5TDMxMC41NTEsMzUxLjYxMkwzNzIuMTQ4LDI5MC4wMTlaIiBzdHlsZT0iZmlsbDpyZ2IoMTkzLDE4LDI4KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" transform="translate(-9.25 -0.5800000000000001) rotate(-90.0) scale(0.0001 -0.0001)" />
+        </g>
+        <g id="geometry-165" data-geometry-id="/sections/road/elements/crossing/features/sign_backward#symbol" data-object-id="/sections/road/elements/crossing/features/sign_backward" data-role="symbol" data-purpose="projection" data-part-id="/sections/road/elements/crossing/features/sign_backward#panel">
+          <image x="-500.0" y="-500.0" width="1000" height="1000" preserveAspectRatio="none" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDIzNjMgMjM2MyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjI7Ij4KICAgIDxnIGlkPSJnNTQwMCIgdHJhbnNmb3JtPSJtYXRyaXgoNS4yNDA1OTgsMCwwLC01LjI0MDU5OCwwLDIzNjIuMjA1NzA3KSI+CiAgICAgICAgPGcgaWQ9Imc1NDAyIj4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGg1NDA0IiBkPSJNMjcuMzc1LDQ1MC4zNzZDMC4zMTYsNDUwLjM5MiAwLjM3NSw0MjMuMzcyIDAuMzc1LDQyMy4zNzJMMC4zNzUsMjcuMzc2QzAuMzc1LDI3LjM3NiAwLjMxNiwwLjM1MyAyNy4zNzUsMC4zNzZMNDIzLjM3NSwwLjM3NkM0NTAuNjA5LDAuMzQ5IDQ1MC4zNzUsMjcuMzc2IDQ1MC4zNzUsMjcuMzc2TDQ1MC4zNzUsNDIzLjM3MkM0NTAuMzc1LDQyMy4zNzIgNDUwLjU5OCw0NTAuNDY2IDQyMy4zNzUsNDUwLjM3NkwyNy4zNzUsNDUwLjM3NloiIHN0eWxlPSJmaWxsOndoaXRlO2ZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cGF0aCBpZD0icGF0aDU0MDYiIGQ9Ik0yNy4zNzUsNDQxLjM3NkMxNy40MzgsNDQxLjM3NiA5LjM3NSw0MzMuMzE4IDkuMzc1LDQyMy4zNzZMOS4zNzUsMjcuMzc2QzkuMzc1LDE3LjQyNyAxNy40MzgsOS4zNzYgMjcuMzc1LDkuMzc2TDQyMy4zNzUsOS4zNzZDNDMzLjMxNiw5LjM3NiA0NDEuMzc1LDE3LjQyNyA0NDEuMzc1LDI3LjM3Nkw0NDEuMzc1LDQyMy4zNzZDNDQxLjM3NSw0MzMuMzE4IDQzMy4zMTYsNDQxLjM3NiA0MjMuMzc1LDQ0MS4zNzZMMjcuMzc1LDQ0MS4zNzZaIiBzdHlsZT0iZmlsbDpyZ2IoMjEsNzIsMTM3KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGg1NDA4IiBkPSJNMjcuMzc1LDQ1MC43NTFDMTMuNzE5LDQ1MC43NTkgNi44MDUsNDQzLjg5MiAzLjM5MSw0MzcuMDQ4Qy0wLjAyMyw0MzAuMjA0IDAsNDIzLjM2OCAwLDQyMy4zNjhMMCwyNy4zNzZDMCwyNy4zNzYgLTAuMDIsMjAuNTQgMy4zOTEsMTMuN0M2LjgwNSw2Ljg1NyAxMy43MTksLTAuMDExIDI3LjM3NSwwLjAwMUw0MjMuMzc1LDAuMDAxQzQzNy4xMTcsLTAuMDE0IDQ0NC4wMzUsNi44NTcgNDQ3LjQyNiwxMy43QzQ1MC44MTMsMjAuNTQgNDUwLjc1LDI3LjM3MiA0NTAuNzUsMjcuMzc2TDQ1MC43NSw0MjMuMzcyQzQ1MC43NSw0MjMuMzc2IDQ1MC44MDksNDMwLjIyNCA0NDcuNDE4LDQzNy4wNzJDNDQ0LjAyNyw0NDMuOTIzIDQzNy4xMDksNDUwLjc5NCA0MjMuMzc1LDQ1MC43NTFMMjcuMzc1LDQ1MC43NTFaTTI3LjM3NSw0NTAuMzc2TDQyMy4zNzUsNDUwLjM3NkM0NTAuNTk4LDQ1MC40NjYgNDUwLjM3NSw0MjMuMzcyIDQ1MC4zNzUsNDIzLjM3Mkw0NTAuMzc1LDI3LjM3NkM0NTAuMzc1LDI3LjM3NiA0NTAuNjA5LDAuMzQ5IDQyMy4zNzUsMC4zNzZMMjcuMzc1LDAuMzc2QzAuMzE2LDAuMzUzIDAuMzc1LDI3LjM3NiAwLjM3NSwyNy4zNzZMMC4zNzUsNDIzLjM3MkMwLjM3NSw0MjMuMzcyIDAuMzE2LDQ1MC4zOTIgMjcuMzc1LDQ1MC4zNzZaIiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoNTQxMCIgZD0iTTM3LjQ4LDcxLjY2MUw0MTMuMjcsNzEuNjYxTDIyNS4zODMsMzk3LjA5NSIgc3R5bGU9ImZpbGw6d2hpdGU7ZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoNTQxMiIgZD0iTTIzNy4zMDksMzIwLjM4QzIzNy4zMDksMzEwLjczOSAyMjkuNDgsMzAyLjkxMSAyMTkuODQsMzAyLjkxMUMyMTAuMTk1LDMwMi45MTEgMjAyLjM3OSwzMTAuNzM5IDIwMi4zNzksMzIwLjM4QzIwMi4zNzksMzMwLjAyNSAyMTAuMTk1LDMzNy44NDEgMjE5Ljg0LDMzNy44NDFDMjI5LjQ4LDMzNy44NDEgMjM3LjMwOSwzMzAuMDI1IDIzNy4zMDksMzIwLjM4Wk0yNDYuMDQzLDI2OC40MzlMMjQ2LjA0MywyMTcuNzk0TDIxMS4xMTMsMjE3Ljc5NEwyMTEuMTEzLDI1OS42NzNMMTg4LjQzNCwyMjQuNzQ3QzE4My44MzIsMjE3LjY2OSAxNzQuMzcxLDIxNS42NTcgMTY3LjI5NywyMjAuMjQ3TDIxMC4yNjIsMjg2LjQzMUMyMTYuODI4LDI5Ni41NCAyMzAuMzU1LDI5OS40MTUgMjQwLjQ2NSwyOTIuODQ5QzI0MS4yMDcsMjkyLjM2MSAyNDEuOTE4LDI5MS44MjUgMjQyLjYwOSwyOTEuMjU5TDI3MS45MTQsMjY2LjY2OUMyNzQuODc5LDI2NC4xODEgMjc2LjU5NCwyNjAuNTAxIDI3Ni41OTQsMjU2LjYzOEwyNzYuNTk0LDIzNS4yNTFDMjc2LjU5NCwyMjYuODE0IDI2OS43NDYsMjE5Ljk3NCAyNjEuMzE2LDIxOS45NzRMMjYxLjMxNiwyNTUuNjE4TDI0Ni4wNDMsMjY4LjQzOVpNMjI4LjU3LDIwNC42M0wxODcuMzQ0LDEyOC42ODlDMTgyLjc0MiwxMjAuMjI4IDE3Mi4xNDUsMTE3LjA3OSAxNjMuNjcyLDEyMS42OTNMMjEwLjA1OSwyMDcuMTE4QzIxMC43NSwyMDguMzg4IDIxMS4xMTMsMjA5LjgyMiAyMTEuMTEzLDIxMS4yNzVMMjExLjExMywyMTMuNDM1TDI0Ni4wNDMsMjEzLjQzNUwyNDYuMDQzLDIxMS4yNzVDMjQ2LjA0MywyMDkuODIyIDI0Ni4zOTEsMjA4LjM4OCAyNDcuMDk4LDIwNy4xMThMMjgxLjc3MywxNDMuMjUxQzI4Ni4zNjMsMTM0Ljc3OSAyODMuMjI3LDEyNC4xODEgMjc0Ljc1NCwxMTkuNTY4TDIyOC41NywyMDQuNjNaTTMzMy45NzcsODcuNjNMMzA1Ljc3MywxNTEuNTA5TDMzNC4xNDgsMTUxLjUwOUwzNzIuMzEzLDg3LjYzTDMzMy45NzcsODcuNjNaTTI3MC4wOTgsODcuNjNMMjYxLjc3MywxMzMuNDQ3TDI3Mi44MjQsMTEzLjA3MkwyNzcuMDM5LDExNS4zNTdDMjg3Ljg0LDEyMS4yMjggMjkxLjg0OCwxMzQuNzMyIDI4NS45NzcsMTQ1LjUyMUwyODIuNzMsMTUxLjUwOUwyODYuODUyLDE1MS41MDlMMzA4LjQzNCw4Ny42M0wyNzAuMDk4LDg3LjYzWk0yMDYuMjE5LDg3LjYzTDIxMS4xOTUsMTUxLjUwOUwyMzkuNTY2LDE1MS41MDlMMjQ0LjU1NSw4Ny42M0wyMDYuMjE5LDg3LjYzWk0xNDIuMzI4LDg3LjYzTDE2My44OTgsMTUxLjUwOUwxNzQuNDA2LDE1MS41MDlMMTU3LjE3NiwxMTkuNzYzTDE2MS4zNzksMTE3LjQ3OEMxNjkuNTMxLDExMy4wNDggMTc5LjU4NiwxMTQuMTM4IDE4Ni41OTQsMTIwLjIyOEwxODAuNjY0LDg3LjYzTDE0Mi4zMjgsODcuNjNaTTc4LjQ1Myw4Ny42M0wxMTYuNjEzLDE1MS41MDlMMTQ0Ljk4OCwxNTEuNTA5TDExNi43NzMsODcuNjMiIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" transform="translate(-3.6500000000000004 0.605) rotate(90.0) scale(0.00015 -0.00015)" />
+        </g>
+        <g id="geometry-166" data-geometry-id="/sections/road/elements/crossing/features/sign_forward#symbol" data-object-id="/sections/road/elements/crossing/features/sign_forward" data-role="symbol" data-purpose="projection" data-part-id="/sections/road/elements/crossing/features/sign_forward#panel">
+          <image x="-500.0" y="-500.0" width="1000" height="1000" preserveAspectRatio="none" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDIzNjMgMjM2MyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjI7Ij4KICAgIDxnIGlkPSJnNTQwMCIgdHJhbnNmb3JtPSJtYXRyaXgoNS4yNDA1OTgsMCwwLC01LjI0MDU5OCwwLDIzNjIuMjA1NzA3KSI+CiAgICAgICAgPGcgaWQ9Imc1NDAyIj4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGg1NDA0IiBkPSJNMjcuMzc1LDQ1MC4zNzZDMC4zMTYsNDUwLjM5MiAwLjM3NSw0MjMuMzcyIDAuMzc1LDQyMy4zNzJMMC4zNzUsMjcuMzc2QzAuMzc1LDI3LjM3NiAwLjMxNiwwLjM1MyAyNy4zNzUsMC4zNzZMNDIzLjM3NSwwLjM3NkM0NTAuNjA5LDAuMzQ5IDQ1MC4zNzUsMjcuMzc2IDQ1MC4zNzUsMjcuMzc2TDQ1MC4zNzUsNDIzLjM3MkM0NTAuMzc1LDQyMy4zNzIgNDUwLjU5OCw0NTAuNDY2IDQyMy4zNzUsNDUwLjM3NkwyNy4zNzUsNDUwLjM3NloiIHN0eWxlPSJmaWxsOndoaXRlO2ZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8cGF0aCBpZD0icGF0aDU0MDYiIGQ9Ik0yNy4zNzUsNDQxLjM3NkMxNy40MzgsNDQxLjM3NiA5LjM3NSw0MzMuMzE4IDkuMzc1LDQyMy4zNzZMOS4zNzUsMjcuMzc2QzkuMzc1LDE3LjQyNyAxNy40MzgsOS4zNzYgMjcuMzc1LDkuMzc2TDQyMy4zNzUsOS4zNzZDNDMzLjMxNiw5LjM3NiA0NDEuMzc1LDE3LjQyNyA0NDEuMzc1LDI3LjM3Nkw0NDEuMzc1LDQyMy4zNzZDNDQxLjM3NSw0MzMuMzE4IDQzMy4zMTYsNDQxLjM3NiA0MjMuMzc1LDQ0MS4zNzZMMjcuMzc1LDQ0MS4zNzZaIiBzdHlsZT0iZmlsbDpyZ2IoMjEsNzIsMTM3KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPHBhdGggaWQ9InBhdGg1NDA4IiBkPSJNMjcuMzc1LDQ1MC43NTFDMTMuNzE5LDQ1MC43NTkgNi44MDUsNDQzLjg5MiAzLjM5MSw0MzcuMDQ4Qy0wLjAyMyw0MzAuMjA0IDAsNDIzLjM2OCAwLDQyMy4zNjhMMCwyNy4zNzZDMCwyNy4zNzYgLTAuMDIsMjAuNTQgMy4zOTEsMTMuN0M2LjgwNSw2Ljg1NyAxMy43MTksLTAuMDExIDI3LjM3NSwwLjAwMUw0MjMuMzc1LDAuMDAxQzQzNy4xMTcsLTAuMDE0IDQ0NC4wMzUsNi44NTcgNDQ3LjQyNiwxMy43QzQ1MC44MTMsMjAuNTQgNDUwLjc1LDI3LjM3MiA0NTAuNzUsMjcuMzc2TDQ1MC43NSw0MjMuMzcyQzQ1MC43NSw0MjMuMzc2IDQ1MC44MDksNDMwLjIyNCA0NDcuNDE4LDQzNy4wNzJDNDQ0LjAyNyw0NDMuOTIzIDQzNy4xMDksNDUwLjc5NCA0MjMuMzc1LDQ1MC43NTFMMjcuMzc1LDQ1MC43NTFaTTI3LjM3NSw0NTAuMzc2TDQyMy4zNzUsNDUwLjM3NkM0NTAuNTk4LDQ1MC40NjYgNDUwLjM3NSw0MjMuMzcyIDQ1MC4zNzUsNDIzLjM3Mkw0NTAuMzc1LDI3LjM3NkM0NTAuMzc1LDI3LjM3NiA0NTAuNjA5LDAuMzQ5IDQyMy4zNzUsMC4zNzZMMjcuMzc1LDAuMzc2QzAuMzE2LDAuMzUzIDAuMzc1LDI3LjM3NiAwLjM3NSwyNy4zNzZMMC4zNzUsNDIzLjM3MkMwLjM3NSw0MjMuMzcyIDAuMzE2LDQ1MC4zOTIgMjcuMzc1LDQ1MC4zNzZaIiBzdHlsZT0iZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoNTQxMCIgZD0iTTM3LjQ4LDcxLjY2MUw0MTMuMjcsNzEuNjYxTDIyNS4zODMsMzk3LjA5NSIgc3R5bGU9ImZpbGw6d2hpdGU7ZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDxwYXRoIGlkPSJwYXRoNTQxMiIgZD0iTTIzNy4zMDksMzIwLjM4QzIzNy4zMDksMzEwLjczOSAyMjkuNDgsMzAyLjkxMSAyMTkuODQsMzAyLjkxMUMyMTAuMTk1LDMwMi45MTEgMjAyLjM3OSwzMTAuNzM5IDIwMi4zNzksMzIwLjM4QzIwMi4zNzksMzMwLjAyNSAyMTAuMTk1LDMzNy44NDEgMjE5Ljg0LDMzNy44NDFDMjI5LjQ4LDMzNy44NDEgMjM3LjMwOSwzMzAuMDI1IDIzNy4zMDksMzIwLjM4Wk0yNDYuMDQzLDI2OC40MzlMMjQ2LjA0MywyMTcuNzk0TDIxMS4xMTMsMjE3Ljc5NEwyMTEuMTEzLDI1OS42NzNMMTg4LjQzNCwyMjQuNzQ3QzE4My44MzIsMjE3LjY2OSAxNzQuMzcxLDIxNS42NTcgMTY3LjI5NywyMjAuMjQ3TDIxMC4yNjIsMjg2LjQzMUMyMTYuODI4LDI5Ni41NCAyMzAuMzU1LDI5OS40MTUgMjQwLjQ2NSwyOTIuODQ5QzI0MS4yMDcsMjkyLjM2MSAyNDEuOTE4LDI5MS44MjUgMjQyLjYwOSwyOTEuMjU5TDI3MS45MTQsMjY2LjY2OUMyNzQuODc5LDI2NC4xODEgMjc2LjU5NCwyNjAuNTAxIDI3Ni41OTQsMjU2LjYzOEwyNzYuNTk0LDIzNS4yNTFDMjc2LjU5NCwyMjYuODE0IDI2OS43NDYsMjE5Ljk3NCAyNjEuMzE2LDIxOS45NzRMMjYxLjMxNiwyNTUuNjE4TDI0Ni4wNDMsMjY4LjQzOVpNMjI4LjU3LDIwNC42M0wxODcuMzQ0LDEyOC42ODlDMTgyLjc0MiwxMjAuMjI4IDE3Mi4xNDUsMTE3LjA3OSAxNjMuNjcyLDEyMS42OTNMMjEwLjA1OSwyMDcuMTE4QzIxMC43NSwyMDguMzg4IDIxMS4xMTMsMjA5LjgyMiAyMTEuMTEzLDIxMS4yNzVMMjExLjExMywyMTMuNDM1TDI0Ni4wNDMsMjEzLjQzNUwyNDYuMDQzLDIxMS4yNzVDMjQ2LjA0MywyMDkuODIyIDI0Ni4zOTEsMjA4LjM4OCAyNDcuMDk4LDIwNy4xMThMMjgxLjc3MywxNDMuMjUxQzI4Ni4zNjMsMTM0Ljc3OSAyODMuMjI3LDEyNC4xODEgMjc0Ljc1NCwxMTkuNTY4TDIyOC41NywyMDQuNjNaTTMzMy45NzcsODcuNjNMMzA1Ljc3MywxNTEuNTA5TDMzNC4xNDgsMTUxLjUwOUwzNzIuMzEzLDg3LjYzTDMzMy45NzcsODcuNjNaTTI3MC4wOTgsODcuNjNMMjYxLjc3MywxMzMuNDQ3TDI3Mi44MjQsMTEzLjA3MkwyNzcuMDM5LDExNS4zNTdDMjg3Ljg0LDEyMS4yMjggMjkxLjg0OCwxMzQuNzMyIDI4NS45NzcsMTQ1LjUyMUwyODIuNzMsMTUxLjUwOUwyODYuODUyLDE1MS41MDlMMzA4LjQzNCw4Ny42M0wyNzAuMDk4LDg3LjYzWk0yMDYuMjE5LDg3LjYzTDIxMS4xOTUsMTUxLjUwOUwyMzkuNTY2LDE1MS41MDlMMjQ0LjU1NSw4Ny42M0wyMDYuMjE5LDg3LjYzWk0xNDIuMzI4LDg3LjYzTDE2My44OTgsMTUxLjUwOUwxNzQuNDA2LDE1MS41MDlMMTU3LjE3NiwxMTkuNzYzTDE2MS4zNzksMTE3LjQ3OEMxNjkuNTMxLDExMy4wNDggMTc5LjU4NiwxMTQuMTM4IDE4Ni41OTQsMTIwLjIyOEwxODAuNjY0LDg3LjYzTDE0Mi4zMjgsODcuNjNaTTc4LjQ1Myw4Ny42M0wxMTYuNjEzLDE1MS41MDlMMTQ0Ljk4OCwxNTEuNTA5TDExNi43NzMsODcuNjMiIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" transform="translate(-4.65 -0.605) rotate(-90.0) scale(0.00015 -0.00015)" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="element-labels" inkscape:groupmode="layer" inkscape:label="Element type labels" font-family="DejaVu Sans, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">
+    <text x="164.4" y="246" data-element-ref="road.barred">barred_area</text>
+    <text x="343.8" y="246" data-element-ref="road.start">starting_line</text>
+    <text x="483.6" y="246" data-element-ref="road.junction">side_road_junction</text>
+    <text x="654" y="246" data-element-ref="road.crossing">crosswalk</text>
+    <text x="945" y="246" data-element-ref="road.parking">parking_area (perpendicular)</text>
+  </g>
+</svg>

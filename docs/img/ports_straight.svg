@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 511 161" width="511" height="161" role="img" aria-labelledby="title description" data-meters-to-pixels="120">
+  <title id="title">2.64 m straight section ports</title>
+  <desc id="description">Orange entry and blue exit. Road width 0.86 m with 0.04 m surface overhang on either side; surface ends flush at ports.</desc>
+  <g id="rendering">
+    <path d="M 96.5 80.4 H 413.3" fill="none" stroke="#1A1A1A" stroke-width="112.8" stroke-linecap="butt" />
+    <path d="M 96.5 30 H 413.3" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" />
+    <path d="M 96.5 130.8 H 413.3" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" />
+    <path d="M 96.5 80.4 H 413.3" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" stroke-dasharray="24 24" />
+  </g>
+  <g id="ports" inkscape:groupmode="layer" inkscape:label="Ports and labels">
+    <g id="port-entry" data-port-ref="road.entry" data-nominal-direction="incoming">
+      <path d="M 27.50000 80.40000 L 70.50000 80.40000" fill="none" stroke="#E87918" stroke-width="4" stroke-linecap="butt" />
+      <polygon points="84.50000,80.40000 70.50000,86.40000 70.50000,74.40000" fill="#E87918" />
+      <circle cx="96.50000" cy="80.40000" r="9" fill="#E87918" stroke="#E87918" stroke-width="2.25" />
+      <text x="56.50000" y="59.40000" fill="#E87918" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="middle">entry</text>
+    </g>
+    <g id="port-exit" data-port-ref="road.exit" data-nominal-direction="outgoing" transform="translate(-43.2 0)">
+      <path d="M 456.50000 80.40000 L 499.50000 80.40000" fill="none" stroke="#1673B8" stroke-width="4" stroke-linecap="butt" />
+      <polygon points="513.50000,80.40000 499.50000,86.40000 499.50000,74.40000" fill="#1673B8" />
+      <circle cx="456.50000" cy="80.40000" r="9" fill="#1673B8" stroke="#1673B8" stroke-width="2.25" />
+      <text x="476.50000" y="59.40000" fill="#1673B8" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="start">exit</text>
+    </g>
+  </g>
+</svg>

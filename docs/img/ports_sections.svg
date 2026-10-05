@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" viewBox="0 0 1160 565" width="1160" height="565" role="img" aria-labelledby="title description">
+  <title id="title">Section types and their ports</title>
+  <desc id="description">A 2.64 m straight above a 60 degree arc with radius 2.4 m on the left. Intersection on the right, displayed at 135 percent of the scale of the other sections. Orange entry ports and blue outgoing ports. Transparent background.</desc>
+  <text x="278.9" y="34" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="600" fill="#737d8c">straight</text>
+  <g id="straight-section" transform="translate(24 48) scale(1)">
+    <title id="straight-title">2.64 m straight section ports</title>
+    <desc id="straight-description">Orange entry and blue exit. Road width 0.86 m with 0.04 m surface overhang on either side; surface ends flush at ports.</desc>
+    <g id="straight-rendering">
+      <path d="M 96.5 80.4 H 413.3" fill="none" stroke="#1A1A1A" stroke-width="112.8" stroke-linecap="butt" />
+      <path d="M 96.5 30 H 413.3" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" />
+      <path d="M 96.5 130.8 H 413.3" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" />
+      <path d="M 96.5 80.4 H 413.3" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" stroke-dasharray="24 24" />
+    </g>
+    <g id="straight-ports" inkscape:groupmode="layer" inkscape:label="Ports and labels">
+      <g id="straight-port-entry" data-port-ref="road.entry" data-nominal-direction="incoming">
+        <path d="M 27.50000 80.40000 L 70.50000 80.40000" fill="none" stroke="#E87918" stroke-width="4" stroke-linecap="butt" />
+        <polygon points="84.50000,80.40000 70.50000,86.40000 70.50000,74.40000" fill="#E87918" />
+        <circle cx="96.50000" cy="80.40000" r="9" fill="#E87918" stroke="#E87918" stroke-width="2.25" />
+        <text x="56.50000" y="59.40000" fill="#E87918" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="middle">entry</text>
+      </g>
+      <g id="straight-port-exit" data-port-ref="road.exit" data-nominal-direction="outgoing" transform="translate(-43.2 0)">
+        <path d="M 456.50000 80.40000 L 499.50000 80.40000" fill="none" stroke="#1673B8" stroke-width="4" stroke-linecap="butt" />
+        <polygon points="513.50000,80.40000 499.50000,86.40000 499.50000,74.40000" fill="#1673B8" />
+        <circle cx="456.50000" cy="80.40000" r="9" fill="#1673B8" stroke="#1673B8" stroke-width="2.25" />
+        <text x="476.50000" y="59.40000" fill="#1673B8" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="start">exit</text>
+      </g>
+    </g>
+  </g>
+  <text x="180" y="310" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="600" fill="#737d8c">arc</text>
+  <g id="arc-section" transform="translate(24 205) scale(1)">
+    <title id="arc-title">60 degree arc ports, radius 2.4 m</title>
+    <desc id="arc-description">Orange entry and blue exit. Road width 0.86 m with 0.04 m surface overhang on either side; surface ends flush at ports.</desc>
+    <g id="arc-rendering">
+      <path d="M 96.5 240 A 288 288 0 0 0 345.91531628991834 96.0" fill="none" stroke="#1A1A1A" stroke-width="112.8" stroke-linecap="butt" />
+      <path d="M 96.5 189.6 A 237.6 237.6 0 0 0 302.2676359391826 70.8" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" />
+      <path d="M 96.5 290.4 A 338.4 338.4 0 0 0 389.562996640654 121.19999999999999" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" />
+      <path d="M 96.5 240 A 288 288 0 0 0 345.91531628991834 96.0" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="butt" stroke-dasharray="24 24" />
+    </g>
+    <g id="arc-ports" inkscape:groupmode="layer" inkscape:label="Ports and labels">
+      <g id="arc-port-entry" data-port-ref="road.entry" data-nominal-direction="incoming" transform="translate(0 76.63655)">
+        <path d="M 27.50000 163.36345 L 70.50000 163.36345" fill="none" stroke="#E87918" stroke-width="4" stroke-linecap="butt" />
+        <polygon points="84.50000,163.36345 70.50000,169.36345 70.50000,157.36345" fill="#E87918" />
+        <circle cx="96.50000" cy="163.36345" r="9" fill="#E87918" stroke="#E87918" stroke-width="2.25" />
+        <text x="56.50000" y="142.36345" fill="#E87918" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="middle">entry</text>
+      </g>
+      <g id="arc-port-exit" data-port-ref="road.exit" data-nominal-direction="outgoing" transform="translate(93.53074628991834 22.63655)">
+        <path d="M 252.38457 73.36345 L 273.88457 36.12436" fill="none" stroke="#1673B8" stroke-width="4" stroke-linecap="butt" />
+        <polygon points="280.88457,24.00000 279.08073,39.12436 268.68842,33.12436" fill="#1673B8" />
+        <circle cx="252.38457" cy="73.36345" r="9" fill="#1673B8" stroke="#1673B8" stroke-width="2.25" />
+        <text x="287.38457" y="48.91858" fill="#1673B8" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="start">exit</text>
+      </g>
+    </g>
+  </g>
+  <text x="852.275" y="34" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="600" fill="#737d8c">intersection</text>
+  <g id="intersection-section" transform="translate(560 26) scale(1.35)">
+    <title id="intersection-title">Four-arm intersection ports, 1 m from center</title>
+    <desc id="intersection-description">Orange entry with an incoming arrow; blue outgoing ports. Filled port markers. Road surface extends 4 cm beyond its side markings and ends flush at the ports.</desc>
+    <defs>
+      <clipPath id="intersection-intersection-ports-junction-1m-port-clip" clipPathUnits="userSpaceOnUse">
+        <rect x="0" y="-1" width="2" height="2" />
+      </clipPath>
+    </defs>
+    <g id="intersection-rendering" inkscape:groupmode="layer" inkscape:label="Rendering" sodipodi:insensitive="true">
+      <g transform="translate(96.50000 203.00000) scale(120 -120)">
+        <g id="intersection-intersection-ports-node-73656374696f6e2f6a756e6374696f6e" data-node-id="section/junction" data-role="road_section" data-layer="surface" data-source="/sections/junction" data-explicit="true" data-port-distance="1.0" />
+        <g id="intersection-intersection-ports-node-73656374696f6e2f6a756e6374696f6e2f726f61645f73757266616365" data-node-id="section/junction/road_surface" data-role="road_surface" data-layer="surface.base" data-source="/sections/junction" data-explicit="true" data-parent="section/junction" data-port-distance="1.0" clip-path="url(#intersection-intersection-ports-junction-1m-port-clip)">
+          <path d="M 2 -0.43 L 2 0.43 1.52 0.43 1.511696 0.430384 1.503463 0.431532 1.49537 0.433436 1.487488 0.436077 1.479884 0.439435 1.472621 0.44348 1.465763 0.448178 1.459367 0.453489 1.453489 0.459367 1.448178 0.465763 1.44348 0.472621 1.439435 0.479884 1.436077 0.487488 1.433436 0.49537 1.431532 0.503463 1.430384 0.511696 1.43 0.52 1.43 1 0.57 1 0.57 0.52 0.569616 0.511696 0.568468 0.503463 0.566564 0.49537 0.563923 0.487488 0.560565 0.479884 0.55652 0.472621 0.551822 0.465763 0.546511 0.459367 0.540633 0.453489 0.534237 0.448178 0.527379 0.44348 0.520116 0.439435 0.512512 0.436077 0.50463 0.433436 0.496537 0.431532 0.488304 0.430384 0.48 0.43 0 0.43 0 -0.43 0.48 -0.43 0.488304 -0.430384 0.496537 -0.431532 0.50463 -0.433436 0.512512 -0.436077 0.520116 -0.439435 0.527379 -0.44348 0.534237 -0.448178 0.540633 -0.453489 0.546511 -0.459367 0.551822 -0.465763 0.55652 -0.472621 0.560565 -0.479884 0.563923 -0.487488 0.566564 -0.49537 0.568468 -0.503463 0.569616 -0.511696 0.57 -0.52 0.57 -1 1.43 -1 1.43 -0.52 1.430384 -0.511696 1.431532 -0.503463 1.433436 -0.49537 1.436077 -0.487488 1.439435 -0.479884 1.44348 -0.472621 1.448178 -0.465763 1.453489 -0.459367 1.459367 -0.453489 1.465763 -0.448178 1.472621 -0.44348 1.479884 -0.439435 1.487488 -0.436077 1.49537 -0.433436 1.503463 -0.431532 1.511696 -0.430384 1.52 -0.43 Z" fill="#1A1A1A" stroke="#1A1A1A" stroke-width=".08" stroke-linejoin="round" />
+        </g>
+        <g id="intersection-intersection-ports-node-73656374696f6e2f6a756e6374696f6e2f626f756e64617279" data-node-id="section/junction/boundary" data-role="intersection_boundary" data-layer="surface.markings.boundary" data-source="/sections/junction" data-explicit="true" data-parent="section/junction" data-port-distance="1.0">
+          <path d="M 2 0.42 L 1.52 0.42 1.511284 0.420381 1.502635 0.421519 1.494118 0.423407 1.485798 0.426031 1.477738 0.429369 1.47 0.433397 1.462642 0.438085 1.455721 0.443396 1.449289 0.449289 1.443396 0.455721 1.438085 0.462642 1.433397 0.47 1.429369 0.477738 1.426031 0.485798 1.423407 0.494118 1.421519 0.502635 1.420381 0.511284 1.42 0.52 1.42 1" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+          <path d="M 0.58 1 L 0.58 0.52 0.579619 0.511284 0.578481 0.502635 0.576593 0.494118 0.573969 0.485798 0.570631 0.477738 0.566603 0.47 0.561915 0.462642 0.556604 0.455721 0.550711 0.449289 0.544279 0.443396 0.537358 0.438085 0.53 0.433397 0.522262 0.429369 0.514202 0.426031 0.505882 0.423407 0.497365 0.421519 0.488716 0.420381 0.48 0.42 0 0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+          <path d="M 0 -0.42 L 0.48 -0.42 0.488716 -0.420381 0.497365 -0.421519 0.505882 -0.423407 0.514202 -0.426031 0.522262 -0.429369 0.53 -0.433397 0.537358 -0.438085 0.544279 -0.443396 0.550711 -0.449289 0.556604 -0.455721 0.561915 -0.462642 0.566603 -0.47 0.570631 -0.477738 0.573969 -0.485798 0.576593 -0.494118 0.578481 -0.502635 0.579619 -0.511284 0.58 -0.52 0.58 -1" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+          <path d="M 1.42 -1 L 1.42 -0.52 1.420381 -0.511284 1.421519 -0.502635 1.423407 -0.494118 1.426031 -0.485798 1.429369 -0.477738 1.433397 -0.47 1.438085 -0.462642 1.443396 -0.455721 1.449289 -0.449289 1.455721 -0.443396 1.462642 -0.438085 1.47 -0.433397 1.477738 -0.429369 1.485798 -0.426031 1.494118 -0.423407 1.502635 -0.421519 1.511284 -0.420381 1.52 -0.42 2 -0.42" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="intersection-intersection-ports-node-73656374696f6e2f6a756e6374696f6e2f63656e7465726c696e65" data-node-id="section/junction/centerline" data-role="intersection_approach_centerlines" data-layer="surface.markings.centerline" data-source="/sections/junction" data-explicit="true" data-parent="section/junction" data-port-distance="1.0">
+          <path d="M 1.8 0 L 2 0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+          <path d="M 1 0.8 L 1 1" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+          <path d="M 0.429204 0 L 0.229204 0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+          <path d="M 0.029204 0 L 0 0" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+          <path d="M 1 -0.8 L 1 -1" fill="none" stroke="#FFFFFF" stroke-width="0.02" stroke-linecap="butt" stroke-linejoin="round" />
+        </g>
+        <g id="intersection-intersection-ports-node-73656374696f6e2f6a756e6374696f6e2f636f6e74726f6c2f73747261696768742f6c696e65" data-node-id="section/junction/control/straight/line" data-role="give_way_line" data-layer="surface.markings.element" data-source="/sections/junction" data-explicit="false" data-parent="section/junction" data-port-distance="1.0">
+          <path d="M 1.41 -0.01 L 1.41 0.07 1.45 0.07 1.45 -0.01 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 1.41 0.13 L 1.41 0.21 1.45 0.21 1.45 0.13 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 1.41 0.27 L 1.41 0.35 1.45 0.35 1.45 0.27 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 1.41 0.41 L 1.41 0.49 1.414261 0.49 1.415597 0.485359 1.418703 0.477117 1.422459 0.46915 1.42684 0.461509 1.431818 0.454243 1.437362 0.447399 1.443436 0.44102 1.45 0.435147 1.45 0.41 Z" fill="#FFFFFF" stroke="none" />
+        </g>
+        <g id="intersection-intersection-ports-node-73656374696f6e2f6a756e6374696f6e2f636f6e74726f6c2f6c6566742f6c696e65" data-node-id="section/junction/control/left/line" data-role="give_way_line" data-layer="surface.markings.element" data-source="/sections/junction" data-explicit="false" data-parent="section/junction" data-port-distance="1.0">
+          <path d="M 1.01 0.41 L 0.93 0.41 0.93 0.45 1.01 0.45 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 0.87 0.41 L 0.79 0.41 0.79 0.45 0.87 0.45 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 0.73 0.41 L 0.65 0.41 0.65 0.45 0.73 0.45 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 0.59 0.41 L 0.51 0.41 0.51 0.414261 0.514641 0.415597 0.522883 0.418703 0.53085 0.422459 0.538491 0.42684 0.545757 0.431818 0.552601 0.437362 0.55898 0.443436 0.564853 0.45 0.59 0.45 Z" fill="#FFFFFF" stroke="none" />
+        </g>
+        <g id="intersection-intersection-ports-node-73656374696f6e2f6a756e6374696f6e2f636f6e74726f6c2f656e7472792f6c696e65" data-node-id="section/junction/control/entry/line" data-role="give_way_line" data-layer="surface.markings.element" data-source="/sections/junction" data-explicit="false" data-parent="section/junction" data-port-distance="1.0">
+          <path d="M 0.59 0.01 L 0.59 -0.07 0.55 -0.07 0.55 0.01 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 0.59 -0.13 L 0.59 -0.21 0.55 -0.21 0.55 -0.13 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 0.59 -0.27 L 0.59 -0.35 0.55 -0.35 0.55 -0.27 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 0.59 -0.41 L 0.59 -0.49 0.585739 -0.49 0.584403 -0.485359 0.581297 -0.477117 0.577541 -0.46915 0.57316 -0.461509 0.568182 -0.454243 0.562638 -0.447399 0.556564 -0.44102 0.55 -0.435147 0.55 -0.41 Z" fill="#FFFFFF" stroke="none" />
+        </g>
+        <g id="intersection-intersection-ports-node-73656374696f6e2f6a756e6374696f6e2f636f6e74726f6c2f72696768742f6c696e65" data-node-id="section/junction/control/right/line" data-role="give_way_line" data-layer="surface.markings.element" data-source="/sections/junction" data-explicit="false" data-parent="section/junction" data-port-distance="1.0">
+          <path d="M 0.99 -0.41 L 1.07 -0.41 1.07 -0.45 0.99 -0.45 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 1.13 -0.41 L 1.21 -0.41 1.21 -0.45 1.13 -0.45 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 1.27 -0.41 L 1.35 -0.41 1.35 -0.45 1.27 -0.45 Z" fill="#FFFFFF" stroke="none" />
+          <path d="M 1.41 -0.41 L 1.49 -0.41 1.49 -0.414261 1.485359 -0.415597 1.477117 -0.418703 1.46915 -0.422459 1.461509 -0.42684 1.454243 -0.431818 1.447399 -0.437362 1.44102 -0.443436 1.435147 -0.45 1.41 -0.45 Z" fill="#FFFFFF" stroke="none" />
+        </g>
+      </g>
+    </g>
+    <g id="intersection-ports" inkscape:groupmode="layer" inkscape:label="Ports and labels">
+      <g id="intersection-port-entry" data-port-ref="junction.entry" data-nominal-direction="incoming">
+        <path d="M 27.50000 203.00000 L 70.50000 203.00000" fill="none" stroke="#E87918" stroke-width="4" stroke-linecap="butt" />
+        <polygon points="84.50000,203.00000 70.50000,209.00000 70.50000,197.00000" fill="#E87918" />
+        <circle cx="96.50000" cy="203.00000" r="9" fill="#E87918" stroke="#E87918" stroke-width="2.25" />
+        <text x="56.50000" y="182.00000" fill="#E87918" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="middle">entry</text>
+      </g>
+      <g id="intersection-port-left" data-port-ref="junction.left" data-nominal-direction="outgoing">
+        <path d="M 216.50000 83.00000 L 216.50000 40.00000" fill="none" stroke="#1673B8" stroke-width="4" stroke-linecap="butt" />
+        <polygon points="216.50000,26.00000 222.50000,40.00000 210.50000,40.00000" fill="#1673B8" />
+        <circle cx="216.50000" cy="83.00000" r="9" fill="#1673B8" stroke="#1673B8" stroke-width="2.25" />
+        <text x="236.50000" y="46.00000" fill="#1673B8" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="start">left</text>
+      </g>
+      <g id="intersection-port-straight" data-port-ref="junction.straight" data-nominal-direction="outgoing">
+        <path d="M 336.50000 203.00000 L 379.50000 203.00000" fill="none" stroke="#1673B8" stroke-width="4" stroke-linecap="butt" />
+        <polygon points="393.50000,203.00000 379.50000,209.00000 379.50000,197.00000" fill="#1673B8" />
+        <circle cx="336.50000" cy="203.00000" r="9" fill="#1673B8" stroke="#1673B8" stroke-width="2.25" />
+        <text x="356.50000" y="182.00000" fill="#1673B8" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="start">straight</text>
+      </g>
+      <g id="intersection-port-right" data-port-ref="junction.right" data-nominal-direction="outgoing">
+        <path d="M 216.50000 323.00000 L 216.50000 366.00000" fill="none" stroke="#1673B8" stroke-width="4" stroke-linecap="butt" />
+        <polygon points="216.50000,380.00000 210.50000,366.00000 222.50000,366.00000" fill="#1673B8" />
+        <circle cx="216.50000" cy="323.00000" r="9" fill="#1673B8" stroke="#1673B8" stroke-width="2.25" />
+        <text x="236.50000" y="369.00000" fill="#1673B8" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="600" text-anchor="start">right</text>
+      </g>
+    </g>
+  </g>
+</svg>
