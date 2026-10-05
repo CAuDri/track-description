@@ -9,7 +9,7 @@ $id: catalog.yaml
 
 title: CAuDri Track Catalog
 x-caudri:
-  version: "1.0"
+  version: "1.0.0"
   regulations: regulations.yaml
 
 $defs:
@@ -19,8 +19,7 @@ $defs:
         type: object
         properties:
           asset_path:
-            description: Base path or URI for relative Catalog asset references, resolved relative to this catalog file.
-              Renderer configuration may override this location without changing a Track Description.
+            description: Base path or URI for relative Catalog asset references, resolved relative to this file.
             type: string
             default: assets/
             format: uri-reference
@@ -31,8 +30,11 @@ $defs:
         type: object
         properties:
           root_port: {type: string, enum: [entry, exit]}
-          # Numerical endpoint-matching tolerance on loop closure and section connections.
+
+          # Numerical port-matching tolerance on loop closure and section connections
           position_tolerance: {type: number, default: 0.001}
+          angle_tolerance: {type: number, default: 0.1}
+          approximation_tolerance: {type: number, default: 0.0001}
 
           connected_network: {type: boolean}
         additionalProperties: false
@@ -108,13 +110,15 @@ $defs:
   root:
     description: Map origin at a section port, with the positive Map x-axis aligned to its forward tangent.
     type: object
-    required: [section, port]
+    required: [section]
     properties:
       section: {$ref: '#/$defs/identifier'}
       port:
+        description: Defaults to entry, except left arcs default to exit for their start box.
         type: string
         $ref: regulations.yaml#/$defs/global/$defs/validation/properties/root_port
         enum: [entry, exit]
+        default: entry
       map_orientation:
         description: Counter-clockwise rotation of the Map frame about World z, in degrees. All map-local
           positions and orientations are transformed together; no track geometry changes.
@@ -209,8 +213,11 @@ $defs:
 
   port_reference: {type: string, pattern: '^[a-z][a-z0-9_-]*\.[a-z][a-z0-9_-]*$'}
 
-  # Exactly two port references. Unique use of ports needs further validation.
+  # Port existence, unique use and nominal direction need structural validation.
   connection:
+    description: Pair of section.port references. Entry-to-entry connections are forbidden, as are exit-to-exit
+      connections between two-port sections. An intersection's left, straight or right port may connect to either
+      port of a two-port section, allowing branches to rejoin at intersections.
     type: array
     prefixItems:
       - {$ref: '#/$defs/port_reference'}
@@ -273,7 +280,6 @@ $defs:
       via:
         type: array
         items: {$ref: '#/$defs/identifier'}
-        uniqueItems: true
     additionalProperties: false
 
   actor_stop:
@@ -327,7 +333,7 @@ $defs:
           type: {const: arc}
           parameters:
             type: object
-            required: [radius, angle]
+            required: [radius]
             properties:
               direction: {type: string, enum: [left, right], default: left}
               radius:
@@ -337,6 +343,7 @@ $defs:
               angle:
                 description: Unsigned swept angle; `direction` determines left or right curvature.
                 type: number
+                default: 90
                 exclusiveMinimum: 0
                 maximum: 360
             additionalProperties: false
@@ -352,6 +359,7 @@ $defs:
         unevaluatedProperties: false
         x-caudri:
           ports: {fixed: [entry, exit]}
+          root_port_by_direction: {left: exit} # TODO: REmove
 
         $defs:
           validation:
@@ -447,7 +455,11 @@ $defs:
                 exclusiveMinimum: 0
               priority_sign_distance: {type: number, default: 0.4}
               mandatory_sign_distance: {type: number, default: 0.25}
-              mandatory_marking_distance: {type: number, default: 0.15}
+              mandatory_marking_distance:
+                description: Free longitudinal gap from the nearest control-line edge to the nearest edge of the arrow marking.
+                  Without a painted control line, use the theoretical control boundary.
+                type: number
+                default: 0.15
             additionalProperties: false
           elements:
             additionalProperties: {const: false}
@@ -501,6 +513,7 @@ $defs:
                     parameters: {marking: give_way_line}
           mandatory_direction:
             parameter: mandatory_turn
+            # Each approach gets <port>_mandatory_sign and <port>_mandatory_marking.
             expansion:
               sign_by_turn: {left: mandatory_left, right: mandatory_right}
               surface_marking: mandatory_direction
@@ -597,7 +610,7 @@ $defs:
         unevaluatedProperties: false
         x-caudri:
           compatibility: {root_only: true}
-          defaults: {slot: start_box, enabled: true}
+          defaults: {slot: start_box, enabled: true, section_types: [arc], direction: left}
 
         $defs:
           validation:
@@ -649,7 +662,7 @@ $defs:
               const: false
         unevaluatedProperties: false
         x-caudri:
-          defaults: {slot: starting_line, enabled: true}
+          defaults: {slot: starting_line, enabled: true, section_types: [straight, arc, clothoid], connected_root_exit: true}
 
         $defs:
           rendering:
@@ -703,8 +716,14 @@ $defs:
                 type: array
                 items: {$ref: '#/$defs/side'}
                 default: [left, right]
-              waiting_area_lateral_extent: {type: number, default: 0.2}
-              waiting_area_longitudinal_extent: {type: number, default: 0.45}
+              waiting_area_lateral_extent:
+                description: Depth from the centerline of the outer road marking to the centerline of the far waiting-area outline.
+                type: number
+                default: 0.2
+              waiting_area_longitudinal_extent:
+                description: Length between the centerlines of the two longitudinally bounding waiting-area outlines.
+                type: number
+                default: 0.45
             additionalProperties: false
 
           rendering:
@@ -881,7 +900,7 @@ $defs:
               # Angle between a sloped end of the bay outline and the outer road marking.
               boundary_side_angle: {type: number, default: 60}
               announcement_sign_distance:
-                description: Distance along the designated route before the first Parking Area.
+                description: Distance along the approach before this Parking Area. Each Parking Area has its own announcement sign.
                 type: number
                 default: 0.3
             additionalProperties: false
@@ -917,11 +936,15 @@ $defs:
             properties:
               parallel_spot_count: {type: integer}
               parallel_final_spot_length: {type: number}
-              parallel_obstacle_lateral_gap: {type: number}
+              parallel_obstacle_lateral_gap:
+                description: Free distance across the bay between the obstacle and the inner edge of each bounding marking.
+                type: number
               parallel_invalid_gap_below: {type: number}
               parallel_side: {type: string, enum: [left, right]}
               perpendicular_spot_count: {type: integer}
-              perpendicular_obstacle_lateral_gap: {type: number}
+              perpendicular_obstacle_lateral_gap:
+                description: Free distance along the road between the obstacle and the inner edge of each separator marking.
+                type: number
               perpendicular_side: {type: string, enum: [left, right]}
               centerline: {type: string}
             additionalProperties: false
@@ -935,12 +958,13 @@ $defs:
                 type: number
                 minimum: 0
               extent_along_road:
-                description: Optional independent longitudinal extent of this parking bay. It defaults to the remaining Parking Area range.
+                description: Optional independent longitudinal extent between this bay's outline centerlines at the road boundary.
+                  It defaults to the remaining Parking Area range.
                 type: number
                 exclusiveMinimum: 0
               extent_lateral:
-                description: Default depth of this lot's spots, measured away from the road. For parallel parking,
-                  measurement starts at the road's outer marking line.
+                description: Default depth of this lot's spots, measured from the centerline of the road's outer marking
+                  to the centerline of the far parking outline.
                 type: number
                 exclusiveMinimum: 0
               spots: {$ref: '#/$defs/elements/$defs/parking_area/$defs/parking_spots'}
@@ -965,11 +989,12 @@ $defs:
                   minimum: 0
                 state: {enum: [free, blocked, no_parking], default: free}
                 extent_along_road:
-                  description: Spot extent parallel to the owner Section reference line.
+                  description: Spot extent parallel to the owner Section reference line, measured between marking centerlines.
                   type: number
                   exclusiveMinimum: 0
                 extent_lateral:
-                  description: Spot depth away from the road; omitted values inherit the containing lot depth.
+                  description: Spot depth between the centerlines of the road's outer marking and the far parking outline;
+                    omitted values inherit the containing lot depth.
                   type: number
                   exclusiveMinimum: 0
                 features:
@@ -987,8 +1012,8 @@ $defs:
               x-caudri:
                 expansion:
                   # Generated only for blocked spots; features.obstacle can override or disable this slot.
-                  # The renderer derives its position and footprint from the spot and obstacle limit.
-                  # Height inherits the shared 0.15 m obstacle default.
+                  # Placement is bound to the spot; size uses the shared 0.30 x 0.20 x 0.15 m defaults.
+                  # A spot may override size explicitly. Fit/clearances are separate validation checks.
                   obstacle:
                     when: {state: blocked}
                     type: static_obstacle
@@ -1083,7 +1108,8 @@ $defs:
                 description: Travel direction from which the sign front is visible.
                 $ref: '#/$defs/direction'
               lateral_offset:
-                description: Distance outward from the right-hand lane boundary (not from the road reference line).
+                description: Free lateral distance from the outside edge of the right-hand outer road marking to the nearest
+                  edge of the sign panel. Implicit placement accounts for half the panel width; explicit at or pose still locates its center.
                 type: number
                 default: 0.1
                 exclusiveMinimum: 0
@@ -1315,6 +1341,13 @@ $defs:
                 type: array
                 items: {$ref: '#/$defs/side'}
                 default: [left, right]
+              lateral_offset:
+                description: Free lateral distance from the outside edge of each adjacent outer road marking to the nearest
+                  edge of its landmark panel; inherits the traffic-sign default.
+                $ref: '#/$defs/features/$defs/traffic_sign/$defs/parameters/properties/lateral_offset'
+              lower_edge_height:
+                description: Height of both panel lower edges; inherits the traffic-sign default.
+                $ref: '#/$defs/features/$defs/traffic_sign/$defs/parameters/properties/lower_edge_height'
               faces:
                 description: Travel direction from which each sign is visible, as for traffic_sign.faces. In section-forward
                   orientation the right sign faces forward and the left sign backward, each facing its adjacent lane.
@@ -1689,7 +1722,7 @@ $defs:
             $ref: regulations.yaml#/$defs/actors/$defs/dynamic_obstacle/$defs/simulation
             type: object
             properties:
-              speed: {type: number, minimum: 0}
+              speed: {type: number, minimum: 0, default: 0.2} # TODO: Determine the intended default speed explicitly.
               behavior: {$ref: '#/$defs/actors/$defs/dynamic_obstacle/$defs/behavior'}
             additionalProperties: false
 
@@ -1758,7 +1791,7 @@ $defs:
             type: object
             required: [behavior]
             properties:
-              speed: {type: number, exclusiveMinimum: 0}
+              speed: {type: number, exclusiveMinimum: 0, default: 0.2} # TODO: Determine the intended default speed explicitly.
               behavior: {$ref: '#/$defs/actors/$defs/pedestrian/$defs/behavior'}
             additionalProperties: false
 
@@ -1787,8 +1820,6 @@ $defs:
                     enum: [immediate, after_vehicle_stops]
                 additionalProperties: false
             additionalProperties: false
-
-  # Containers and open base schemas. Concrete types close their object fields.
 
   section_zones:
     type: object
@@ -1850,6 +1881,8 @@ $defs:
     $ref: '#/$defs/object_base'
     properties:
       features:
+        # Generated begin/end slots inherit the corresponding range/span endpoint's section.
+        # Extra global-zone features need pose, or a separate root feature with at.section.
         $ref: '#/$defs/feature_slots'
         additionalProperties:
           properties:

@@ -8,11 +8,11 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: caudri-track.schema.yaml
 
-title: CAuDri Track Description Schema v1.0
+title: CAuDri Track Description Schema v1.0.0
 
-# CAuDri-specific metadata and conventions. "x-caudri" sections are not validated by JSON Schema, but can be used for validation and tooling.
+# CAuDri-specific metadata and conventions. "x-caudri" sections are not validated by JSON Schema
 x-caudri:
-  version: "1.0"
+  version: "1.0.0"
 
   catalog: catalog.yaml
   regulations: regulations.yaml
@@ -65,8 +65,8 @@ properties:
   # Connections between sections need to be defined explicitly using port references.
   # Each connection is described as a pair of port references, the first being the source port and the second the target port.
   # Example: "section1" -> "section2" is represented as ["section1.exit", "section2.entry"].
-  # Ports can only be referenced once, two entry ports cannot be connected together.
-  # This allows for an arbitrary track topology, including loops and branches, with an implicit direction of travel.
+  # Each port can only be referenced once. Entry-entry and exit-exit pairs are forbidden.
+  # An intersection's left/straight/right ports may connect to entry or exit, allowing branches to rejoin there.
   connections:
     type: array
     items: {$ref: catalog.yaml#/$defs/connection}
