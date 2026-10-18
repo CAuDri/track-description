@@ -24,11 +24,13 @@ if __package__:
                                child, expand_track, load_track, prepare_track,
                                source_location, write_file)
     from .validate_schema import CheckResult, validate_schema
+    from .width_transition import WidthTransition
 else:
     from expand_track import (Diagnostic, ExpansionResult, InputError, SchemaBundle,
                               child, expand_track, load_track, prepare_track,
                               source_location, write_file)
     from validate_schema import CheckResult, validate_schema
+    from width_transition import WidthTransition
 
 
 __all__ = ["GeometryResult", "GeometryModel", "validate_geometry"]
@@ -483,21 +485,37 @@ class GeometryModel:
                   for p in section.ports if abs(cross(a["u"], self.arm(section, p)["u"])) > 1e-9]
         return max(widths, default=0)
 
+    def boundary_transition(self, section, first_port, second_port):
+        """@return The shared local boundary curve between opposite arm ports."""
+        first, second = self.arm(section, first_port), self.arm(section, second_port)
+        delta = (second["angle"]-first["angle"]) % math.tau
+        if abs(delta-math.pi) >= 1e-9:
+            raise ValueError("A width transition requires opposite intersection arms")
+        return WidthTransition(
+            number(section.value["parameters"]["port_distance"]), first["u"],
+            first["boundary"], second["boundary"],
+            first["road"].marking, second["road"].marking,
+        )
+
     def intersection_polygon(self, section, tolerance=None):
         d = number(section.value["parameters"]["port_distance"])
         radius = number(section.value["parameters"]["corner_radius"])
         if radius < 0:
             raise ValueError("Corner radius must be non-negative")
-        arms = sorted((self.arm(section, p) for p in section.ports), key=lambda a: a["angle"])
+        arms = sorted(((p, self.arm(section, p)) for p in section.ports), key=lambda a: a[1]["angle"])
         points = []
-        for a, b in zip(arms, arms[1:]+arms[:1]):
+        for (first_port, a), (second_port, b) in zip(arms, arms[1:]+arms[:1]):
             delta = (b["angle"]-a["angle"]) % math.tau
             port = add((d, 0), scale(a["u"], d))
             points += [add(port, scale(a["n"], -a["half"])), add(port, scale(a["n"], a["half"]))]
             first = add((d, 0), scale(a["n"], a["half"]))
             second = add((d, 0), scale(b["n"], -b["half"]))
             if abs(delta-math.pi) < 1e-9:
-                points += [first, second]
+                transition = self.boundary_transition(section, first_port, second_port)
+                # Port corners already delimit this edge. Keep their exact source
+                # coordinates instead of adding almost-identical trigonometric
+                # endpoints, which can create microscopic self-intersections.
+                points += transition.sample(self.approximation if tolerance is None else tolerance, side=1)[1:-1]
                 continue
             if not 0 < delta < math.pi:
                 raise ValueError("Adjacent intersection arms leave a gap greater than 180 degrees")
@@ -905,6 +923,51 @@ class GeometryModel:
             raise ValueError("Sign panel dimensions must be positive")
         return width, height
 
+    def transition_sign_edge(self, section, port, station, clearance):
+        """@return A tapered roadside panel-edge offset, or None for a nominal arm.
+
+        The sign keeps its longitudinal anchor and inbound yaw. Its nearest
+        panel edge follows the Euclidean clearance envelope of the road surface,
+        rather than the attached arm's constant width or a lateral-only gap.
+        """
+        d = section.value["parameters"]["port_distance"]
+        if not -d <= station <= d or section.surface is None:
+            return None
+        ports = sorted(section.ports, key=lambda name: self.arm(section, name)["angle"])
+        following = ports[(ports.index(port)+1) % len(ports)]
+        arm, other = self.arm(section, port), self.arm(section, following)
+        if abs((other["angle"]-arm["angle"]) % math.tau-math.pi) >= 1e-9:
+            return None
+        if arm["half"] == other["half"] and arm["boundary"] == other["boundary"]:
+            return None
+        if clearance <= 0:
+            raise PathError("Roadside clearance must be positive")
+        anchor = transform(add((d, 0), scale(arm["u"], station)), section.pose)
+        normal = unit(section.pose[2]+arm["angle"]+math.pi/2)
+        projections = [(x-anchor[0])*normal[0]+(y-anchor[1])*normal[1]
+                       for x, y in section.surface.exterior.coords]
+        low, high = min(projections)-clearance-1, max(projections)+clearance+1
+        ray = LineString([add(anchor, scale(normal, offset)) for offset in (low, high)])
+        clipped = section.surface.buffer(clearance).intersection(ray)
+        pieces = list(clipped.geoms) if hasattr(clipped, "geoms") else [clipped]
+        offsets = [(x-anchor[0])*normal[0]+(y-anchor[1])*normal[1]
+                   for piece in pieces for x, y in piece.coords]
+        if not offsets:
+            raise PathError("The tapered roadside has no clearance-envelope intersection")
+        low = max(offsets)
+        # GEOS approximates the buffer's round joins by chords. Refine its outer
+        # intersection against the original surface so the prescribed distance
+        # is retained, including when the panel's axis is oblique to the taper.
+        if Point(add(anchor, scale(normal, low))).distance(section.surface) >= clearance:
+            return low
+        for _ in range(50):
+            middle = (low+high)/2
+            if Point(add(anchor, scale(normal, middle))).distance(section.surface) < clearance:
+                low = middle
+            else:
+                high = middle
+        return high
+
     def sign_default(self, obj):
         owner, p = obj.owner, obj.value.get("parameters", {})
         if owner is None:
@@ -930,7 +993,11 @@ class GeometryModel:
             station = self.crossing_station(section, port)
             advance = params["mandatory_sign_distance"] if role == "mandatory_sign" else params["priority_sign_distance"]
             anchor = add((params["port_distance"], 0), scale(arm["u"], station))
-            local = add(add(anchor, scale(arm["u"], advance)), scale(arm["n"], arm["half"]+lateral))
+            offset = arm["half"]+lateral
+            edge = self.transition_sign_edge(section, port, station+advance, number(p["lateral_offset"]))
+            if edge is not None:
+                offset = edge+panel_width/2
+            local = add(add(anchor, scale(arm["u"], advance)), scale(arm["n"], offset))
             return section, None, transform(local, section.pose), angle(section.pose[2]+arm["angle"]+math.pi)
         if owner.kind == "crosswalk":
             direction = 1 if obj.slot == "sign_forward" else -1

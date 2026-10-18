@@ -406,7 +406,9 @@ $defs:
 
       intersection:
         $ref: '#/$defs/section_base'
-        description: Three- or four-arm intersection.
+        description: Three- or four-arm intersection. On the closed side of a three-arm intersection, different
+          widths of opposite arms are joined by a monotone quintic boundary across the full distance between
+          their ports. Its tangent and curvature match the attached straight boundaries at both ports.
         properties:
           type: {const: intersection}
           parameters:
@@ -444,12 +446,16 @@ $defs:
                 type: number
                 default: 90
               corner_radius:
-                description: Radius of rounded lane-boundary corners at the intersection.
+                description: Radius of rounded lane-boundary corners between non-opposite arms. The smooth width
+                  transition between opposite arms is determined by their widths and port_distance, independently
+                  of this corner radius.
                 type: number
                 default: 0.1
                 minimum: 0
               port_distance:
                 description: Distance from the intersection axis crossing to every port along that arm's reference line.
+                  A width transition between opposite arms spans twice this distance and uses the connected roads'
+                  boundary offsets and marking widths at its endpoints.
                 type: number
                 default: 0.8
                 exclusiveMinimum: 0
@@ -1109,7 +1115,9 @@ $defs:
                 $ref: '#/$defs/direction'
               lateral_offset:
                 description: Free lateral distance from the outside edge of the right-hand outer road marking to the nearest
-                  edge of the sign panel. Implicit placement accounts for half the panel width; explicit at or pose still locates its center.
+                  edge of the sign panel. Implicit placement accounts for half the panel width and measures against the actual
+                  road edge at a smooth intersection width transition, preserving the sign's arm-aligned station and yaw.
+                  Explicit at or pose still locates its center.
                 type: number
                 default: 0.1
                 exclusiveMinimum: 0
