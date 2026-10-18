@@ -869,6 +869,8 @@ class GeometryModel:
                         raise ValueError("Waiting-area dimensions must be positive")
                     for side in p["waiting_area_sides"]:
                         sign = 1 if side == "left" else -1
+                        if p["direction"] == "backward":
+                            sign *= -1
                         center = section.point((obj.start+obj.end)/2, sign*(section.boundary+depth/2))
                         area = rectangle(center, length, depth, section.yaw(obj.start))
                         self.surfaces.append((obj.path+"/waiting/"+side, obj.section, area, True))

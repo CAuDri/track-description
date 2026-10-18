@@ -1516,7 +1516,13 @@ $defs:
             required: [markings]
             properties:
               markings:
-                description: Marking roles are resolved in Section-local orientation before applying travel direction.
+                description: >-
+                  On linear Sections, marking roles are resolved in Section-local orientation
+                  before applying travel direction. Within an Intersection, left and right
+                  follow the selected path's travel direction through its incoming and outgoing
+                  arms. Only the traversed arm sides and their adjoining boundary arcs are
+                  affected; other arms retain their markings. Mandatory-turn center and outer
+                  guidance lines are exempt.
                 type: array
                 items: {enum: [left_boundary, centerline, right_boundary]}
                 minItems: 1
