@@ -183,7 +183,7 @@ $defs:
     required: [distance]
     properties:
       distance:
-        description: Arc length from Section entry [m].
+        description: Arc length from Section entry [m], between zero and the Section length.
         type: number
         minimum: 0
       offset:

@@ -739,6 +739,16 @@ class GeometryModel:
             section = self.sections[sid]
             current = incoming if section.intersection else (0 if incoming == "entry" else section.curve.length)
 
+    def locate_local(self, section, station):
+        """Resolve an explicit section-local distance without crossing its ports."""
+        station = number(station)
+        if section.intersection:
+            raise PathError("Intersection positions use local x/y coordinates")
+        if not 0 <= station <= section.curve.length:
+            raise PathError(f"Explicit distance must stay within section {section.identifier!r} "
+                            f"(0 to {section.curve.length:g} m)")
+        return section, station, section.point(station), section.yaw(station)
+
     def locate(self, section, station):
         """Carry a longitudinal placement across nominally connected sections."""
         seen, orientation = set(), 1
@@ -1046,7 +1056,7 @@ class GeometryModel:
                         point = transform((number(at["x"]), number(at["y"])), section.pose)
                         placed, station, yaw = section, None, section.pose[2]
                     else:
-                        placed, station, point, yaw = self.locate(section, number(at["distance"]))
+                        placed, station, point, yaw = self.locate_local(section, at["distance"])
                         point = add(point, scale(unit(yaw+math.pi/2), number(at.get("offset", 0))))
                     yaw += math.radians(number(at.get("yaw", 0)))
                 elif obj.kind == "static_obstacle" and obj.owner and obj.owner.kind == "parking_spot":

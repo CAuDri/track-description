@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import asdict, dataclass, field
 import json
+import math
 from pathlib import Path
 import sys
 
@@ -521,6 +522,21 @@ class _Validator:
         elif "distance" not in at or "x" in at or "y" in at:
             self.issue("schema.position_kind", path,
                        "Positions on a linear section use distance, not local x/y coordinates.")
+        elif _number(at["distance"]):
+            # Explicit positions stay on their named/owning section. Automatic
+            # sign advances use geometric route traversal instead of this field.
+            parameters = section.get("parameters", {})
+            length = parameters.get("length") if isinstance(parameters, dict) else None
+            if section.get("type") == "arc" and isinstance(parameters, dict):
+                radius, angle = parameters.get("radius"), parameters.get("angle")
+                if _number(radius) and _number(angle):
+                    length = radius * math.radians(angle)
+            if not _number(length) or not math.isfinite(length) or length <= 0:
+                self.block(path + "/distance", "Position bounds need a usable section length.")
+            elif not 0 <= at["distance"] <= length:
+                self.issue("schema.position_range", path + "/distance",
+                           "Explicit distance must lie between section entry and exit.",
+                           section=section_id, distance=at["distance"], length=length)
 
     def _feature_placement(self, obj):
         value, path = obj.value, obj.path
@@ -535,7 +551,7 @@ class _Validator:
         at = value.get("at")
         if not isinstance(at, dict):
             return
-        section_id = obj.section or at.get("section")
+        section_id = at.get("section", obj.section)
         if section_id is None and binding and binding.get("kind") == "zone_endpoint":
             # Generated global-zone slots inherit their own endpoint. The index
             # avoids rescanning every object for every generated zone sign.
